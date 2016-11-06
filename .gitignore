@@ -1,0 +1,7 @@
+*.htaccess
+
+sites/default/
+sites/all/libraries/*
+sites/all/modules/*
+sites/all/themes/adminimal_theme/*
+sites/all/themes/neato/*
