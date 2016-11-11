@@ -74,6 +74,7 @@ body{
 #footer {
   position:relative;
   zoom: 1;
+
 }
 #header:before, #header:after,
 #main:before, #main:after,
@@ -92,6 +93,7 @@ body{
 	left:0;
 	right: 0;
 	transition: all 0.4s ease;
+	z-index: 1000;
 	}
 
  #navigation {
@@ -613,7 +615,7 @@ width:96%;
 }
 .view-thumbnail-gallery .view-content .item-list .shrink{
 	width: 60%;
-	margin-bottom: 90rem;
+	margin-bottom: 50rem;
 	 display: -webkit-flex;
 	-webkit-flex-direction: row /* works with row or column */
    flex-direction: row;
@@ -754,6 +756,7 @@ width: 100%;
  text-align: center;
     top: 0;
     width: 100%;
+    pointer-events:none;  
 
 
 }
@@ -776,7 +779,7 @@ width: 100%;
 	width: 15%;
 	position: absolute;
 	border-radius: 0;
-	
+	pointer-events:auto;  
 	background-color: none !important;
 
 }
