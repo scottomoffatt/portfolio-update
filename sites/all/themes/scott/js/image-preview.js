@@ -17,7 +17,19 @@ $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').o
   $(this).parents('ul').removeClass('shrink');
 }
 });
+var winh = $('.single_page_wrapper').height();
+var headerheight = $('#header').height();
 
+  $(document).ready(function(e){
+      $('.views-field-body , .views-field-field-slider-image .field-content, .open').css({'max-height': winh });
+  });
+
+
+var eqheight = $('.view-thumbnail-gallery .views-row .views-field-field-image img').width();
+  $(window).resize(function(){
+    $('.view-thumbnail-gallery .view-content .item-list  .views-row').css({'height': eqheight });
+  
+  });
 
 
 
