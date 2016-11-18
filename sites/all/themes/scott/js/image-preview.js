@@ -3,8 +3,8 @@
 $(document).ready(function(){
 $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').on('click' , function(e){
    var mywidth =  $('.view-thumbnail-gallery .views-row .views-field-field-image img')[0].getBoundingClientRect().width;
-   $('.button-wrapper').css({"top": mywidth /2 +54});
-   $('.owl-buttons').css({"top": mywidth /2});
+   $('.button-wrapper').css({"top":"45%" });
+  // $('.owl-buttons').css({"top": mywidth /2});
   e.preventDefault();
     if ($(this).siblings('.slide-container').hasClass('open')){
     $(this).siblings('.slide-container').removeClass('open');
@@ -65,8 +65,8 @@ $('.button').on('click', function(e){
 });
 $(function(){
   var windowHH = $(window).height() ;
-      $('.owl-wrapper-outer').css({"height":windowHH});
-      $('.views-field-body').css({"top": windowHH })
+      $('.owl-wrapper-outer').css({"height":windowHH /2 -20});
+      $('.views-field-body').css({"top": windowHH /1.7});
       
 });
 

@@ -678,8 +678,8 @@ width:96%;
 .view-thumbnail-gallery .view-content .views-row .open .views-field-field-slider-image{
 	height: auto;
 	overflow: visible;
-	background: rgba(137,224,224,1);
-	padding: 3.6rem 0;
+	/*background: rgba(137,224,224,1);
+	padding: 3.6rem 0;*/
 	
 }
 .open {
@@ -691,7 +691,7 @@ width:96%;
 .view-thumbnail-gallery .view-content .views-row .button-wrapper{
 	position: absolute;
 	top: 8.2rem;
-	right: 5%;
+	right: 0;
 	width: 6.6rem;
 	height: 6.6rem;
 	text-align: center;
@@ -710,7 +710,7 @@ width:96%;
 }
 
 .button:before {
-	content:"\\";
+	content:"X";
 	display: block;
 	font-size: 6.6rem;
 	line-height: 6.6rem;
@@ -769,16 +769,23 @@ width: 100%;
 
 }
 .owl-buttons{
-	position: absolute;
-	height: 21rem;
+	position: static;
+	height: 100%;
 	width: 100%;
 	z-index: 100;
-	top: 25%;
+	top: 0;
+	display: -webkit-flex;
+	-webkit-flex-direction: row /* works with row or column */
+   flex-direction: row;
+   -webkit-justify-content: center;
+   justify-content: space-between;
+   align-items: center;
 
 }
 .owl-prev, .owl-next{
-	height: 21rem;
-	width: 15%;
+	height: 50%;
+	max-height: 54rem;
+	width: 6%;
 	position: absolute;
 	border-radius: 0;
 	pointer-events:auto;  
@@ -1007,7 +1014,7 @@ position: relative;
 }*/
 .view-thumbnail-gallery .view-content .open .views-field-body{
 	width:100%;
-	height:7.2rem;
+	height:16rem;
 	overflow:hidden;
 	position: absolute;
 	bottom:0;
@@ -1023,12 +1030,12 @@ position: relative;
 
 .view-thumbnail-gallery .view-content .open .views-field-body .field-content{
 	width:100%;
-	height:75px;	
+	height:100%;	
 	font-size:1.6rem;
 	line-height: 1.5rem;
 	color: #000000;
 		background-color: rgba(137,224,224,1);
-	margin:auto;
+	margin:0;
 	padding:5.4rem 0;
 	display: block;
 	clear: both;
@@ -1264,9 +1271,7 @@ position: relative;
 	.view-thumbnail-gallery .view-content .open .views-field-body{
 		position: absolute;
 		width: 100%;
-		height: 8.5rem;
 		left: 0;
-		top:75rem;
 		z-index: 700;
 
 	}	
