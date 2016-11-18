@@ -1295,6 +1295,9 @@ position: relative;
 		margin:0;
 		
 		}
+	#navigation{
+		width: 100%
+	}
 	.no-sidebars #single_page_wrapper{
 		width: 100%;
 		margin: 0;
@@ -1314,7 +1317,7 @@ position: relative;
 		width: 100%;
 		font-size: 150%;		
 	}
-	#logo-wrap{
+	/*#logo-wrap{
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -1328,7 +1331,7 @@ position: relative;
 	  width:100%;
 		margin:0;
 
-	}
+	}*/
 	/*#header{
 		position: absolute;
 		background-color: transparent;	
@@ -1389,7 +1392,7 @@ position: relative;
 	line-height:0;
 	height: 5.4rem;
 		}*/
-	#main-menu ul li a:before{	
+	/*#main-menu ul li a:before{	
 		font-family: 'icons';
 		font-weight: normal;
 
@@ -1417,7 +1420,7 @@ position: relative;
 	.no-sidebars #main-menu ul li a:after{
 		/*content: " /";	*/	
 		display:none;
-		} 
+		} */
 	.no-sidebars #footer{
 	 pointer-events:none;
 	}	

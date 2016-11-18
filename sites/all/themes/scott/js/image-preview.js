@@ -67,7 +67,7 @@ $(function(){
   var windowHH = $(window).height() ;
       $('.owl-wrapper-outer').css({"height":windowHH /2 -20});
       $('.views-field-body').css({"top": windowHH /1.7});
-      
+      $('#header').css({"top": windowHH});
 });
 
 
