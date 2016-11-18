@@ -754,7 +754,7 @@ width: 100%;
 }
 .owl-controls{
  position: absolute;
-  height: 50%;
+  height: 100%;
  text-align: center;
     top: 0;
     width: 100%;
