@@ -3,7 +3,7 @@
 $(document).ready(function(){
 $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').on('click' , function(e){
    var mywidth =  $('.view-thumbnail-gallery .views-row .views-field-field-image img')[0].getBoundingClientRect().height;
-   //$('.button-wrapper').css({"top":mywidth /2.4});
+   $('.button-wrapper').css({"top":mywidth /1.6});
   // $('.owl-buttons').css({"top": mywidth /2});
   e.preventDefault();
     if ($(this).siblings('.slide-container').hasClass('open')){
@@ -70,7 +70,6 @@ $(function(){
       $('.views-field-body').css({"top": windowHH /1.6});
       $('#header').css({"top": windowHH});
 });
-
 
 
 

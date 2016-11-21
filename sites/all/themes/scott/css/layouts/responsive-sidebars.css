@@ -1177,10 +1177,12 @@ position: relative;
 	display: block;
 	 -webkit-transform:    skewX(45deg);
   transform:    skewX(45deg);
+  margin:1.8rem;
 	}	
 .node-about-custom .field-name-body{
 	width: 100%;
-		margin:0 auto;
+	margin:0 auto;
+	padding: 3.6rem;
 	}	
 .node-blog{
 	border-top:1px solid #666666;
@@ -1342,6 +1344,17 @@ position: relative;
 	  width:100%;
 		margin:0;
 
+	}
+	.node-about-custom .field-name-field-blog-image{
+		width: 100%;
+		height: auto;
+		max-width: none;
+	}
+	.view-thumbnail-gallery .view-content .item-list h3{
+		width: 10%;
+	}
+	.view-thumbnail-gallery .view-content .item-list ul{
+		width: 90%;
 	}
 	/*#header{
 		position: absolute;
