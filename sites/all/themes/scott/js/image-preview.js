@@ -42,7 +42,7 @@ $(window).on("navigate", function (event, data) {
   if (direction == 'back') {
      $('.shrink').removeClass('shrink').css({"margin-bottom":"0"});
      $('.open').removeClass('open');
-     $('.view-thumbnail-gallery .view-content .views-row').css({"border" : "none"});  
+     $('.view-thumbnail-gallery .view-content .views-row').css({"background" : "none"});  
   }
   //if (direction == 'forward') {
     // do something else
@@ -53,14 +53,14 @@ $(document).keyup(function(event) {
     if(event.which === 27) {
       $('.shrink').removeClass('shrink').css({"margin-bottom":"0"});
       $('.open').removeClass('open');
-      $('.view-thumbnail-gallery .view-content .views-row').css({"border" : "none"});  
+      $('.view-thumbnail-gallery .view-content .views-row').css({"background" : "none"});  
     }
 });
 $('.button').on('click', function(e){
   e.preventDefault();
        $('.shrink').removeClass('shrink').css({"margin-bottom":"0"});
      $('.open').removeClass('open');
-     $('.view-thumbnail-gallery .view-content .views-row').css({"border" : "none"});  
+     $('.view-thumbnail-gallery .view-content .views-row').css({"background" : "none"});  
 
 });
 $(function(){
