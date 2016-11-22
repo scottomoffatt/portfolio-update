@@ -408,6 +408,7 @@ background:-800px 0 ;
 }
 .no-sticky #logo-wrap{
  width: 7.4rem;
+ height: auto;
  margin: 0 auto;
 transition: all 0.4s ease;
 }
@@ -1331,17 +1332,17 @@ position: relative;
 		font-size: 150%;		
 	}
 	#logo-wrap{
-		position: absolute;
-		top: 0;
-		right: 0;
+		position: relative;
 		width: 5.4rem;
 		height: 5.4rem;
+		margin:0 auto;
 
 	}
 	#logo { /* Wrapping link for logo */
 		display:block;	 /* LTR */
 	  padding:0 0 0 0 ;
 	  width:100%;
+	  height: auto;
 		margin:0;
 
 	}
@@ -1356,82 +1357,27 @@ position: relative;
 	.view-thumbnail-gallery .view-content .item-list ul{
 		width: 90%;
 	}
-	/*#header{
-		position: absolute;
-		background-color: transparent;	
 
-	}*/
-
-
-
-	/*#navigation {
-	  margin:0 0 0 0;
-	  height:2%;
-	}
-	#navigation {
-		margin:0 0 0 0;
-		padding:0;
-	   height: auto;
-	   float: right;
-	   position: relative;
-	   z-index: 500;
-	     width:10%;
-	  background-color:transparent;
-		overflow: hidden;
-		display: block;
-	  }*/
-	#main-menu ul li { /* A simple method to get navigation links to appear in one line. */
-	/*text-align:right;
-	letter-spacing: 5em;
-	font-size: 170%;
-	height:1.5%;
-	  width: 100%;	
-	  margin: 0;
-	  padding: 0;
-	  text-align: left;*/ /* LTR */
-
-	}
-	/* #main-menu ul li a{
-	text-align:right;
-	text-indent: 10%;
-	height:2em;
-	line-height: 2em;
-		}*/
-	.no-sidebars #main-menu ul li { /* A simple method to get navigation links to appear in one line. */
-	/*text-align:right;
-	letter-spacing: 5em;
-	font-size: 170%;
-	height:1.5%;
-	  width: 100%;	
-	  margin: 0;
-	  padding: 0;
-	  text-align: left;*//* LTR */
-
-	}
-	/*.no-sidebars #main-menu ul li a{
-	text-align:center;
-	display: block;
-	text-indent:0;
-	font-size: 0;
-	line-height:0;
-	height: 5.4rem;
-		}*/
 	#main-menu ul li a:before{	
-		font-family: 'icons';
+		font-family: 'typicons';
 		font-weight: normal;
 
 	}
 	#main-menu ul li:nth-child(1) a:before{
 	
-	content: '\e079';
+	content: '\e08a';
 	}
 	#main-menu ul li:nth-child(2) a:before{
 
-	content:'\e07c' ;
+	content:'\e08d' ;
 	}
 	#main-menu ul li:nth-child(3) a:before{
 	
-	content: '\e05c';
+	content: '\e128';
+	}
+	#main-menu ul li:nth-child(4) a:before{
+	
+	content: '\e0a5';
 	}
 	#main-menu ul li a:before{
 		display:block;
@@ -1566,8 +1512,8 @@ position: relative;
 	.no-sidebars #main-menu ul li a{
 	text-align:right;
 	text-indent:30%;
-	font-size: 120%;
-	line-height: 2em;
+	font-size: 3.6rem;
+	line-height:3.6em;
 		}
 	#main-menu ul li a:before{	
 		font-family: 'icons';
@@ -1580,7 +1526,7 @@ position: relative;
 	}
 	#main-menu ul li:nth-child(2) a:before{
 
-	content:'\e07c' ;
+	content:'\e07c';
 	}
 	#main-menu ul li:nth-child(3) a:before{
 	
