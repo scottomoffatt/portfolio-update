@@ -8,9 +8,9 @@ $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').o
   e.preventDefault();
     if ($(this).siblings('.slide-container').hasClass('open')){
     $(this).siblings('.slide-container').removeClass('open');
-   $(this).parent('.views-row').css({"border" : "none"}).siblings().css({"border" : "none"});
+   $(this).parent('.views-row').css({"background" : "none"}).siblings().css({"background" : "none"});
   }  else {
-  $(this).parent('.views-row').css({"border" : "solid 2px rgba(137,224,224,1)", "height" : mywidth}).siblings().css({"border" : "none"});
+  $(this).parent('.views-row').css({"background" : "rgba(137,224,224,1)"}).siblings().css({"background" : "none"});
     $(this).siblings('.slide-container').toggleClass('open').parent().siblings().children().removeClass('open');
     $('html,body').animate({scrollTop:$(this).parent().parent().offset().top -54},2);  
   } 
