@@ -1299,23 +1299,34 @@ position: relative;
 
 }	
 @media all and (max-width:680px) and (orientation: portrait) {
-	.no-sidebars #page{
-		}
-
-
 
 	.no-sidebars #main{
 		width:100%;	
 		margin:0;
 		
 		}
-	#navigation{
-		width: 100%
+		.sticky #inner-wrapper{
+			font-size: 0;
+		}
+	.no-sticky #navigation{
+		width: 100%;
+		display:inline-block;
+		vertical-align: middle;
+	}
+	.sticky #navigation{
+		width: 90%;
+
+		display:inline-block;
+		vertical-align: middle;
 	}
 	.no-sidebars #single_page_wrapper{
 		width: 100%;
 		margin: 0;
 	}	
+	#main-menu{
+		max-height: 5.4rem;
+		
+	}
 	 .single_page_wrapper .single_page{
 		display: block;
 		clear: both;
@@ -1331,14 +1342,31 @@ position: relative;
 		width: 100%;
 		font-size: 150%;		
 	}
-	#logo-wrap{
+	.no-sticky #logo-wrap{
 		position: relative;
 		width: 5.4rem;
 		height: 5.4rem;
-		margin:0 auto;
+		display: inline-block;
+		vertical-align: top;
 
 	}
-	#logo { /* Wrapping link for logo */
+	.no-sticky #logo { /* Wrapping link for logo */
+	  display:block;	 /* LTR */
+	  padding:0 0 0 0 ;
+	  width:100%;
+	  height: auto;
+	  margin:0;
+
+	}
+	.sticky #logo-wrap{
+		position: relative;
+		width: 10%;
+		height: auto;
+		display: inline-block;
+		vertical-align: middle;
+		margin:0;
+	}
+	.sticky #logo { /* Wrapping link for logo */
 		display:block;	 /* LTR */
 	  padding:0 0 0 0 ;
 	  width:100%;
@@ -1346,16 +1374,31 @@ position: relative;
 		margin:0;
 
 	}
+	.sticky #main-menu .links{
+		width: 100%;
+	}
+	
 	.node-about-custom .field-name-field-blog-image{
 		width: 100%;
 		height: auto;
 		max-width: none;
 	}
 	.view-thumbnail-gallery .view-content .item-list h3{
-		width: 10%;
+		width: 15%;
+		height: 3.6rem;
 	}
-	.view-thumbnail-gallery .view-content .item-list ul{
-		width: 90%;
+	.view-thumbnail-gallery .view-content .item-list h3 li{
+	transform: rotate(0deg); */
+    -ms-transform: rotate(0deg);
+    /* -webkit-transform: rotate(-90deg); */
+    -moz-transform: rotate(0deg);
+    height: 3.6rem;
+    line-height: 3.6rem;
+    position: relative;
+}
+	.view-thumbnail-gallery .view-content .item-list h3 ul{
+		width: 100%;
+		height: auto;
 	}
 
 	#main-menu ul li a:before{	
@@ -1385,7 +1428,7 @@ position: relative;
 		font-size: 3.6rem;
 		line-height: 5.4rem;
 		width: 100%;
-		color: rgb(70,93,136);
+		color: rgb(44,62,121);
 	}
 	.no-sidebars #main-menu ul li a:after{
 		/*content: " /";	*/	
@@ -1482,33 +1525,6 @@ position: relative;
 		
 	}
 
-	/*.no-sidebars #navigation {
-	  margin:0 0 0 0;
-	  height:2%;
-	}
-	.no-sidebars #navigation {
-		margin:0 0 0 0;
-		padding:0;
-	   height: auto;
-	   float: right;
-	   position: relative;
-	   z-index: 500;
-	     width:9%;
-	  background-color: transparent;
-		overflow: hidden;
-		display: block;
-	  }*/
-	.no-sidebars #main-menu ul li { /* A simple method to get navigation links to appear in one line. */
-	/*text-align:right;
-	letter-spacing: 5em;
-	font-size: 170%;
-	height:1.5%;
-	  width: 100%;	
-	  margin: 0;
-	  padding: 0;
-	  text-align: left;*/ /* LTR */
-
-	}
 	.no-sidebars #main-menu ul li a{
 	text-align:right;
 	text-indent:30%;
@@ -1520,22 +1536,28 @@ position: relative;
 		font-weight: normal;
 
 	}
+	#main-menu ul li a:before{	
+		font-family: 'typicons';
+		font-weight: normal;
+
+	}
 	#main-menu ul li:nth-child(1) a:before{
 	
-	content: '\e079';
+	content: '\e08a';
 	}
 	#main-menu ul li:nth-child(2) a:before{
 
-	content:'\e07c';
+	content:'\e08d' ;
 	}
 	#main-menu ul li:nth-child(3) a:before{
 	
-	content: '\e05c';
+	content: '\e128';
 	}
-	/*#main-menu ul li:nth-child(4) a:before{
-	font-family: "typicons";
-	content: "\e09a";
-	}*/
+	#main-menu ul li:nth-child(4) a:before{
+	
+	content: '\e0a5';
+	}
+	
 	.no-sidebars #main-menu ul li a:after{
 		/*content: " /";	*/	
 		display:none;
