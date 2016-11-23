@@ -120,7 +120,7 @@
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-        <h2 class="title" id="page-title"><?php print $title; ?></h2>
+        <h3 class="title" id="page-title"><?php print $title; ?></h3>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
 <!--       <?php print $messages; ?> -->

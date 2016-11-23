@@ -4,7 +4,7 @@ $(document).ready(function(){
 $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').on('click' , function(e){
    var mywidth =  $('.view-thumbnail-gallery .views-row .views-field-field-image img')[0].getBoundingClientRect().width;
    var widthstart = $('.view-thumbnail-gallery .views-row .views-field-field-image img').width();
-   $('.button-wrapper').css({"top":mywidth /1.6});
+   $('.button-wrapper').css({"top":mywidth /1.8});
   // $('.owl-buttons').css({"top": mywidth /2});
   e.preventDefault();
     if ($(this).siblings('.slide-container').hasClass('open')){
@@ -17,7 +17,6 @@ $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').o
   } 
   if ($(this).siblings('.slide-container').hasClass('open')){
   $(this).parents('ul').addClass('shrink').css({"margin-bottom":windowH /2 +54});
-  //$(this).parent('.views-row').siblings().css({'height': eqheight });
   } else {
   $(this).parents('ul').removeClass('shrink').css({"margin-bottom":"0"});
 }
@@ -31,13 +30,6 @@ var headerheight = $('#header').height();
   });
 
 
-
-//var eqheight = $('.view-thumbnail-gallery .views-row .views-field-field-image img').width();
- // $(window).resize(function(){
-   // $('.view-thumbnail-gallery .view-content .item-list  .views-row').css({'height': eqheight });
-  
-  //});
-
 $(window).on("navigate", function (event, data) {
   var direction = data.state.direction;
   if (direction == 'back') {
@@ -45,11 +37,7 @@ $(window).on("navigate", function (event, data) {
      $('.open').removeClass('open');
      $('.view-thumbnail-gallery .view-content .views-row ').css({"background" : "none"});  
   }
-  //if (direction == 'forward') {
-    // do something else
-  //}
 });
-
 $(document).keyup(function(event) {
     if(event.which === 27) {
       $('.shrink').removeClass('shrink').css({"margin-bottom":"0"});
@@ -68,7 +56,7 @@ $(function(){
   var windowHH = $(window).height() ;
       $('.owl-wrapper-outer').css({"height":windowHH /2 -20});
       $('.owl-wrapper').css({"height":windowHH /2 -20});
-      $('.views-field-body').css({"top": windowHH /1.6});
+      $('.views-field-body, .views-field-title').css({"top": windowHH /1.6});
       $('#header').css({"top": windowHH});
 });
 function matchHeights() {
