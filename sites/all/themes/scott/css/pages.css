@@ -22,12 +22,9 @@ body {
   font-family:'Quicksand', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /*background-color:rgba(255,255,255,1);*/
-  /*color:#1C1C1C;*/
   font-size: 1.8rem;
   line-height: 1.8rem;
   font-weight: 500;
- 
 }
 *, *:before, *:after {
   box-sizing: border-box;
