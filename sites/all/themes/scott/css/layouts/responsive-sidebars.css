@@ -1035,6 +1035,7 @@ position: relative;
 	position: absolute;
 	left: 0;
 	padding:0 10%;
+	z-index: 700;
 }
 .view-thumbnail-gallery .view-content .open .views-field-title h3{
 	width: 100%;
