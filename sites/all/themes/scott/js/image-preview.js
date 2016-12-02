@@ -56,11 +56,12 @@ $('.button').on('click', function(e){
 });
 $(function(){
   var windowHH = $(window).height() ;
-      $('.owl-wrapper-outer').css({"height":windowHH /1.6});
+      $('.owl-wrapper-outer').css({"height":windowHH });
       $('.owl-wrapper').css({"height":windowHH /1.6});
-      $('.views-field-body, .views-field-title').css({"top": windowHH /1.3 +18});
+      $('.views-field-title').css({"top": windowHH /1.2 +18});
+      $('.views-field-body').css({"top": windowHH /1.2 +36+18});
       $('#header').css({"top": windowHH /1.6});
-      $('.owl-buttons').css({"top": windowHH /2});
+      $('.owl-controls').css({"top": windowHH /5});
 });
 
 
