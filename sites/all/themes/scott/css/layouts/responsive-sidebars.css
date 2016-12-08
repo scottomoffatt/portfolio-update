@@ -607,12 +607,14 @@ width:96%;
 	vertical-align: top;
 	width:23%;
 	height: auto;
-	margin: 0 1% ;
+	margin: 1% ;
 	overflow: hidden;
 	/*margin-bottom: 3.6rem;*/
 	/*border-right: #ffffff 2px solid;*/
 	padding: 0;
-	background:transparent;
+    background: url(../../images/sq-bg.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
 	}
 .view-thumbnail-gallery .view-content h3 .item-list ul{ 
 	flex: none;
@@ -651,7 +653,8 @@ width:96%;
 	height: 50rem;
 	overflow: visible;
 	width: 100%;
-	border-top: 5px solid rgba(255,219,31,1);
+	/*border-top: 5px solid rgba(255,219,31,1);*/
+
 
 	
 
@@ -960,7 +963,7 @@ width: 100%;
 	vertical-align: top;
 	text-align: center;
 	background: transparent;
-	padding: 0;
+	padding: 0 .6rem .6rem 0;
 	max-width: 280px;
 	}	
 .view-thumbnail-gallery .views-row img{
@@ -1031,7 +1034,7 @@ position: relative;
 }*/
 .view-thumbnail-gallery .view-content .open .views-field-title{
 	width: 100%;
-	height: auto;
+	height: 100%;
 	position: absolute;
 	left: 0;
 	padding:0 10%;
@@ -1039,12 +1042,13 @@ position: relative;
 }
 .view-thumbnail-gallery .view-content .open .views-field-title h3{
 	width: 100%;
-	min-height: 3.6rem;
+	height: 10.8rem;
 	font-weight: 700;
 	text-align: center;
 	line-height: 5.4rem;
 	background:  rgb(255,255,255);
 	color:rgba(50,84,155,1);
+	border: 1px solid;
 
 }
 
@@ -1057,11 +1061,11 @@ position: relative;
 	bottom:0;
 	left: 0;
 	top:0;
-	 display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
+	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+ 	-webkit-justify-content: center;
+ 	justify-content: center;
 	} 
 
 .view-thumbnail-gallery .view-content .open .views-field-body .field-content{
@@ -1069,7 +1073,6 @@ position: relative;
 	height:100%;	
 	font-size:1.8rem;
 	line-height: 1.8rem;
-		background:  rgb(255,255,255);
 	color:rgba(50,84,155,1);
 	margin:0;
 	padding:1.8rem;
@@ -1309,9 +1312,6 @@ position: relative;
 	.view-thumbnail-gallery .view-content .views-row{
 		width: 23%;
 		height: 21.6rem; 
-		
-		background-color:transparent;
-		/*border-right: #000000 1px solid; 	*/
 		padding: 0;
 		}
 	.view-thumbnail-gallery .view-content .open .views-field-body{
