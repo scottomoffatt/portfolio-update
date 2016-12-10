@@ -58,7 +58,7 @@ $(function(){
       $('.views-field-title').css({"top": windowHH /1.3 +18});
       $('.views-field-body').css({"top": windowHH /1.3 +36+18});
       $('#header').css({"top": windowHH /1.6});
-      $('.owl-controls').css({"top": windowHH /5});
+      $('.owl-buttons').css({"top": windowHH /4});
 });
 
 
