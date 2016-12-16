@@ -145,14 +145,16 @@ body{
   width: 100%;
   height: 100%;
   border: none;
- 
   color: rgba(255,255,255,1);
+   }
+   #navigation ul li a:visited{
+   	color: rgba(255,255,255,1);
    }
 #navigation ul li a:after{
 	/*content: " /";*/	
 	}  
 #navigation ul li a:active, #navigation ul li a:hover{
-   background-color:rgba(255,255,255,.2);
+   background-color:rgba(255,255,255,1);
 	color: #ffffff;
 	}	
 
@@ -188,16 +190,22 @@ body{
 	text-align: center;
 }
 .page-user #main{
-	text-align: right;
+	text-align: left;
 }
 .title {
+	display: block;
+
+}
+.node-type-article .title{
+	padding: 1.8rem 0;
+}
+.page-single-page #page-title{
 	display: none;
 }
-
-.single_page .title { 
- display: block ;
- }
- #spw-front .single_page .title {
+ .page-single-page #single_page_wrapper #page-title {
+	display: block;
+}
+ .page-single-page #spw-front #page-title {
 	display: none;
 }
  .sidebar-first #content { /* Span 2 columns, starting in 2nd column from left. */
@@ -329,8 +337,40 @@ body{
 	display: inline-block;
 	text-align: center;
 	width: 100%;
-
-	
+}
+.page-node #header{
+	min-height: 5.4rem;
+}
+.page-node #inner-wrapper{
+	width: 100%;
+	padding:0;
+	top: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	height: 5.4rem;
+	z-index:100;
+	background-color: rgba(137,224,224,1);
+}
+.page-node #logo-wrap{
+  background-color:transparent;
+  position: absolute;
+  width:6%;
+  height: 5.4rem;
+  margin-left: 5%;
+   display: block;
+  overflow: hidden;
+  transition: all 0.4s ease;
+	}
+.page-node #logo { /* Wrapping link for logo */
+	display:block;	 /* LTR */
+   margin:0 ;
+ 	padding:0 ;
+	height: 100%;
+	width: auto;
+	margin:0;
+	z-index: 200;
+	   pointer-events:all;
 }
  .page-single-page #single_page_wrapper .single_page_wrapper{
 	/*padding-top:5.4rem;*/
@@ -352,7 +392,7 @@ body{
     width:100%;
   }
 
- .page-single-page .no-sticky #inner-wrapper{
+.page-single-page .no-sticky #inner-wrapper{
 	position: absolute;
 	top: 40%;
 	left:0;
@@ -371,48 +411,15 @@ body{
 	right: 0;
 	position: fixed;
 	height: 5.4rem;
+	z-index: 100;
 		background-color: rgba(137,224,224,1);
 }
 
- .page-single-page .sticky #inner-wrapper{
-	width: 100%;
-	padding:0;
-	top: 0;
-	left: 0;
-	right: 0;
-	position: fixed;
-	height: 5.4rem;
-	z-index:100;
-	background-color: rgba(137,224,224,1);
-}
+
 #spw-front{
 	padding: 0 !important;
 }
-.page-single-page .no-sticky #spw-front{  
- 	background: url(../../images/bg.svg) no-repeat;
- 	background-size:cover;
- 	background-position: center;
-  }  
- .page-single-page .sticky #spw-front{
-padding-bottom: 0;
-background:-800px 0 ;
-
- }
-.no-sticky #logo-wrap{
- width: 5.4rem;
- margin: 0 auto;
-}
-.no-sticky, .sticky{
-	transition: all 0.4s ease;
-
-}
-.no-sticky #logo-wrap{
- width: 7.4rem;
- height: auto;
- margin: 0 auto;
-transition: all 0.4s ease;
-}
-.sticky #logo-wrap{
+.not-front #logo-wrap{
   background-color:transparent;
   position: absolute;
   width:6%;
@@ -423,7 +430,56 @@ transition: all 0.4s ease;
   overflow: hidden;
   transition: all 0.4s ease;
 	}
-.sticky #logo { /* Wrapping link for logo */
+.not-front #logo { /* Wrapping link for logo */
+	display:block;	 /* LTR */
+   margin:0 ;
+ 	padding:0 ;
+	height: 100%;
+	width: auto;
+	margin:0;
+	z-index: 200;
+	 pointer-events:all;
+}
+.page-single-page .no-sticky #spw-front{  
+ 	background: url(../../images/bg.svg) no-repeat;
+ 	background-size:cover;
+ 	background-position: center;
+  }  
+
+
+
+.page-single-page .sticky #spw-front{
+padding-bottom: 0;
+background:-800px 0 ;
+
+ }
+.page-single-page .no-sticky #logo-wrap{
+ width: 5.4rem;
+ margin: 0 auto;
+}
+.page-single-page .no-sticky, .sticky{
+	transition: all 0.4s ease;
+
+}
+.page-single-page .no-sticky #logo-wrap{
+	position: static;
+ width: 7.4rem;
+ height: auto;
+ margin: 0 auto;
+transition: all 0.4s ease;
+}
+.page-single-page .sticky #logo-wrap{
+  background-color:transparent;
+  position: absolute;
+  width:6%;
+  height: 5.4rem;
+  margin-left: 5%;
+   display: block;
+ /*  float: left;*/
+  overflow: hidden;
+  transition: all 0.4s ease;
+	}
+.page-single-page .sticky #logo { /* Wrapping link for logo */
 	display:block;	 /* LTR */
    margin:0 ;
  	padding:0 ;
@@ -442,7 +498,7 @@ transition: all 0.4s ease;
 	margin:0 auto;
 	}
 
-.page-single-pagelabel{
+.page-single-page label{
 	margin:0;
 	text-align: left;
 		
@@ -476,7 +532,10 @@ transition: all 0.4s ease;
   	height: 2.5em;
   	line-height:2.5em;
   	font-size: 1.6rem;
-  	}	
+  	}
+  .not-front form input{ 
+  	width: 100%;
+  }		
 .page-single-page form{
 	width: 90%;
 	margin: 0 auto;
@@ -512,7 +571,7 @@ form textarea{
 	padding:.6rem; 
 	border: 1px solid rgba(50,84,155,1);
 	}
-.page-single-page form .form-submit{	
+ form .form-submit{	
   margin:0;	
   display: inline-block;
   -webkit-box-sizing: content-box;
@@ -1183,6 +1242,12 @@ font-size: 0;
 	font-size: 90%;
 }
 .not-front #content{
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+.page-single-page #content{
 	width: 100%;
 	margin: 0 auto;
 	padding: 0;
@@ -1203,7 +1268,7 @@ font-size: 0;
 	   text-align: left;
 	  }
 	  .page-user #main {
-	   text-align: right;
+	   text-align: left;
 	  }
 
 	.page-single-page #single_page_wrapper{
