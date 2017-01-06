@@ -535,7 +535,11 @@ transition: all 0.4s ease;
   	}
   .not-front form input{ 
   	width: 100%;
-  }		
+  }	
+  #google_recaptcha_webform_client_form_16{
+  	width: 50%;
+  	display: inline-block;
+  }	
 .page-single-page form{
 	width: 90%;
 	margin: 0 auto;
@@ -1258,7 +1262,18 @@ font-size: 0;
 		padding-top:5.4rem;
 
 	}
+.maintenance-page #logo{
+	display: inline-block;
+	width: 9%;
 
+}
+.maintenance-page #main{
+	text-align: center;
+}
+.maintenance-page #content{
+	margin:0 auto;
+	display: inline-block;
+}
 @media all and (max-width: 1024px) {
 
 	  /*
