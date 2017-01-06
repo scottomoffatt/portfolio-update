@@ -138,11 +138,11 @@ body {
 
 a:link {
 	text-decoration: none;
-	color:#666666;
+	color:rgba(137,224,224,1);
 }
 
 a:visited {
-	color:#666666;
+	color:rgba(137,224,224,1);
 }
 
 a:hover,
@@ -153,7 +153,7 @@ a:focus {
 }
 
 a:active {
-	color:#666666;
+	color:rgba(137,224,224,1);
 }
 
 /*
@@ -161,7 +161,7 @@ a:active {
  */
 
 a:focus {
-  outline: thin dotted;
+  outline: none;
 }
 
 /*
@@ -173,7 +173,7 @@ a:hover,
 a:active {
 
 	
-  outline: 0;
+  outline: none;
   /*	text-shadow:1px 1px #cccccc;*/
 }
 
