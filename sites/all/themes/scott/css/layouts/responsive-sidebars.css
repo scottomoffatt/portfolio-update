@@ -1215,6 +1215,7 @@ font-size: 0;
 	max-width: 200px;
 	overflow: hidden;
 	margin:0;
+	vertical-align: top;
 	 -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -1237,6 +1238,7 @@ font-size: 0;
 	width: 50%;
 	margin:0 auto;
 	padding: 3.6rem;
+	vertical-align: top;
 	}	
 .node-blog{
 	border-top:1px solid #666666;
