@@ -1078,7 +1078,7 @@ font-size: 0;
 	height: 10.8rem;
 	font-weight: 700;
 	text-align: center;
-	line-height: 2.4rem;
+	line-height:3.6rem;
 	background:  rgb(255,255,255);
 	color:rgba(50,84,155,1);
 	border: 1px solid;
@@ -1099,6 +1099,7 @@ font-size: 0;
   	display: flex;
  	-webkit-justify-content: center;
  	justify-content: center;
+ 	z-index: 5000;
 	} 
 
 .view-thumbnail-gallery .view-content .open .views-field-body .field-content{
@@ -1239,6 +1240,7 @@ font-size: 0;
 	margin:0 auto;
 	padding: 1.8rem 3.6rem 3.6rem 3.6rem;
 	vertical-align: top;
+
 	}	
 .node-blog{
 	border-top:1px solid #666666;
