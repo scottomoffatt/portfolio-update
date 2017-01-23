@@ -1688,7 +1688,8 @@ font-size: 0;
 		
 	}	
 	.node-about-custom .field-name-body{
-		width: 80%;
+		width: 100%;
+		padding: 1.8rem;
 	}	
 	.view-thumbnail-gallery .view-content .open .views-field-title{
 		padding:0 5%;
