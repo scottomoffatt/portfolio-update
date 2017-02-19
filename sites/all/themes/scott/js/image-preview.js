@@ -10,7 +10,7 @@ $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').o
     $(this).siblings('.slide-container').removeClass('open');
    $(this).parent('.views-row').css({"height" : "auto"});
   }  else {
-  $(this).parent('.views-row').css({"height" : widthstart}).siblings().css({"height" : "auto"});
+  $(this).parent('.views-row').css({"height" : windowH}).siblings().css({"height" : "auto"});
     $(this).siblings('.slide-container').toggleClass('open').parent().siblings('.views-row').children('.slide-container').removeClass('open');
     $('html,body').animate({scrollTop:$(this).parent().parent().offset().top -54},2);  
   } 
@@ -52,15 +52,16 @@ $('.button').on('click', function(e){
 
 });
 $(function(){
-  var windowHH = $(window).height() ;
+  var windowHH = $(window).height();
   var headerheight = $('#header').height();
-  var baseHeight = $('.views-field views-field-title h3').height();
-  var topHeight = $('.view-thumbnail-gallery .view-content .item-list').height();
-  var bottomH = (windowHH - baseHeight - topHeight - headerheight);
+  var baseHeight = $('.views-field .views-field-title h3').height();
+  var topHeight = $('.view-thumbnail-gallery .view-content .views-row').height();
+  var bottomH = (windowHH - topHeight/2.5);
+
       $('.owl-wrapper-outer').css({"height":windowHH });
       $('.owl-wrapper').css({"height":windowHH /1.6});
       $('.views-field-title').css({"top": bottomH });
-      $('.views-field-body').css({"top": bottomH +18});
+      $('.views-field-body').css({"top": bottomH +18 });
       $('#header').css({"top": windowHH /1.6});
       $('.owl-prev , .owl-next').css({"top": windowHH /4});
 });
