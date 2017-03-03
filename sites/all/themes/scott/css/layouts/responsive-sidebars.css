@@ -1068,7 +1068,7 @@ font-size: 0;
 .view-thumbnail-gallery .view-content .open .views-fieldset{
 	position: absolute;
 	 right: 1%;
-    top: 20%;
+    margin:20% 0 0 0;
 	height: 5.4rem;
 	width: 5.4rem;
 	overflow: hidden;
@@ -1158,7 +1158,7 @@ font-size: 0;
 	overflow:hidden;
 	display: inline-block;
 	text-align: center;
-	
+
 
 	} 
 
