@@ -1103,7 +1103,7 @@ font-size: 0;
 	color:rgba(50,84,155,0);
 }
 .view-thumbnail-gallery .view-content .open .infobox{
-	width: 34rem;
+	width: 60%;
 	height: 7.2rem;
 	height: auto;
 	outline: 1px solid rgba(50,84,155,1);
