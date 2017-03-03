@@ -93,7 +93,7 @@ body{
 	left:0;
 	right: 0;
 	transition: all 0.4s ease;
-	z-index: 1000;
+	z-index: 990;
 	}
 
  #navigation {
@@ -1075,7 +1075,7 @@ font-size: 0;
 	color: rgba(50,84,155,1);
 	outline: 0px solid rgba(50,84,155,0);
 	cursor: pointer;
-	z-index: 50000;
+	z-index: 720;
 	transition: all 0.4s ease;
 	text-align: left;
 
@@ -1136,14 +1136,14 @@ font-size: 0;
 	width: 75%;
 	height: auto;
 	display: inline-block;
-	z-index: 700;
+	z-index: 730;
 }
 .view-thumbnail-gallery .view-content .open .views-field-title h3{
 	width: 100%;
 	height: auto;
 	font-weight: 700;
 	text-align: center;
-	line-height:3.6rem;
+	line-height:1.8rem;
 	background:  rgb(255,255,255);
 	color:rgba(50,84,155,1);
 	border: none;
@@ -1154,7 +1154,7 @@ font-size: 0;
 .view-thumbnail-gallery .view-content .open .views-field-body{
 	width:75%;
 	    height: 5.4rem;
-    padding: 0 0.6rem;
+    padding:0.6rem;
 	overflow:hidden;
 	display: inline-block;
 	text-align: center;
@@ -1415,10 +1415,8 @@ font-size: 0;
 		height: auto; 
 		padding: 0;
 		}
-	.view-thumbnail-gallery .view-content .open .views-field-body{
-		
+	
 
-	}	
 	.view-thumbnail-gallery .view-content .item-list .shrink{
 		width: 100%;
 	}
@@ -1754,7 +1752,7 @@ font-size: 0;
 
 	}
 	.view-thumbnail-gallery .view-content .open .views-field-body{
-		padding: 0 5%;
+height: 3.6rem;
 	}
 }	
 @media all and (max-width:680px) and (orientation: landscape) {
