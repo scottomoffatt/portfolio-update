@@ -60,12 +60,15 @@ $(function(){
 
       $('.owl-wrapper-outer').css({"height":windowHH });
       $('.owl-wrapper').css({"height":windowHH /1.6});
-      $('.views-field-title').css({"top": bottomH });
-      $('.views-field-body').css({"top": bottomH +18 });
+      //$('.views-field-title').css({"top": bottomH });
+      //$('.views-field-body').css({"top": bottomH +18 });
       $('#header').css({"top": windowHH /1.6});
       $('.owl-prev , .owl-next').css({"top": windowHH /4});
 });
 
+$( "div.views-fieldset" ).click(function() {
+  $(this).toggleClass("infobox");
+});
 
   
 });
