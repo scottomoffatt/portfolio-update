@@ -58,8 +58,8 @@ $(function(){
   var topHeight = $('.view-thumbnail-gallery .view-content .views-row').height();
   var bottomH = (windowHH - topHeight/2.5);
 
-      $('.owl-wrapper-outer').css({"height":windowHH });
-      $('.owl-wrapper').css({"height":windowHH /1.6});
+      $('.owl-wrapper-outer').css({"height":"auto" });
+      $('.owl-wrapper').css({"height":"auto"});
       //$('.views-field-title').css({"top": bottomH });
       //$('.views-field-body').css({"top": bottomH +18 });
       $('#header').css({"top": windowHH /1.6});
