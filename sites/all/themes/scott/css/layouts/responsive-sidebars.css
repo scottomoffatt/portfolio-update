@@ -721,6 +721,7 @@ width:96%;
 	height: 50rem;
 	overflow: visible;
 	width: 100%;
+	will-change: transform;
 	/*border-top: 5px solid rgba(255,219,31,1);*/
 
 
@@ -1754,6 +1755,9 @@ font-size: 0;
 	}
 	.view-thumbnail-gallery .view-content .open .views-field-body{
 height: 3.6rem;
+	}
+	.view-thumbnail-gallery .view-content .item-list h3 li{
+		text-indent: 0;
 	}
 }	
 @media all and (max-width:680px) and (orientation: landscape) {
