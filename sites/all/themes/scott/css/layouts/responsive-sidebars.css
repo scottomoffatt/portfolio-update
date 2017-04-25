@@ -89,7 +89,7 @@ body{
 }
 #header{
 	margin:0 0 0 0;
-	top: 0,
+	top: 0;
 	left:0;
 	right: 0;
 	transition: all 0.4s ease;
@@ -671,6 +671,7 @@ width:96%;
 .view-thumbnail-gallery .view-content .views-row{
 	/*vertical-align: middle;
 	overflow: hidden;*/
+		will-change:auto;
 	display: inline-block;
 	vertical-align: top;
 	width:23%;
@@ -694,10 +695,11 @@ width:96%;
 	
 }
 .view-thumbnail-gallery .view-content .item-list .shrink{
+
 	width: 60%;
 	margin-bottom: 50rem;
 	 display: -webkit-flex;
-	-webkit-flex-direction: row /* works with row or column */
+	-webkit-flex-direction: row; /* works with row or column */
    flex-direction: row;
    /*-webkit-align-items: center;
    align-items: top;*/
@@ -711,6 +713,7 @@ width:96%;
 	max-height: 80rem;
 }
 .slide-container{
+	will-change:auto;
 	overflow: hidden;
 	position: static;
 	height: 0;
@@ -1076,7 +1079,7 @@ font-size: 0;
 	outline: 0px solid rgba(50,84,155,0);
 	cursor: pointer;
 	z-index: 720;
-	transition: all 0.4s ease;
+	transition: all 0.1s ease;
 	text-align: left;
 
 
