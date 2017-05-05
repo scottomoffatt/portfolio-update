@@ -84,7 +84,7 @@ $( "div.views-fieldset" ).click(function() {
 
         path: 'sites/all/themes/scott/js/data.json'
     };
-    anim = bodymovin.loadAnimation(animData);
+    anim = bodymovin.loadAnimation(animData); 
   
 });
 })(jQuery);
