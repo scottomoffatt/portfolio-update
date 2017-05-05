@@ -156,5 +156,5 @@
   <?php print render($page['footer']); ?>
      <?php /*print $breadcrumb;*/ ?>
 </div><!-- /#page -->
-<div id="full-bg"><div id="page-bg"></div></div>
+<div id="full-bg"></div>
 <?php print render($page['bottom']); ?>
