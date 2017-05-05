@@ -64,12 +64,27 @@ $(function(){
       //$('.views-field-body').css({"top": bottomH +18 });
       $('#header').css({"top": windowHH /1.6});
       $('.owl-prev , .owl-next').css({"top": windowHH /4});
+      $('#full-bg').css({"height":windowHH });
 });
 
 $( "div.views-fieldset" ).click(function() {
   $(this).toggleClass("infobox");
 });
+    var anim;
+    var elem = document.getElementById('page-bg')
+    var animData = {
+        container: elem,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        rendererSettings: {
+            preserveAspectRatio:false,
+            progressiveLoad:false
+        },
 
+        path: 'sites/all/themes/scott/js/data.json'
+    };
+    anim = bodymovin.loadAnimation(animData); 
   
 });
 })(jQuery);
