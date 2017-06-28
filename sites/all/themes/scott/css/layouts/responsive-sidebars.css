@@ -26,23 +26,7 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
-#full-bg{
-/*	background: url(../../images/bg.svgz) no-repeat;
-		position: fixed;
-		top: 0; 
-		bottom: 0;
-		right: 0;
-		
-	z-index: 0;*/
 
-  z-index: -1;
-  width: 100%;
-  height:100%;
-  border: none;
-  
-
-  
-}
 /*
  * Apply the shared properties of grid items in a single, efficient ruleset.
  */
@@ -394,11 +378,12 @@ body{
 
 .page-single-page .no-sticky #inner-wrapper{
 	position: absolute;
-	top: 40%;
+	top: 50%;
 	left:0;
 	right:0;
-	height: 25%;
+	height: 20%;
 	width: 100%;
+	transform: translate(0%, -50%);
 	transition: all 0.4s ease;
 	z-index: 100;
 
@@ -440,11 +425,11 @@ body{
 	z-index: 200;
 	 pointer-events:all;
 }
-.page-single-page .no-sticky #spw-front{  
+/*.page-single-page .no-sticky #spw-front{  
  	background: url(../../images/bg.svg) no-repeat;
  	background-size:cover;
  	background-position: top;
-  }  
+  }  */
 
 
 
@@ -1344,7 +1329,50 @@ font-size: 0;
 	margin:0 auto;
 	display: inline-block;
 }
+#full-bg.no-sticky{
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
 
+	transition: all 0.4s ease;
+}
+#full-bg.sticky{
+		position:fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	z-index: -1;
+}
+.page-single-page .no-sticky #page-bg{
+		position: fixed;
+		top: 0; 
+		right: 0;
+		transition: all 0.4s ease;
+		overflow: hidden;
+  z-index: -1;
+  width: 100%;
+  height:100%;
+  border: none;
+
+}
+.page-single-page .sticky #page-bg{
+	position: fixed;
+	height: 0;
+		transition: all 0.4s ease;
+		width: 100%;
+
+}
+#page-bg svg{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
 @media all and (max-width: 1024px) {
 
 	  /*
