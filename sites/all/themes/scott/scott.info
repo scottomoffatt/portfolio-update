@@ -100,6 +100,7 @@ stylesheets[all][] = system.menus.css
 
 ;scripts[] = js/script.js
 scripts[] = js/image-preview.js
+scripts[] = js/bodymovin.js
 
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
