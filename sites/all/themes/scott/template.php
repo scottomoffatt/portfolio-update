@@ -232,3 +232,10 @@ function phptemplate_preprocess_node(&$vars) {
 function THEME_collapse_content($c_content, $collapse_heading) {
 print theme('ctools_collapsible', array('handle' => $collapse_heading, 'content' => $c_content, 'collapsed' => TRUE));
 }
+
+function scott_preprocess_page(&$variables) {
+    if (isset($variables['node']->type)) {
+        $nodetype = $variables['node']->type;
+        $variables['theme_hook_suggestions'][] = 'page__' . $nodetype;
+    }
+}
