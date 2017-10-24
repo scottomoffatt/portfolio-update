@@ -109,8 +109,8 @@ $(function(){
     count = 1;
   }   
 
-      $(source_w).attr('src', "http://www.scottomoffatt.com/sites/default/files/videos/headturn-02_"+count+".webm");
-       $(source_m).attr('src', "http://www.scottomoffatt.com/sites/default/files/videos/headturn-02_"+count+".mp4");
+      $(source_w).attr('src', "./sites/default/files/videos/headturn-02_"+count+".webm");
+       $(source_m).attr('src', "./sites/default/files/videos/headturn-02_"+count+".mp4");
 
       player.load();
       player.pause();
