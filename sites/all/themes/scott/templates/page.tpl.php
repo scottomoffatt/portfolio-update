@@ -80,17 +80,14 @@
     <?php endif; ?>
 	</div>
    
-	
-  
+   
+
 	   <nav id="navigation">
 
       <?php if ($main_menu): ?>
         <nav id="main-menu" role="navigation">
           <?php
-          // This code snippet is hard to modify. We recommend turning off the
-          // "Main menu" on your sub-theme's settings form, deleting this PHP
-          // code block, and, instead, using the "Menu block" module.
-          // @see http://drupal.org/project/menu_block
+        
           print theme('links__system_main_menu', array(
             'links' => $main_menu,
             'attributes' => array(
@@ -111,7 +108,19 @@
     <?php print render($page['header']); ?>
     </div><!--innner-wrapper-->
   </header>
+  <?php if ($site_name || $site_slogan): ?>
 
+        <?php if ($site_name): ?>
+          <h1 class="header__site-name" id="site-name">
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><?php print $site_name; ?></a>
+          </h1>
+        <?php endif; ?>
+
+        <?php if ($site_slogan): ?>
+          <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
+        <?php endif; ?>
+  
+    <?php endif; ?>
   <div id="main">
 
     <div id="content" class="column" role="main">
@@ -119,11 +128,8 @@
  
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="title" id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
+      
       <?php print render($title_suffix); ?>
-<!--       <?php print $messages; ?> -->
       <?php if($is_admin): ?>
         <?php print $messages; ?>
       <?php endif; ?>
@@ -156,5 +162,5 @@
   <?php print render($page['footer']); ?>
      <?php /*print $breadcrumb;*/ ?>
 </div><!-- /#page -->
-<div id="full-bg"><div id="page-bg"></div></div>
+<div id="full-bg"></div>
 <?php print render($page['bottom']); ?>

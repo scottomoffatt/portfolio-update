@@ -1,0 +1,173 @@
+/**
+ * Featherlight – ultra slim jQuery lightbox
+ * Version 1.7.1 - http://noelboss.github.io/featherlight/
+ *
+ * Copyright 2017, Noël Raoul Bossart (http://www.noelboss.com)
+ * MIT Licensed.
+**/
+@media all {
+	.featherlight {
+		display: none;
+
+		/* dimensions: spanning the background from edge to edge */
+		position:fixed;
+		top: 1.8rem; right: 0; bottom: 0; left: 0;
+		z-index: 2147483647; /* z-index needs to be >= elements on the site. */
+
+		/* position: centering content */
+		text-align: center;
+
+		/* insures that the ::before pseudo element doesn't force wrap with fixed width content; */
+		white-space: nowrap;
+
+		/* styling */
+		cursor: pointer;
+		background: #333;
+		/* IE8 "hack" for nested featherlights */
+		background: rgba(0, 0, 0, 0);
+		    overflow: scroll;
+	}
+
+	/* support for nested featherlights. Does not work in IE8 (use JS to fix) */
+	.featherlight:last-of-type {
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	.featherlight:before {
+		/* position: trick to center content vertically */
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	.featherlight .featherlight-content {
+		/* make content container for positioned elements (close button) */
+		position: relative;
+
+		/* position: centering vertical and horizontal */
+		text-align: center;
+		vertical-align: middle;
+		display: inline-block;
+		width: 75%;
+    	max-width: 800px;
+		/* dimensions: cut off images */
+		overflow: visible;
+		padding: 1rem 1rem 0;
+		border-bottom: 1rem solid transparent;
+
+		/* dimensions: handling large content */
+		margin-left: 5%;
+		margin-right: 5%;
+
+
+		/* styling */
+		background: #fff;
+		cursor: auto;
+
+		/* reset white-space wrapping */
+		white-space: normal;
+
+ 
+	}
+
+	/* contains the content */
+	.featherlight .featherlight-inner {
+		/* make sure its visible */
+		display: block;
+
+	}
+
+	.featherlight .featherlight-close-icon {
+		/* position: centering vertical and horizontal */
+		position: fixed;
+		z-index: 9999;
+	
+		right: 0;
+		line-height: 3.6rem;
+		    width: 6.3rem;
+    height: 6.3rem;
+		font-weight: 700;
+    	text-transform: capitalize;
+		/* styling */
+		font-size: 5.4rem;
+		cursor: pointer;
+		text-align: center;
+		font-family: 'Poppins', sans-serif;
+
+		background: transparent;
+	
+		border: none;
+		padding: 0;
+
+	}
+/*		.featherlight .featherlight-close-icon {
+					-webkit-transition: all 1s ease-in-out;
+		  -moz-transition: all .2s ease-in-out;
+		  -o-transition: all .2s ease-in-out;
+		  transition: all .2s ease-in-out;
+
+		}
+.featherlight .featherlight-close-icon:hover {
+ -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+	.featherlight .featherlight-close-icon:before{
+		content: "X";
+		width: 100%;
+		height: 100%;
+		font-size: 5.4rem;
+		color: rgba(165,36,61,1);
+		  
+	}
+	.featherlight .featherlight-close-icon:hover:before{
+		font-size: 7.2rem;
+	
+	
+	}/*
+	/* See http://stackoverflow.com/questions/16077341/how-to-reset-all-default-styles-of-the-html5-button-element */
+	/*.featherlight .featherlight-close-icon::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+
+	.featherlight .featherlight-image {
+		styling 
+		width: 100%;
+	}*/
+
+
+	.featherlight-iframe .featherlight-content {
+		/* removed the border for image croping since iframe is edge to edge */
+		border-bottom: 0;
+		padding: 0;
+		-webkit-overflow-scrolling: touch;
+		overflow-y: scroll;
+	}
+
+	.featherlight iframe {
+		/* styling */
+		border: none;
+	}
+
+	.featherlight * { /* See https://github.com/noelboss/featherlight/issues/42 */
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+
+/* handling phones and small screens */
+@media only screen and (max-width: 1024px) {
+	.featherlight .featherlight-content {
+		/* dimensions: maximize lightbox with for small screens */
+		margin-left: 0;
+		margin-right: 0;
+		max-height: 98%;
+		padding: 10px 10px 0;
+		border-bottom: 10px solid transparent;
+	}
+}

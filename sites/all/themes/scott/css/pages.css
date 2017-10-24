@@ -12,20 +12,21 @@
  * Body
  */
 
-@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
+/*@import url(http://fonts.googleapis.com/css?family=Poppins:300,400,700);
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');
 
 html{
 	font-size: 62.5%;
 	  /*background-color:#ffffff;*/
 	}
 body {
-  font-family:'Quicksand', Helvetica, Arial, sans-serif;
+  font-family:'Poppins', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   font-size: 1.8rem;
   line-height: 1.8rem;
-  font-weight: 500;
+  font-weight: 200;
 }
 *, *:before, *:after {
   box-sizing: border-box;
@@ -40,10 +41,10 @@ body {
 	letter-spacing: 1px;
 }
 p, ul, ol, dl, blockquote, pre, td, th, label, textarea, caption {
-    font-size: 1em; /* equiv 14px */
+    font-size: 1.4rem; /* equiv 14px */
     line-height: 1.5em;
     margin: 0 0 1.5em 0;
-    letter-spacing: .070em;
+    letter-spacing: .025rem;
 }
 a, a:active, a:focus {
 outline: none;
@@ -60,7 +61,12 @@ nav ul, nav ol{
 }
 #page {
 }
-
+input:focus{
+    outline: none;   
+}
+button:focus{
+  outline: none;
+}
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
@@ -102,7 +108,7 @@ nav ul, nav ol{
   margin: 0;
   font-size: 2em;
   line-height: 1.5em;
-  font-family: Quicksand, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   color:#f2f2f2;
 }
 #site-name a:link,
@@ -149,41 +155,41 @@ h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
   margin: 0;
-	font-weight: 300;
-	text-transform: uppercase;
+	font-weight: 600;
+	text-transform: capitalize;
 }
 h1, h2, h3, h4, h5{
-	font-family: 'Quicksand', Helvetica, Arial, sans-serif;
-	font-weight: 300;
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	font-weight: 600;
 	
 	}
 h1{
-    font-size:  3.6rem; /* equiv 26px */
-    line-height: 3.6rem;
+    font-size:  5.4rem; /* equiv 54 */
+    line-height: 5.4rem;
     margin: 0 0 1.8rem 0;
 }
 h2{
-    font-size:  3.2000rem; /* equiv 24px */
-    line-height: 3.6rem;
+    font-size:  4.5rem; /* equiv 36 */
+    line-height: 5.4rem;
     margin: 0 0 1.8rem 0;
 }
 h3{
-    font-size:  2.8rem; /* equiv 22px */
-    line-height: 3.6rem;
+    font-size:  3.6rem; /* equiv 28 */
+    line-height: 4.5rem;
     margin: 0 0 1.8rem 0;
 }
 h4{
-    font-size:  2.6rem; /* equiv 20px */
+    font-size:  2.7rem; /* equiv 26 */
     line-height:  3.6rem;
     margin: 0 0  1.8rem 0;
 }
 h5{
-    font-size:  2.4rem; /* equiv 18px */
+    font-size:  2.4rem; /* equiv 24 */
     line-height:  3.6rem;
     margin: 0 0  1.8rem 0;
 }
 h6{
-    font-size:  1.6rem; /* equiv 16px */
+    font-size:  1.6rem; /* equiv 16 */
     line-height:  1.8rem;
     margin: 0 0  1.8rem 0;
 } 
@@ -319,3 +325,72 @@ border-top: 1px solid #000000;
 
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
 }
+
+@media all and (max-width: 1024px) {
+  h1{
+    font-size:  4.2rem; /* equiv 54 */
+    line-height: 4.2rem;
+    margin: 0 0 1.8rem 0;
+  }
+  h2{
+      font-size:  2.7rem; /* equiv 36 */
+      line-height: 3.6rem;
+      margin: 0 0 1.8rem 0;
+  }
+  h3{
+      font-size:  2.4rem; /* equiv 28 */
+      line-height: 3.6rem;
+      margin: 0 0 1.8rem 0;
+  }
+  h4{
+      font-size:  2.2rem; /* equiv 26 */
+      line-height:  2.4rem;
+      margin: 0 0  1.8rem 0;
+  }
+  h5{
+      font-size:  1.8rem; /* equiv 24 */
+      line-height:  2.2rem;
+      margin: 0 0  1.8rem 0;
+  }
+  h6{
+      font-size:  1.6rem; /* equiv 16 */
+      line-height:  1.8rem;
+      margin: 0 0  1.8rem 0;
+  }
+}
+@media all and (max-width:800px){
+  h1{
+    font-size:  3.6rem; /* equiv 54 */
+    line-height: 3.6rem;
+    margin: 0 0 1.8rem 0;
+  }
+  h2{
+      font-size:  2.45rem; /* equiv 36 */
+      line-height: 2.45rem;
+      margin: 0 0 1.8rem 0;
+  }
+  h3{
+      font-size:  1.945rem; /* equiv 28 */
+      line-height: 2.45rem;
+      margin: 0 0 1.8rem 0;
+  }
+  h4{
+      font-size:  1.8rem; /* equiv 26 */
+      line-height:  2.445rem;
+      margin: 0 0  1.8rem 0;
+  }
+  h5{
+      font-size:  1.45rem; /* equiv 24 */
+      line-height:  1.8rem;
+      margin: 0 0  1.8rem 0;
+  }
+  h6{
+      font-size:  1.4rem; /* equiv 16 */
+      line-height:  1.8rem;
+      margin: 0 0  1.8rem 0;
+  }
+}
+@media all and (max-width:680px){
+
+}
+

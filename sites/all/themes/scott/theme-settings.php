@@ -7,12 +7,16 @@
  * @param $form_state
  *   A keyed array containing the current state of the form.
  */
-function ginamarie_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
+function scott_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
   // Work-around for a core bug affecting admin themes. See issue #943212.
   if (isset($form_id)) {
     return;
   }
-
+function mscott_preprocess_page(&$variables) {
+  if (!empty($variables['node']) && $variables['node']->type == 'basic_page') {
+    $variables['show_title'] = FALSE;
+  }
+}
   // Create the form using Forms API: http://api.drupal.org/api/7
 
   /* -- Delete this line if you want to use this setting
