@@ -388,13 +388,12 @@ font-weight: 700;
 		z-index: 0;
 }
 .not-front #logo-wrap{
-  background-color:transparent;
-  position: absolute;
-  width:6%;
-  height: 5.4rem;
-  margin-left: 5%;
+   background-color: transparent;
+   position: relative;
+   width: 35.6%;
+   height: 13.6rem;
    display: block;
- /*  float: left;*/
+  text-align: right;
   overflow: hidden;
   transition: all 0.4s ease;
 	}
@@ -431,18 +430,16 @@ font-weight: 700;
   height:0;
   }
 .no-sticky #site-name{
-	text-align: right;
-    width: 33%;
-    right:36%;
-    height: 54rem;
-    height: 85vh;
+	  text-align: right;
+    width: 35%;
+    height: 11.4rem;
     display: inline-block;
     vertical-align: top;
     letter-spacing: 0;
     font-size: 5.4rem;
     line-height: 5.4rem;
     color: rgb(255,255,255);
-    position: absolute;
+    position: relative;
     margin: 0;
     z-index: 5;
 
@@ -459,55 +456,33 @@ font-weight: 700;
     color: rgb(255,255,255);
     vertical-align: top;
 
-}.sticky #site-name{
+}
+.sticky #site-name{
 	text-align: right;
 	width: 0;
 	height: 0;
 	text-indent: -1000000%;
-
 }
-.page-single-page .no-sticky #spw-front #text{
-	    height: 54rem;
-	    height:85vh;
-    position: absolute;
-    width: 33%;
-    text-align: left;
+
+.page-single-page .no-sticky #site-slogan{
     display: inline-block;
-    vertical-align: top;
-    right: 1.8rem;
+    width: 60%;
+    color: #ffffff;
+    font-size: 1.8rem;
+    position: relative;
+    text-align: left;
+    height: 15rem;
+    z-index: 600;
+    margin: .9rem 0 0 1.6rem;
+    line-height: 2.4rem;
 }
-.page-single-page .no-sticky #spw-front #text h5{
-	    display: inline-block;
-    line-height: 3.6rem;
-    vertical-align: text-bottom;
-    margin: 0;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-.page-single-page .sticky #spw-front #text{
-	    height: 0;
-	    overflow: hidden;
-	    
-}
-.page-single-page .sticky #spw-front #text h5{
-	  height: 0;
-}
-
-.page-single-page .no-sticky #spw-front{  
- 	/*background: url(../../images/bg.svg) no-repeat ;*/
- 	/*background: url(../../images/me-04.png) no-repeat ;
- 	background-size:contain;
- 	background-position:left top;*/
-
-
-  }  
+ 
 .page-single-page .sticky #spw-front{
 padding-bottom: 0;
 background:-800px 0 ;
 
  }
-.page-single-page .no-sticky #logo-wrap{
+.page-single-page .no-sticky #site-info{
  width: 5.4rem;
  margin: 0 auto;
 
@@ -516,27 +491,28 @@ background:-800px 0 ;
 	transition: all 0.4s ease;
 
 }
-.page-single-page .no-sticky #logo-wrap{
-        position: absolute;
-        top:5.4rem;
-    height: 84%;
-    height: 76vh;
-    right: 36%;
-    width: 33%;
-    max-width: 12rem;
-    
-    margin: 0;
+.page-single-page .no-sticky #site-info{
+         margin: 0;
     transition: all 0.4s ease;
+}
+
+.page-single-page .no-sticky .info-contain{
+  position: absolute;
+    /* display: inline-block; */
+    /* vertical-align: bottom; */
+    width: 50%;
+    height: auto;
+    bottom: 0px;
+    right: 0;
 }
 .page-single-page .no-sticky #logo-wrap:before{
 	content: " ";
-    bottom: 10.8rem;
     height: 12rem;
-    left: 0;
     margin: 0;
-    position: absolute;
+    display: inline-block;
+    position: relative;
     transition: all 0.4s ease 0s;
-    width: 100%;
+    width: 12rem;
     z-index: 6;
 background: url(../../logo-nosticky.svg) center bottom no-repeat;
  -webkit-background-size: contain;
@@ -595,8 +571,9 @@ background: url(../../logo-nosticky.svg) center bottom no-repeat;
  .page-single-page .no-sticky #inner-wrapper{
 	background-color: transparent;
 	background:rgba(25, 50, 121, 1);
-	width: 100%;
-	position: absolute;
+      width: 100%;
+    height: 90vh;
+    position: relative;
 	}
  .page-single-page .sticky #inner-wrapper{
 	width: 100%;
@@ -610,6 +587,20 @@ background: url(../../logo-nosticky.svg) center bottom no-repeat;
 	background: rgba(255,255,255,1);
 	text-align: right;
 }
+ .page-single-page .sticky #site-slogan{
+  width: 0;
+  height: 0;
+  text-indent: -100%;
+  line-height: 0;
+  overflow: hidden;
+ }
+ .page-single-page .sticky #site-name a{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  text-indent: -100%;
+}
+
  #main-menu { /* Menu block links */ 
 	    margin: 0;
     display: inline-block;
@@ -1521,6 +1512,7 @@ position: relative;
 	}
 	#main-menu{
 		height: auto;
+    width: 80%;
 	}
 
 	#main-menu ul li a{
@@ -1573,12 +1565,15 @@ position: relative;
 	.view-thumbnail-gallery .view-content .views-row .open .views-field-field-slider-image{
 		width: 100%;
 	}
+  .page-single-page .no-sticky .info-contain {
+    width: 100%;
+  }
 	.page-single-page .no-sticky #logo-wrap{
-    right: 38%;
+  
 
 	}
 	.page-single-page .no-sticky #site-name{
-		right: 38%;
+		
 	}
 	.page-single-page .no-sticky #spw-front video {
 		left: 70%;
@@ -1632,7 +1627,6 @@ position: relative;
 	#main-menu{
 		max-height: 5.4rem;
 		width: 100%;
-		
 	}
 	 .single_page_wrapper .single_page{
 		display: block;
@@ -1642,8 +1636,11 @@ position: relative;
 		height: auto;
 	 	}
 	.single_page_wrapper{
-			
+	
 	}
+  .page-single-page .no-sticky #inner-wrapper {
+    height: 100vh;
+  }
 	.single_page_wrapper h2{
 		display: block;
 		width: 100%;
@@ -1652,47 +1649,35 @@ position: relative;
 	.single_page_wrapper .specimens h2{
 		width: 46%;
 	}
-	.no-sticky #logo-wrap{
-		position: relative;
-		width: 5.4rem;
-		height: 5.4rem;
-		display: inline-block;
-		vertical-align: top;
 
-	}
+  .page-single-page .no-sticky #logo-wrap:before{
+   width: 9rem;
+  height: 9rem;
+  }
+
 	.no-sticky #logo { /* Wrapping link for logo */
-	  display:block;	 /* LTR */
-	  padding:0 0 0 0 ;
-	  width:100%;
-	  height: auto;
-	  margin:0;
+	  
 	}
-		.page-single-page .no-sticky #logo-wrap{
-    right: 5%;
-    width:20%;
-    height: 83vh;
+	.page-single-page .no-sticky #logo-wrap{
+      width: 98%;
+      height: 9rem;
 
-}
+  }
 	.page-single-page .no-sticky #site-name{
-		right: 5%;
-		height: 91vh;
+    width: 96%;
+
 	}
 		.no-sticky #site-name{
 	
-}
-.no-sticky #site-name a{
+  }
+  .no-sticky #site-name a{
 	
-}	
-.page-single-page .no-sticky #spw-front #text{
-	    height: 26vh;
-    position: absolute;
-    width: 70%;
-    left:5%;
-}
-.page-single-page .no-sticky #spw-front #text h5{
-	  font-size: 1.8rem;
-	  line-height: 1.8rem;
-}
+  }	
+.page-single-page .no-sticky #site-slogan{
+width: 96%;
+text-align: right;
+margin:0;
+  }
 	.sticky #logo-wrap{
 		position: relative;
 		width: 13%;
@@ -1718,12 +1703,9 @@ position: relative;
 		height: auto;
 		max-width: none;
 	}
-
-
 	#main-menu ul li a:before{	
 		font-family: 'typicons';
 		font-weight: normal;
-
 	}
 	#main-menu ul li:nth-child(1) a:before{
 	
@@ -1750,8 +1732,8 @@ position: relative;
 		color:rgb(255,255,255);
 	}
 	.sticky	#main-menu ul li  a:before{
-			color: rgb(44,62,121);
-			display:block;
+		color: rgb(44,62,121);
+		display:block;
 		min-height: 5.4rem;
 		font-size: 3.6rem;
 		line-height: 5.4rem;
@@ -1967,13 +1949,12 @@ height: 3.6rem;
 	content: '\e128';
 	}
 	#main-menu ul li:nth-child(4) a:before{
-	
 	content: '\e0a5';
 	}
 	
 	.page-single-page #main-menu ul li a:after{
 		/*content: " /";	*/	
-		display:none;
+		display:none; 
 		} 
 /*	.no-sidebars #footer{
 	 pointer-events:none;
