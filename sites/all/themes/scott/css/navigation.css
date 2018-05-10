@@ -54,27 +54,40 @@ li a.active {
 }
 
 #navigation ul.links, /* Main menu and secondary menu links */
-#navigation ul.menu { /* Menu block links */
+#navigation .ex-menu ul.menu { height: 3.6rem;
 
 }
 
-#navigation ul.links li,
-#navigation ul.menu li { /* A simple method to get navigation links to appear in one line. */
+.ex-menu ul.links li,
+.ex-menu ul.menu li { /* A simple method to get navigation links to appear in one line. */
   list-style-type: none;
   list-style-image: none;
+  display: inline-block;
+  width: auto;
+  height: 3.6rem;
+  font-size: 1.6rem;
 
 }
-#navigation ul li a{
-
+#navigation .ex-menu ul li a:link{
+  line-height: 3.6rem;
+  font-size: 1.6rem;
+  padding: 0 .45rem;
 	  background-color:transparent; 
 	}
+  #navigation .ex-menu ul li:after{
+    content: "|";
+    width:.45rem ;
+    display: inline-block;
+    vertical-align: middle;
+
+  }
 
 #navigation ul li a:after{
 	/*content: " /";	*/
 	}  
 #navigation ul li a:active, #navigation ul li a:hover, #navigation ul li a.active {
  background-color:transparent;
-	color: rgba(50,84,155,1);
+	color: rgba(25,50,121,1);
 	
 	} 
 .region-navigation {

@@ -139,10 +139,15 @@ body {
 a:link {
 	text-decoration: none;
 	color:rgba(137,224,224,1);
+  color: rgba(25,50,121,1);
+    text-decoration:underline;
+
 }
 
 a:visited {
 	color:rgba(137,224,224,1);
+color: rgba(25,50,121,1);
+    text-decoration:underline;
 }
 
 a:hover,
@@ -163,7 +168,9 @@ a:active {
 a:focus {
   outline: none;
 }
-
+h2 a:link, h2 a:visited{
+  text-decoration: none;
+}
 /*
  * Improves readability when focused and also mouse hovered in all browsers
  * people.opera.com/patrickl/experiments/keyboard/test

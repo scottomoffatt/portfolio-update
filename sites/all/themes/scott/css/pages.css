@@ -14,19 +14,45 @@
 
 /*@import url(http://fonts.googleapis.com/css?family=Poppins:300,400,700);
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');
+/*@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot');
+  src:  url('../fonts/icomoon.eot') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 html{
 	font-size: 62.5%;
 	  /*background-color:#ffffff;*/
 	}
 body {
-  font-family:'Poppins', Helvetica, Arial, sans-serif;
+  font-family:'Montserrat', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   line-height: 1.8rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 *, *:before, *:after {
   box-sizing: border-box;
@@ -37,13 +63,13 @@ body {
 	font-weight: normal;
    }
 #admin-menu-menu{
-	font-size: 14px;
-	letter-spacing: 1px;
+	font-size: 1.4rem;
+	letter-spacing:.025rem;
 }
 p, ul, ol, dl, blockquote, pre, td, th, label, textarea, caption {
     font-size: 1.4rem; /* equiv 14px */
-    line-height: 1.5em;
-    margin: 0 0 1.5em 0;
+    line-height: 1.6rem;
+    margin: 0 0 1.6em 0;
     letter-spacing: .025rem;
 }
 a, a:active, a:focus {
@@ -108,7 +134,7 @@ button:focus{
   margin: 0;
   font-size: 2em;
   line-height: 1.5em;
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   color:#f2f2f2;
 }
 #site-name a:link,
@@ -155,37 +181,38 @@ h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
   margin: 0;
-	font-weight: 600;
+	font-weight: 500;
 	text-transform: capitalize;
 }
 h1, h2, h3, h4, h5{
-	font-family: 'Poppins', Helvetica, Arial, sans-serif;
-	font-weight: 600;
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-weight: 500;
+  letter-spacing: 0.025rem;
 	
 	}
 h1{
-    font-size:  5.4rem; /* equiv 54 */
-    line-height: 5.4rem;
+    font-size:  3.6rem; /* equiv 54 */
+    line-height: 3.6rem;
     margin: 0 0 1.8rem 0;
 }
 h2{
-    font-size:  4.5rem; /* equiv 36 */
-    line-height: 5.4rem;
+    font-size:  2.7rem; /* equiv 36 */
+    line-height: 3.6rem;
     margin: 0 0 1.8rem 0;
 }
 h3{
-    font-size:  3.6rem; /* equiv 28 */
-    line-height: 4.5rem;
+    font-size:  2.25rem; /* equiv 28 */
+    line-height: 3.6rem;
     margin: 0 0 1.8rem 0;
 }
 h4{
-    font-size:  2.7rem; /* equiv 26 */
-    line-height:  3.6rem;
+    font-size:  1.8rem; /* equiv 26 */
+    line-height:  2.7rem;
     margin: 0 0  1.8rem 0;
 }
 h5{
-    font-size:  2.4rem; /* equiv 24 */
-    line-height:  3.6rem;
+    font-size:  1.6rem; /* equiv 24 */
+    line-height:  1.8rem;
     margin: 0 0  1.8rem 0;
 }
 h6{
@@ -327,40 +354,40 @@ border-top: 1px solid #000000;
 }
 
 @media all and (max-width: 1024px) {
-  h1{
-    font-size:  4.2rem; /* equiv 54 */
+/*  h1{
+    font-size:  3.6rem; 
     line-height: 4.2rem;
     margin: 0 0 1.8rem 0;
   }
   h2{
-      font-size:  2.7rem; /* equiv 36 */
+      font-size:  2.7rem; 
       line-height: 3.6rem;
       margin: 0 0 1.8rem 0;
   }
   h3{
-      font-size:  2.4rem; /* equiv 28 */
+      font-size:  2.4rem; 
       line-height: 3.6rem;
       margin: 0 0 1.8rem 0;
   }
   h4{
-      font-size:  2.2rem; /* equiv 26 */
+      font-size:  2.2rem; 
       line-height:  2.4rem;
       margin: 0 0  1.8rem 0;
   }
   h5{
-      font-size:  1.8rem; /* equiv 24 */
+      font-size:  1.8rem; 
       line-height:  2.2rem;
       margin: 0 0  1.8rem 0;
   }
   h6{
-      font-size:  1.6rem; /* equiv 16 */
+      font-size:  1.6rem; 
       line-height:  1.8rem;
       margin: 0 0  1.8rem 0;
-  }
+  }*/
 }
 @media all and (max-width:800px){
   h1{
-    font-size:  3.6rem; /* equiv 54 */
+    font-size:  2.7rem; /* equiv 54 */
     line-height: 3.6rem;
     margin: 0 0 1.8rem 0;
   }
