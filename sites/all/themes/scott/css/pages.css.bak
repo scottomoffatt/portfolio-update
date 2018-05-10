@@ -1,0 +1,421 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+
+/*
+ * Body
+ */
+
+/*@import url(http://fonts.googleapis.com/css?family=Poppins:300,400,700);
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot');
+  src:  url('../fonts/icomoon.eot') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+	font-size: 62.5%;
+	  /*background-color:#ffffff;*/
+	}
+body {
+  font-family:'Poppins', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-weight: 200;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.footnav li a span{	
+	font-family: "typicons";
+	font-size:200%;
+	font-weight: normal;
+   }
+#admin-menu-menu{
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+p, ul, ol, dl, blockquote, pre, td, th, label, textarea, caption {
+    font-size: 1.4rem; /* equiv 14px */
+    line-height: 1.5em;
+    margin: 0 0 1.5em 0;
+    letter-spacing: .025rem;
+}
+a, a:active, a:focus {
+outline: none;
+}
+nav ul, nav ol{
+	margin: 0;
+	padding: 0;
+}
+
+.element-invisible{
+	display: none;
+	height: 0;
+	line-height: 0;
+}
+#page {
+}
+input:focus{
+    outline: none;   
+}
+button:focus{
+  outline: none;
+}
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+
+#skip-link {
+  margin: 0;
+}
+#skip-link a,
+#skip-link a:visited {
+  display: block;
+  width: 100%;
+  padding: 2px 0 3px 0;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+
+#header {
+	text-align: center;
+	background-color: transparent;
+
+}
+
+
+#name-and-slogan { /* Wrapper for website name and slogan */
+  float: left;
+  color:#f2f2f2;
+  width: 1%;
+  overflow: hidden;
+  height:10px;
+}
+
+#site-name { /* The name of the website */
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.5em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color:#f2f2f2;
+}
+#site-name a:link,
+#site-name a:visited {
+  color:#f2f2f2;
+  text-decoration: none;
+}
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration:none;
+}
+
+#site-slogan { /* The slogan (or tagline) of a website */
+  margin: 0;
+  font-size: 1em;
+}
+
+.region-header { /* Wrapper for any blocks placed in the header region */
+  clear: both; /* Clear the logo */
+}
+
+
+
+.region-highlighted {
+}
+
+.breadcrumb { /* The path to the current page in the form of a list of links */
+}
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+}
+.breadcrumb li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1.title, /* The title of the page */
+h2.node-title, /* Title of a piece of content when it is given in a list of content */
+h2.block-title, /* Block title */
+h2.title, /* Comment section heading */
+h2.comment-form, /* Comment form heading */
+h3.title { /* Comment title */
+  margin: 0;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+h1, h2, h3, h4, h5{
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	
+	}
+h1{
+    font-size:  5.4rem; /* equiv 54 */
+    line-height: 5.4rem;
+    margin: 0 0 1.8rem 0;
+}
+h2{
+    font-size:  4.5rem; /* equiv 36 */
+    line-height: 5.4rem;
+    margin: 0 0 1.8rem 0;
+}
+h3{
+    font-size:  3.6rem; /* equiv 28 */
+    line-height: 4.5rem;
+    margin: 0 0 1.8rem 0;
+}
+h4{
+    font-size:  2.7rem; /* equiv 26 */
+    line-height:  3.6rem;
+    margin: 0 0  1.8rem 0;
+}
+h5{
+    font-size:  2.4rem; /* equiv 24 */
+    line-height:  3.6rem;
+    margin: 0 0  1.8rem 0;
+}
+h6{
+    font-size:  1.6rem; /* equiv 16 */
+    line-height:  1.8rem;
+    margin: 0 0  1.8rem 0;
+} 
+tr.even { /* Some tables have rows marked even or odd. */
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+div.messages { /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
+  margin: 1.5rem 0; /* Drupal core uses "6px 0" margin */
+}
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.status { /* Normal priority messages */
+}
+
+div.warning,
+tr.warning { /* Medium priority messages */
+  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error { /* High priority messages. See also the .error declaration below. */
+}
+
+.error { /* Errors that are separate from div.messages status messages. */
+  /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+
+.warning { /* Warnings that are separate from div.messages status messages. */
+  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+
+.tabs { /* See also the tabs.css file. */
+}
+
+.region-help { /* Help text on a page */
+}
+
+.more-help-link { /* Link to more help */
+}
+
+.region-content { /* Wrapper for the actual page content */
+}
+
+ul.inline { /* List of links generated by theme_links() */
+  display: inline;
+  padding: 0;
+}
+ul.inline li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 1em 0 0; /* LTR */
+}
+
+span.field-label { /* The inline field label used by the Fences module */
+  padding: 0 1em 0 0; /* LTR */
+}
+
+.item-list .pager { /* A list of page numbers when more than 1 page of content is available */
+  padding: 0;
+}
+.item-list .pager li { /* Each page number in the pager list */
+  padding: 0 0.5em;
+}
+
+.feed-icon { /* The link to the RSS or Atom feed for the current list of content */
+}
+/************* Main (container for everything else)******************* */
+
+#main {
+	
+	
+}
+/**********************CONTENT****************/
+
+#content {
+}
+
+
+.more-link { /* Aggregator, blog, and forum more link */
+}
+.view-frontpage article{
+border-top: 1px solid #000000;	
+
+	}
+	
+.view-frontpage .webform-client-form label, .view-frontpage .webform-client-form input{
+	width: 90%;
+	}
+.pinit a{
+	display: block;
+	width: 80px;
+	overflow: hidden;
+	margin:0 auto;
+}
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+
+.region-sidebar-first {
+}
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+
+.region-sidebar-second {
+}
+
+/*
+ * Footer
+ */
+
+#footer {
+}
+
+/*
+ * Page bottom
+ */
+
+.region-bottom { /* Wrapper for any blocks placed in the page bottom region */
+}
+
+@media all and (max-width: 1024px) {
+  h1{
+    font-size:  4.2rem; /* equiv 54 */
+    line-height: 4.2rem;
+    margin: 0 0 1.8rem 0;
+  }
+  h2{
+      font-size:  2.7rem; /* equiv 36 */
+      line-height: 3.6rem;
+      margin: 0 0 1.8rem 0;
+  }
+  h3{
+      font-size:  2.4rem; /* equiv 28 */
+      line-height: 3.6rem;
+      margin: 0 0 1.8rem 0;
+  }
+  h4{
+      font-size:  2.2rem; /* equiv 26 */
+      line-height:  2.4rem;
+      margin: 0 0  1.8rem 0;
+  }
+  h5{
+      font-size:  1.8rem; /* equiv 24 */
+      line-height:  2.2rem;
+      margin: 0 0  1.8rem 0;
+  }
+  h6{
+      font-size:  1.6rem; /* equiv 16 */
+      line-height:  1.8rem;
+      margin: 0 0  1.8rem 0;
+  }
+}
+@media all and (max-width:800px){
+  h1{
+    font-size:  3.6rem; /* equiv 54 */
+    line-height: 3.6rem;
+    margin: 0 0 1.8rem 0;
+  }
+  h2{
+      font-size:  2.45rem; /* equiv 36 */
+      line-height: 2.45rem;
+      margin: 0 0 1.8rem 0;
+  }
+  h3{
+      font-size:  1.945rem; /* equiv 28 */
+      line-height: 2.45rem;
+      margin: 0 0 1.8rem 0;
+  }
+  h4{
+      font-size:  1.8rem; /* equiv 26 */
+      line-height:  2.445rem;
+      margin: 0 0  1.8rem 0;
+  }
+  h5{
+      font-size:  1.45rem; /* equiv 24 */
+      line-height:  1.8rem;
+      margin: 0 0  1.8rem 0;
+  }
+  h6{
+      font-size:  1.4rem; /* equiv 16 */
+      line-height:  1.8rem;
+      margin: 0 0  1.8rem 0;
+  }
+}
+@media all and (max-width:680px){
+
+}
+

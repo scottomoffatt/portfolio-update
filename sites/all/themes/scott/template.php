@@ -239,3 +239,37 @@ function scott_preprocess_page(&$variables) {
         $variables['theme_hook_suggestions'][] = 'page__' . $nodetype;
     }
 }
+function scott_preprocess_node(&$variables) {
+
+if (isset($variables['content']['links']['node']['#links']['node-readmore'])){
+$variables['content']['links']['node']['#links']['node-readmore']['title'] = "Full Page";
+}
+}
+// Used in conjunction with https://gist.github.com/1417914
+/**
+ * Implements hook_preprocess_html().
+ */
+function scott_preprocess_html(&$vars) {
+  // Move JS files "$scripts" to page bottom for perfs/logic.
+  // Add JS files that *needs* to be loaded in the head in a new "$head_scripts" scope.
+  // For instance the Modernizr lib.
+  $path = drupal_get_path('theme', 'scott');
+ 
+  drupal_add_js($path . '/js/image-preview.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));  
+  
+  drupal_add_js($path . '/js/lozad.min.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));
+
+  drupal_add_js($path . '/js/featherlight.js', array('scope' => 'head_scripts', 'weight' => -2, 'preprocess' => FALSE));    
+  
+  drupal_add_js($path . '/js/featherlight.gallery.js', array('scope' => 'head_scripts', 'weight' => 0, 'preprocess' => FALSE));  
+  drupal_add_js($path . '/js/bodymovin.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));
+
+  drupal_add_js('sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js', array('scope' => 'head_scripts', 'weight' => -3, 'preprocess' => TRUE));   
+
+}
+/**
+ * Implements hook_process_html().
+ */
+function scott_process_html(&$vars) {
+  $vars['head_scripts'] = drupal_get_js('head_scripts');
+}

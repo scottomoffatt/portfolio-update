@@ -70,7 +70,7 @@
  */
 ?>
 
-<div id="page" class="no-sticky">
+<div id="page" class="sticky">
 
   <header id="header" role="banner">
     <div id="inner-wrapper">
@@ -81,45 +81,20 @@
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a> 
     <?php endif; ?>
 	</div>
-    
-      <?php if ($site_name || $site_slogan): ?>
 
-        <?php if ($site_name): ?>
-          <h1 class="header__site-name" id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><?php print $site_name; ?></a>
-          </h1>
-        <?php endif; ?>
-
-        <?php if ($site_slogan): ?>
-          <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
-        <?php endif; ?>
-  
-       <?php endif; ?>
    </div><!--info-contain-->
       </div><!--siteinfo-->
    
 
 	   <nav id="navigation">
+      <label for="toggle"><span class="icon-menu"></span></label>
+        <input type="checkbox" id="toggle">
+        <nav id="nav-menu" role="navigation" class="ex-menu">
+         <?php $menu = menu_navigation_links('menu-menu-taxonomy-menu');print theme('links__menu-menu-taxonomy-menu', array('links' => $menu));?>
 
-      <?php if ($main_menu): ?>
-        <nav id="main-menu" role="navigation">
-          <?php
-        
-          print theme('links__system_main_menu', array(
-            'links' => $main_menu,
-            'attributes' => array(
-              'class' => array('links', 'inline', 'clearfix'),
-            ),
-            'heading' => array(
-              'text' => t('Main menu'),
-              'level' => 'h2',
-              'class' => array('element-invisible'),
-            ),
-          )); ?>
         </nav>
-      <?php endif; ?>
+    
 
-      <?php print render($page['navigation']); ?>
 
     </nav><!-- /#navigation -->
     <?php print render($page['header']); ?>
@@ -169,5 +144,5 @@
   <?php print render($page['footer']); ?>
      <?php /*print $breadcrumb;*/ ?>
 </div><!-- /#page -->
-<div id="full-bg"></div>
+
 <?php print render($page['bottom']); ?>
