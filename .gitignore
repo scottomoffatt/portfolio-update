@@ -1,5 +1,5 @@
 *.htaccess
-
+.git
 sites/default/
 sites/all/libraries/*
 sites/all/modules/*
