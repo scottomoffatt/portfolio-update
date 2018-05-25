@@ -2390,7 +2390,7 @@ height: 3.6rem;
 	@media all and (max-width:600px){
 	.view-thumbnail-gallery .project  .views-field-title h1{
 		font-size:150%; /*fix for older size phones*/
-    /*test done*/
+    /*test push to prod*/
 
 	}
 }
