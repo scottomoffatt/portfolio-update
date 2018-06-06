@@ -1459,8 +1459,8 @@ height: 100vh;
     z-index: 0;
     }
    .about-bg img {
-  width: 100%;
-    height: auto;
+  width: auto;
+    height: 100%;
     object-fit: cover;
 } 
  #spw-emailme{
