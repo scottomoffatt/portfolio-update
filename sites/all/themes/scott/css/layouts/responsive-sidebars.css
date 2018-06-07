@@ -1648,6 +1648,41 @@ height: 100vh;
 	padding: 0;
 	text-align: center;
 }
+.page-taxonomy #content, .page-node #content{
+  width: 96%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.page-taxonomy article, .page-node article{
+  text-align: left;
+    padding: .9rem;
+    margin: .9rem;
+    border: 1px solid;
+    width: 46%;
+    position: relative;
+}
+.page-taxonomy #content .term-listing-heading, .page-node #content .term-listing-heading{
+display: none;
+}
+.page-taxonomy #content #main-content, .page-node #content #main-content{
+display: none;
+}
+.page-taxonomy #content ul.links, .page-node #content ul.links{
+position: absolute;
+    bottom: .9rem;
+    right: .9rem;
+    padding: .9rem;
+    width: 11.2rem;
+    border: 1px solid;
+    margin: 0;
+}
+.page-taxonomy #content .field-type-text-long, .page-node #content .field-type-text-long{
+    padding: .9rem .9rem 6.9rem .9rem;
+}
 .page-single-page #content{
 	width: 100%;
 	margin: 0 auto;
@@ -1677,28 +1712,23 @@ height: 100vh;
 .page-taxonomy .field-items{
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
 }
 .page-taxonomy .field-item{
   width: auto;
-margin: 1%;
 }
 .page-taxonomy .field-name-field-project-desc .field-item {
   width: 100%;
   max-width: 64.8rem;
 }
 
-.page-taxonomy article, .page-node article{
- text-align:left;
-padding: 1.6rem 0;
-max-width: 648px;
-margin: 0 auto;
-border-bottom: 1px solid;
-}
 .page-taxonomy #main, .page-node #main{
   margin: 0 auto;
 }
 .page-taxonomy article h2.node-title, .page-node article h2.node-title{
-  margin: 1.8rem 0;
+  margin:0 0 .9rem 0;
+  padding-bottom: .9rem;
+  border-bottom: 1px solid;
 }
 .field-name-field-project-name{
   font-size: 3.6rem;
