@@ -87,8 +87,8 @@
    
 
 	   <nav id="navigation">
-      <label for="toggle"><span class="icon-menu"></span></label>
         <input type="checkbox" id="toggle">
+        <label for="toggle"><span class="icon-menu"></span></label>
         <nav id="nav-menu" role="navigation" class="ex-menu">
          <?php $menu = menu_navigation_links('menu-menu-taxonomy-menu');print theme('links__menu-menu-taxonomy-menu', array('links' => $menu));?>
 
@@ -121,7 +121,7 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
       <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
+      
     </div><!-- /#content -->
 
  
