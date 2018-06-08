@@ -2230,6 +2230,8 @@ position: absolute;
       background: rgb(255,255,255);
       transition: width .4s ease-out, height .2s ease-out;
       overflow: visible;
+          z-index: 1;
+    position: relative;
       }
       #toggle[type=checkbox]:checked ~ label {
         width: 100%;
