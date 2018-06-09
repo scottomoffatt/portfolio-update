@@ -1674,9 +1674,13 @@ height: 100vh;
 }
 .page-taxonomy article:nth-child(odd){
     animation: 1s ease-out 0s 1 leftslide;
+    -webkit-perspective: 1000;
+-webkit-backface-visibility: hidden;
 }
 .page-taxonomy article:nth-child(even){
     animation: 1s ease-out 0s 1 rightslide;
+    -webkit-perspective: 1000;
+-webkit-backface-visibility: hidden;
 }
 @keyframes leftslide {
   0% {
@@ -2223,6 +2227,7 @@ position: absolute;
       text-align: right;
       transition: width .4s ease-out, height .2s ease-out;
       overflow: hidden;
+      pointer-events: none; /*click trough to label checkbox*/
 
      } 
      #toggle[type=checkbox]:checked ~ .ex-menu {
@@ -2235,6 +2240,7 @@ position: absolute;
       overflow: visible;
           z-index: 1;
     position: relative;
+    pointer-events: none; /*click trough to label checkbox*/
       }
       #toggle[type=checkbox]:checked ~ label {
         width: 100%;

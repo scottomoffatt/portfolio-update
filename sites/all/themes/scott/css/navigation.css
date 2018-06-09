@@ -73,6 +73,7 @@ li a.active {
   font-size: 1.6rem;
   padding: 0 .45rem;
 	  background-color:transparent; 
+        pointer-events: all;
 	}
   #navigation .ex-menu ul li:after{
     content: "|";
