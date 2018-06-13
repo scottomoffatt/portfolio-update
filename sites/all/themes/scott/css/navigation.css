@@ -66,22 +66,27 @@ li a.active {
   width: auto;
   height: 3.6rem;
   font-size: 1.6rem;
+  position: relative;
 
 }
 #navigation .ex-menu ul li a:link{
   line-height: 3.6rem;
   font-size: 1.6rem;
   padding: 0 .45rem;
+  text-align: left;
 	  background-color:transparent; 
         pointer-events: all;
 	}
-  #navigation .ex-menu ul li:after{
+  /*#navigation .ex-menu ul li:after{
     content: "|";
+    font-weight: 100;
     width:.45rem ;
     display: inline-block;
     vertical-align: middle;
-
-  }
+    position: absolute;
+    right: 0;
+    top: 0;
+  }*/
 
 #navigation ul li a:after{
 	/*content: " /";	*/
@@ -120,4 +125,11 @@ li a.active {
  */
 
 .block-menu-block {
+}
+@media all and (max-width:1024px) {
+#navigation .ex-menu ul li a:link{
+  font-size: 1.4rem;
+   
+  }
+
 }
