@@ -2184,7 +2184,7 @@ margin: 3.5rem auto;
   overflow: visible;
   width: 83%;
 }  
-  .page-taxonomy .sticky #navigation{
+  .page-taxonomy .sticky #navigation, .page-node .sticky #navigation{
   width: 100%;
 }  
 
