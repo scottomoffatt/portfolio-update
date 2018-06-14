@@ -1678,12 +1678,12 @@ height: 100vh;
     box-shadow: 2px 2px 0 rgba(25,50,121,1);
 }
 .page-taxonomy #content .view-content .views-row:nth-child(odd){
-    animation: 1s ease-out 0s 1 leftslide;
+    animation: .5s ease-out 0s 1 leftslide;
     -webkit-perspective: 1000;
 -webkit-backface-visibility: hidden;
 }
 .page-taxonomy #content .view-content .views-row:nth-child(even){
-    animation: 1s ease-out 0s 1 rightslide;
+    animation: .5s ease-out 0s 1 rightslide;
     -webkit-perspective: 1000;
 -webkit-backface-visibility: hidden;
 }
@@ -1731,6 +1731,13 @@ position: absolute;
     margin: 0;
     background: rgb(255,255,255);
     box-shadow: 2px 2px 0 rgba(25,50,121,1);
+    transition: all .05s;
+}
+.page-taxonomy #content ul.links:hover, .page-node #content ul.links:hover{
+  box-shadow: 0px 0px 0 rgba(25,50,121,1); 
+}
+.page-taxonomy #content ul.links:active, .page-node #content ul.links:active{
+  box-shadow: inset 2px 2px 0 rgba(25,50,121,1); 
 }
 .page-taxonomy #content ul.links .node-readmore, .page-node #content ul.links .node-readmore{
     text-align: center;

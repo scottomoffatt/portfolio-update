@@ -92,8 +92,7 @@ li a.active {
 	/*content: " /";	*/
 	}  
 #navigation ul li a:active, #navigation ul li a:hover, #navigation ul li a.active {
- background-color:transparent;
-	color: rgba(25,50,121,1);
+
 	
 	} 
 .region-navigation {
