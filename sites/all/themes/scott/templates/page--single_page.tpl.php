@@ -71,7 +71,6 @@
 ?>
 
 <div id="page" class="no-sticky">
-<h1>I am Single page</h1>
   <header id="header" role="banner">
     <div id="inner-wrapper">
     <div id="site-info">
