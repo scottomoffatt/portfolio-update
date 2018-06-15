@@ -244,10 +244,7 @@ function scott_preprocess_node(&$variables) {
 
 if (isset($variables['content']['links']['node']['#links']['node-readmore'])){
 $variables['content']['links']['node']['#links']['node-readmore']['title'] = "Full Page";
-}
-if($variables['nid'] == '89'){
-        drupal_add_js($path . '/js/tagm.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));
-    }
+  }
 }
 // Used in conjunction with https://gist.github.com/1417914
 /**
