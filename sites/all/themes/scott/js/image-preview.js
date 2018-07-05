@@ -126,9 +126,10 @@ $(function(){
       $('.owl-prev , .owl-next').css({"top": windowHH /4});
 
 });
+
 $('.specimens img, .view-thumbnail-gallery img, .field-name-field-slider-image img, .field-type-image img').each(function(){
     $(this).attr("data-src" , $(this).attr("src")).removeAttr("src");
-      $(this).addClass("lozad")
+      $(this).addClass("lozad");
 
  });
     lozad('.lozad', {
@@ -136,7 +137,10 @@ $('.specimens img, .view-thumbnail-gallery img, .field-name-field-slider-image i
         el.src = el.dataset.src;
         el.onload = function() {
             el.classList.add('fade')
+           
+
         }
+        
     }
 }).observe()
 //scroll within div only

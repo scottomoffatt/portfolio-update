@@ -1053,9 +1053,55 @@ height: 100vh;
     transition: all .5s ease-in-out;
     z-index: 0;
 }
+.load{
+ 	background: linear-gradient(319deg, #f7f59e, #5b2c92, #73eaac,#193279);
+background-size: 800% 800%;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	margin:auto;
+	content: " ";
+	-webkit-animation: loadingbg 3s ease infinite;
+	-moz-animation: loadingbg 3s ease infinite;
+	animation: loadingbg 3s ease infinite;
+	z-index: 0;
+}
+
+/*@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}*/
+	@-webkit-keyframes loadingbg {
+	    0%{background-position:7% 0%}
+	    50%{background-position:94% 100%}
+	    100%{background-position:7% 0%}
+	}
+	@-moz-keyframes loadingbg {
+	    0%{background-position:7% 0%}
+	    50%{background-position:94% 100%}
+	    100%{background-position:7% 0%}
+	}
+	@keyframes loadingbg {
+	    0%{background-position:7% 0%}
+	    50%{background-position:94% 100%}
+	    100%{background-position:7% 0%}
+	}
+
 .fade {
+	animation-delay: 1s;
   animation-name: fade;
-  animation-duration: 2s;
+  background: rgba(255,255,255,1)
+  z-index:1;
+  position: relative;
 }
 
 @keyframes fade {
@@ -1817,6 +1863,15 @@ margin: 3.5rem auto;
     overflow: visible;
     border-bottom: 2px solid;
 }
+    .page-taxonomy .field-type-video .field-item{
+    	width: 33%;
+    }
+    .node-teaser .video-js{
+    	width: 146px;
+    	height: 100px;
+    	margin: 0;
+
+    }
 
 .page-single-page #content{
 	width: 100%;
@@ -2446,6 +2501,7 @@ height: 3.6rem;
    .page-taxonomy .node-teaser{
       width: 100%;
     }
+
     .page-node article{
       width: 96%;
       margin: 0 auto;
