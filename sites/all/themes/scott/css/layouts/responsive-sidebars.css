@@ -1097,8 +1097,7 @@ background-size: 800% 800%;
 	}
 
 .fade {
-	animation-delay: 3s;
-  animation-name: fade;
+	animation: fade 3s ease;
   background: rgba(255,255,255,1);
 }
 
