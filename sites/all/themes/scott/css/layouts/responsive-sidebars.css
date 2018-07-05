@@ -1099,9 +1099,7 @@ background-size: 800% 800%;
 .fade {
 	animation-delay: 3s;
   animation-name: fade;
-  background: rgba(255,255,255,1)
-  z-index:1;
-  position: relative;
+  background: rgba(255,255,255,1);
 }
 
 @keyframes fade {
