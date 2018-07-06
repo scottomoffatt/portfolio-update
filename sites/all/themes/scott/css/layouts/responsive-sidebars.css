@@ -1098,7 +1098,7 @@ background-size: 800% 800%;
 
 .fade {
 	animation: fade 3s ease;
-  background: rgba(255,255,255,1);
+ 
 }
 
 @keyframes fade {
@@ -1869,7 +1869,34 @@ margin: 3.5rem auto;
     	margin: 0;
 
     }
-
+    .page-node .video-js{
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    
+    margin: 0 auto;
+    }
+.page-node .video-js .vjs-tech{
+	    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 34vh;
+}
+.page-node .video-js .vjs-tech video{
+	width: 100%;
+    height: auto;
+}
+.page-node .video-js .vjs-tech video source{
+	    box-sizing: inherit;
+    width: 100%;
+    position: static;
+    display: block;
+    height: auto;
+}
+.page-node .video-js.vjs-has-started .vjs-control-bar{
+	    background: rgb(25,50,121);
+	    position: relative;
+}
 .page-single-page #content{
 	width: 100%;
 	margin: 0 auto;

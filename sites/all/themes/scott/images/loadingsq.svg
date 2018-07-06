@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><style type="text/css">  
+	.pulse-bg{fill:#193279;}
+	.pulse{fill:#4DCCBD;}
+</style>
+<rect x="0" y="0" class="pulse-bg" width="300" height="300"></rect>
+
+<rect x="0" y="0" class="pulse" width="300" height="300">
+	 <animate id="animation1"
+             attributeName="opacity"
+             from="0" to=".3" dur="1.2s"
+             begin="0s;animation2.end" />
+    <animate id="animation2"
+             attributeName="opacity"
+             from=".3" to="0" dur="1.5s" 
+             begin="animation1.end" />
+</rect>
+</svg>
