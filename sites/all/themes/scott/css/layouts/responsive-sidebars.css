@@ -1730,6 +1730,10 @@ background-size: 800% 800%;
     -webkit-perspective: 1000;
 -webkit-backface-visibility: hidden;
 }
+.page-taxonomy #content .view-content .views-row .node-teaser .field-type-image{
+	pointer-events: none;
+}
+
 @keyframes leftslide {
   0% {
     transform: translateX(-100%);
