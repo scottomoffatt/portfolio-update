@@ -1886,6 +1886,9 @@ margin: 3.5rem auto;
     height: auto;
     max-height: 34vh;
 }
+.page-taxonomy .video-js .vjs-poster{
+	background-color: transparent;
+}
 .page-node .video-js .vjs-tech video{
 	width: 100%;
     height: auto;
