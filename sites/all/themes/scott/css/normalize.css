@@ -183,7 +183,9 @@ a:active {
   outline: none;
   /*	text-shadow:1px 1px #cccccc;*/
 }
-
+ul.links a:link, ul.links a:visited, ul.links a:hover ul.links a:active{
+  text-decoration: none;
+}
 
 /* =============================================================================
    Typography

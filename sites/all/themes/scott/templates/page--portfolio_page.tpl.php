@@ -70,7 +70,7 @@
  */
 ?>
 
-<div id="page" class="no-sticky">
+<div id="page" class="sticky">
 
   <header id="header" role="banner">
     <div id="inner-wrapper">
@@ -123,6 +123,16 @@
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
         <h1 class="title" id="<?php print $title; ?>"><?php print $title; ?></h1>
+        <div id="full-page">
+       <?php   $menu = menu_navigation_links('menu-linkto');
+print theme('links__menu-linkto', array(
+  'links' => $menu,
+  'attributes' => array(
+              'class' => array('links', 'inline', 'clearfix'),
+            )
+
+  )); ?>
+        </div>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php if($is_admin): ?>
@@ -157,5 +167,5 @@
   <?php print render($page['footer']); ?>
      <?php /*print $breadcrumb;*/ ?>
 </div><!-- /#page -->
-<div id="full-bg"></div>
+
 <?php print render($page['bottom']); ?>
