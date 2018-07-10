@@ -128,7 +128,7 @@
 print theme('links__menu-linkto', array(
   'links' => $menu,
   'attributes' => array(
-              'class' => array('links', 'inline', 'clearfix'),
+              'class' => array('links', 'inline'),
             )
 
   )); ?>
