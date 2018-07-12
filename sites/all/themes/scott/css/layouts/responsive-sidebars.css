@@ -1791,12 +1791,11 @@ display: none;
     width: 11.2rem;
 
 }
-.single_page_wrapper #full-page, #spw-work h1{
-	width: 100%;
+.single_page_wrapper #full-page, #spw-work .title{
+	width: 49%;
 	display: inline-block;
 	vertical-align: bottom;
-	word-break: normal;
-	white-space: normal;
+
 }
 #full-page{
 	text-align: right;
