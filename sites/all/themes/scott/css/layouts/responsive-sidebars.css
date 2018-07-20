@@ -757,13 +757,15 @@ form textarea{
   -moz-box-sizing: content-box;
   -o-box-sizing: content-box;
   box-sizing: content-box;
-  height: 1.8rem;
-  max-width: 25rem;
+  height: 3.6rem;
+  max-width: 18rem;
   cursor: pointer;
-  padding: 0.6rem 2%;
-  border: none;
-  color:rgb(255,255,255);
-  background: rgba(44,62,121,1); 
+  padding: 0.9rem 0;
+  margin: 0 .2rem .2rem 0rem;
+  background: rgb(255,255,255); 
+      color: rgb(25,50,121);
+    box-shadow: 2px 2px 0px rgb(25,50,121);
+        border: 1px solid rgb(25,50,121);
   -webkit-border-radius: .2rem;
   -moz-border-radius: .2rem;
   -o-border-radius: .2rem;
@@ -879,10 +881,9 @@ position: relative;
 }
 .view-thumbnail-gallery .view-content .views-row .views-field-field-image:before{
 	background: rgba(3,0,67,0);
-  -webkit-transition: background-color 2s ease-out;
-  -moz-transition: background-color 2s ease-out;
-  -o-transition: background-color 2s ease-out;
-  transition: background-color 2s ease-out;
+content: " ";
+display: block;
+opacity: 0;
 }
 .view-thumbnail-gallery .view-content .views-row:hover .views-field-field-image:before{
 	background: rgba(25,50,121,0.8);
@@ -892,7 +893,7 @@ position: relative;
 	height: 100%;
 	left: 0;
     z-index: 1;
-
+    opacity: 1;
 }
 .view-thumbnail-gallery .view-content .item-list .shrink{
 
@@ -1626,21 +1627,20 @@ background-size: 800% 800%;
     text-align: left;
 	} 
 .view-thumbnail-gallery .project{
-	display: none;
 	width: 0;
 	height: 0;
 	margin:0;
-
+	opacity: 0;
 }
 
 .view-thumbnail-gallery .views-row:hover .project{
-	display: block;
 	width: 100%;
 	position: relative;
 	height: 0;	
 	text-align: center;
+	opacity: 1;
 }	
-.view-thumbnail-gallery .views-row:hover .project .views-field-title{
+.view-thumbnail-gallery .views-row .project .views-field-title{
 	position: absolute;
     width: 100%;
     height: 0;
@@ -1650,8 +1650,13 @@ background-size: 800% 800%;
     text-align: center;
     overflow: visible;
      pointer-events: none;
+     opacity: 0;
 }
-.view-thumbnail-gallery .views-row:hover .project .views-field-body{
+.view-thumbnail-gallery .views-row:hover .project .views-field-title{
+	opacity: 1;
+}
+
+.view-thumbnail-gallery .views-row .project .views-field-body{
 	position: absolute;
     width: 100%;
     height: 0;
@@ -1663,8 +1668,12 @@ background-size: 800% 800%;
     overflow: visible;
     color: rgba(255,255,255,1);
      pointer-events: none;
+     opacity: 0;
 }
-.view-thumbnail-gallery .shrink .views-row:hover .project .views-field-title{
+.view-thumbnail-gallery .views-row:hover .project .views-field-body{
+	opacity: 1;
+}
+.view-thumbnail-gallery .shrink .views-row .project .views-field-title{
 	position: absolute;
     width: 0;
     height: 0;
@@ -1674,7 +1683,7 @@ background-size: 800% 800%;
     text-align: center;
     overflow: hidden;
 }
-.view-thumbnail-gallery .shrink .views-row:hover .project .views-field-body{
+.view-thumbnail-gallery .shrink .views-row .project .views-field-body{
 	position: absolute;
     width: 0;
     height: 0;
@@ -1682,7 +1691,7 @@ background-size: 800% 800%;
     padding-bottom:0;
     z-index: 0;
     text-align: center;
-    overflow: hidden;
+	 overflow: hidden;
 }
   #content .view-display-id-page{
     text-align: left;
@@ -1787,7 +1796,17 @@ display: none;
     box-shadow: 2px 2px 0 rgba(25,50,121,1);
     transition: all .05s;
     display: inline-block;
+      -webkit-border-radius: .2rem;
+  -moz-border-radius: .2rem;
+  -o-border-radius: .2rem;
+  border-radius: .2rem;
+  -o-text-overflow: clip;
+  text-overflow: clip;
 }
+.page-taxonomy #content ul.links:hover, .page-node #content ul.links:hover, .single_page_wrapper ul.links:hover {
+	box-shadow: 2px 2px 0 rgba(255,255,255,1);
+}
+
 .page-taxonomy #content ul.links, .page-node #content ul.links{
 	position: absolute;
     bottom: .9rem;
@@ -1811,8 +1830,23 @@ display: none;
 #full-page ul.links{
 	margin: 0 1.8rem 0 0;
 }
-.page-taxonomy #content ul.links:hover, .page-node #content ul.links:hover{
-  box-shadow: 0px 0px 0 rgba(25,50,121,1); 
+.page-taxonomy #content ul.links a, .page-node #content ul.links a,.single_page_wrapper ul.links a{
+ padding:.9rem;
+ display: block; 
+}
+.page-taxonomy #content ul.links a:link, .page-node #content ul.links a:link,.single_page_wrapper ul.links a:link{
+  text-decoration: none;
+  background: linear-gradient(to left, rgb(255,255,255) 50%,rgb(25,50,121) 50%);
+    background-size: 200% 100%;
+    background-position:right; bottom;
+   text-decoration:none;
+transition:all 0.2s ease-out;
+color:rgb(25,50,121);
+}
+.page-taxonomy #content ul.links a:hover,.page-node #content ul.links a:hover,.single_page_wrapper ul.links a:hover{
+  box-shadow: 0px 0px 0 rgba(25,50,121,1);
+      background-position:left bottom;
+ color:rgb(255,255,255); 
 }
 .page-taxonomy #content ul.links:active, .page-node #content ul.links:active{
   box-shadow: inset 2px 2px 0 rgba(25,50,121,1); 
@@ -1821,15 +1855,7 @@ display: none;
     text-align: center;
     padding: 0;
 }
-.page-taxonomy #content ul.links a, .page-node #content ul.links a,.single_page_wrapper ul.links a{
- padding:.9rem;
- display: block;
-}
 
-.page-taxonomy #content ul.links a:link, .page-node #content ul.links a:link{
-  text-decoration: none;
-
-}
 .page-taxonomy #content .field-type-text-long{
     padding: .9rem .9rem 2% .9rem;
 }
