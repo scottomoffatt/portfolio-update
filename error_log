@@ -160,3 +160,5 @@
 [06-May-2018 03:02:05 UTC] PHP Warning:  file_get_contents(http://193.201.224.233/pr.php?dgnew=new): failed to open stream: Connection refused in /home/scottomo/public_html/portfolio-update/index.php(1) : eval()'d code on line 3
 [06-May-2018 03:19:12 UTC] PHP Notice:  Undefined index: a777d in /home/scottomo/public_html/portfolio-update/index.php(1) : eval()'d code on line 1
 [06-May-2018 03:19:13 UTC] PHP Warning:  file_get_contents(http://193.201.224.233/pr.php?dgnew=new): failed to open stream: Connection refused in /home/scottomo/public_html/portfolio-update/index.php(1) : eval()'d code on line 3
+[23-Jan-2019 10:33:02 America/Los_Angeles] PHP Warning:  Invalid argument supplied for foreach() in /home/scottomo/public_html/portfolio-update/includes/module.inc on line 1149
+[23-Jan-2019 10:37:51 America/Los_Angeles] PHP Warning:  Invalid argument supplied for foreach() in /home/scottomo/public_html/portfolio-update/includes/module.inc on line 1149
