@@ -20,7 +20,7 @@ $(window).ready(function() {
       'z-index' : '500'
     });
     $(window).scroll(function() {
-if ($(this).scrollTop() > 250){  
+if ($(this).scrollTop() > 250){
     $('.page-single-page #page, .page-single-page #full-bg').addClass("sticky").removeClass("no-sticky");
   }
   else{
@@ -70,7 +70,7 @@ if ($(this).scrollTop() > 250){
       'z-index' : '500'
     });
 */
- 
+
 
 
    function setHeight() {
@@ -78,7 +78,7 @@ if ($(this).scrollTop() > 250){
     $('.single_page_wrapper').css('min-height', windowHeight);
   };
   setHeight();
-  
+
   $(window).resize(function() {
     setHeight();
   });
@@ -93,7 +93,7 @@ if ($(this).scrollTop() > 250){
 
 
   });
-   
+
 
 
 })(jQuery);

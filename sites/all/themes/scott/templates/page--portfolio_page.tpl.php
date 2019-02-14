@@ -76,11 +76,11 @@
     <div id="inner-wrapper">
     	<div id="logo-wrap">
         <?php if ($logo): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a> 
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
         <?php endif; ?>
     	</div>
-     
- 
+
+
 	   <nav id="navigation">
 
       <?php if ($main_menu): ?>
@@ -116,23 +116,14 @@
   <div id="main">
 
     <div id="content" class="column" role="main">
-    
+
       <?php print render($page['highlighted']); ?>
- 
+
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
         <h1 class="title" id="<?php print $title; ?>"><?php print $title; ?></h1>
-        <div id="full-page">
-       <?php   $menu = menu_navigation_links('menu-linkto');
-print theme('links__menu-linkto', array(
-  'links' => $menu,
-  'attributes' => array(
-              'class' => array('links', 'inline'),
-            )
 
-  )); ?>
-        </div>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php if($is_admin): ?>
@@ -147,7 +138,7 @@ print theme('links__menu-linkto', array(
       <?php print $feed_icons; ?>
     </div><!-- /#content -->
 
- 
+
 
     <?php
       // Render the sidebars to see if there's anything in them.

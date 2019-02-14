@@ -15,7 +15,8 @@
 /*@import url(http://fonts.googleapis.com/css?family=Poppins:300,400,700);
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');*/
 /*@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');
+/*@import url('https://fonts.googleapis.com/css?family=Libre Franklin:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');*/
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot');
@@ -36,41 +37,40 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
+  *,*:before,*:after {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased; }
 html{
 	font-size: 62.5%;
 	  /*background-color:#ffffff;*/
 	}
 body {
-  font-family:'Montserrat', Helvetica, Arial, sans-serif;
+  font-family:'Libre Franklin', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   font-weight: 300;
 }
 *, *:before, *:after {
   box-sizing: border-box;
 }
-.footnav li a span{	
+.footnav li a span{
 	font-family: "typicons";
 	font-size:200%;
 	font-weight: normal;
    }
 #admin-menu-menu{
 	font-size: 1.4rem;
-	letter-spacing:.025rem;
+	letter-spacing:0rem;
 }
 p, ul, ol, dl, blockquote, pre, td, th, label, textarea, caption {
-    font-size: 1.4rem; /* equiv 14px */
-    line-height: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 300;
     margin: 0 0 1.6em 0;
-    letter-spacing: .025rem;
 }
 a, a:active, a:focus {
 outline: none;
@@ -88,7 +88,7 @@ nav ul, nav ol{
 #page {
 }
 input:focus{
-    outline: none;   
+    outline: none;
 }
 button:focus{
   outline: none;
@@ -134,7 +134,7 @@ button:focus{
   margin: 0;
   font-size: 2em;
   line-height: 1.5em;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
   color:#f2f2f2;
 }
 #site-name a:link,
@@ -181,45 +181,47 @@ h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
   margin: 0;
-	font-weight: 500;
+	font-weight: 800;
 	text-transform: capitalize;
 }
 h1, h2, h3, h4, h5{
-	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-	font-weight: 500;
-  letter-spacing: 0.025rem;
-	
+	font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
+	font-weight: 900;
+  letter-spacing: 0.005rem;
+  text-transform: capitalize;
+  margin: 0;
+
 	}
 h1{
-    font-size:  3.6rem; /* equiv 54 */
-    line-height: 3.6rem;
-    margin: 0 0 1.8rem 0;
+    font-size:  5.4rem; /* equiv 54 */
+    line-height: 5.4rem;
+
 }
 h2{
-    font-size:  2.7rem; /* equiv 36 */
+    font-size:  3.6rem; /* equiv 36 */
     line-height: 3.6rem;
-    margin: 0 0 1.8rem 0;
+
 }
 h3{
-    font-size:  2.25rem; /* equiv 28 */
+    font-size:  2.4rem; /* equiv 28 */
     line-height: 3.6rem;
-    margin: 0 0 1.8rem 0;
+
 }
 h4{
     font-size:  1.8rem; /* equiv 26 */
-    line-height:  2.7rem;
-    margin: 0 0  1.8rem 0;
+    line-height:  2.4rem;
+
 }
 h5{
     font-size:  1.6rem; /* equiv 24 */
     line-height:  1.8rem;
-    margin: 0 0  1.8rem 0;
+
 }
 h6{
-    font-size:  1.6rem; /* equiv 16 */
+    font-size:  1.4rem; /* equiv 16 */
     line-height:  1.8rem;
-    margin: 0 0  1.8rem 0;
-} 
+
+}
 tr.even { /* Some tables have rows marked even or odd. */
   /* background-color: #eee; */ /* Drupal core uses a #eee background */
 }
@@ -294,8 +296,8 @@ span.field-label { /* The inline field label used by the Fences module */
 /************* Main (container for everything else)******************* */
 
 #main {
-	
-	
+
+
 }
 /**********************CONTENT****************/
 
@@ -306,10 +308,10 @@ span.field-label { /* The inline field label used by the Fences module */
 .more-link { /* Aggregator, blog, and forum more link */
 }
 .view-frontpage article{
-border-top: 1px solid #000000;	
+border-top: 1px solid #000000;
 
 	}
-	
+
 .view-frontpage .webform-client-form label, .view-frontpage .webform-client-form input{
 	width: 90%;
 	}
@@ -355,32 +357,32 @@ border-top: 1px solid #000000;
 
 @media all and (max-width: 1024px) {
 /*  h1{
-    font-size:  3.6rem; 
+    font-size:  3.6rem;
     line-height: 4.2rem;
     margin: 0 0 1.8rem 0;
   }
   h2{
-      font-size:  2.7rem; 
+      font-size:  2.7rem;
       line-height: 3.6rem;
       margin: 0 0 1.8rem 0;
   }
   h3{
-      font-size:  2.4rem; 
+      font-size:  2.4rem;
       line-height: 3.6rem;
       margin: 0 0 1.8rem 0;
   }
   h4{
-      font-size:  2.2rem; 
+      font-size:  2.2rem;
       line-height:  2.4rem;
       margin: 0 0  1.8rem 0;
   }
   h5{
-      font-size:  1.8rem; 
+      font-size:  1.8rem;
       line-height:  2.2rem;
       margin: 0 0  1.8rem 0;
   }
   h6{
-      font-size:  1.6rem; 
+      font-size:  1.6rem;
       line-height:  1.8rem;
       margin: 0 0  1.8rem 0;
   }*/
@@ -420,4 +422,3 @@ border-top: 1px solid #000000;
 @media all and (max-width:680px){
 
 }
-

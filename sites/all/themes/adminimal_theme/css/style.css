@@ -21,7 +21,14 @@
 body.adminimal-theme *::-moz-focus-inner {
   border: 0;
 }
-
+.group-thumb{
+	width: 100px;
+	height: 100px;
+}
+.video-js[tabindex="-1"]{
+  width: 100px;
+  height: 100px;
+}
 body.adminimal-theme * {
   -moz-box-sizing: inherit;
   -webkit-box-sizing: inherit;
