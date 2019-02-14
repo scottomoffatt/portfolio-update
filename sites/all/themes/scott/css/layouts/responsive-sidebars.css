@@ -1618,12 +1618,13 @@ left:0;
     opacity: .3;
 }
 .node-about-custom .field-label,.node-about-custom .file {
-    width: 49%;
-    display: inline-block;
-		clear: both;
-		font-weight: 800;
-		font-size: 2.4rem;
-		vertical-align: bottom;
+	width: auto;
+	display: inline-block;
+	clear: both;
+	font-weight: 800;
+	font-size: 2.4rem;
+	vertical-align: bottom;
+	padding: 1.6rem 0;
 }
 .node-about-custom .field-label{
 	text-align: right;
