@@ -2387,6 +2387,12 @@ margin: 0 auto;
 .pseudolink{
   cursor: pointer;
 }
+.node-type-case-study #navigation{
+	text-align: center;
+}
+.node-type-case-study #inner-wrapper{
+	text-align: center;
+}
 .ex-menu{
       display: inline-block;
       height: 3.6rem;
@@ -2845,6 +2851,7 @@ margin: 0 auto;
     top: 0;
     right: 0;
     }
+
      /***hover touch ***/
  /*    #navigation .ex-menu:hover, #navigation .ex-menu:focus{
       width: 20%;

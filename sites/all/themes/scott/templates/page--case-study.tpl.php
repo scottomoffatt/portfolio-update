@@ -89,8 +89,8 @@
 	   <nav id="navigation">
         <input type="checkbox" id="toggle">
         <label for="toggle"><span class="icon-menu"></span></label>
-        <nav id="nav-menu" role="navigation" class="ex-menu">
-         <?php $menu = menu_navigation_links('menu-menu-taxonomy-menu');print theme('links__menu-menu-taxonomy-menu', array('links' => $menu));?>
+        <nav id="nav-menu" role="navigation" class="back">
+         <?php $menu = menu_navigation_links('menu-back');print theme('links__menu-menu-taxonomy-menu', array('links' => $menu));?>
 
         </nav>
 
