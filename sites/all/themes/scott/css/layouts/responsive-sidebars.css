@@ -1618,11 +1618,14 @@ left:0;
     opacity: .3;
 }
 .node-about-custom .field-label,.node-about-custom .file {
-    width: 50%;
+    width: 49%;
     display: inline-block;
 		clear: both;
 		font-weight: 800;
 		font-size: 2.4rem;
+}
+.node-about-custom .field-label{
+	text-align: right;
 }
 .node-about-custom a{
 	width: 100%;
