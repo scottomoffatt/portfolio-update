@@ -1953,6 +1953,9 @@ padding: 0;
 #full-page ul.links{
 
 }
+span.file {
+    font-weight: 800;
+}
 .page-taxonomy #content ul.links a, .page-node #content ul.links a,.single_page_wrapper ul.links a{
  padding:.9rem;
  display: block;
@@ -2388,10 +2391,14 @@ margin: 0 auto;
   cursor: pointer;
 }
 .node-type-case-study #navigation{
-	text-align: center;
+	text-align: right;
+	width: 50%
 }
 .node-type-case-study #inner-wrapper{
 	text-align: center;
+}
+.node-type-case-study .sticky #navigation ul li a:link{
+	font-size: 3.2rem;
 }
 .ex-menu{
       display: inline-block;
@@ -2660,6 +2667,7 @@ margin: 0 auto;
 		display:inline-block;
 		vertical-align: middle;
 	}
+
 	.page-single-page #single_page_wrapper{
 		width: 100%;
 		margin: 0;
