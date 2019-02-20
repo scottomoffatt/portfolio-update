@@ -2259,11 +2259,11 @@ margin: 0 auto;
 }
 
 .paragraphs-item-case-study .group-sections .group-image-wrap img{
-	opacity: .7;
+	opacity: 1;
 	z-index: 0;
 	display: block;
 	width: 100%;
-	min-height: 90vh;
+
 }
 
 .paragraphs-item-case-study .group-sections .group-image-wrap img:after{
@@ -2399,7 +2399,7 @@ margin: 0 auto;
 	padding:0 0 0 0;
 }
 .paragraphs-item-hero .group-image-wrap img {
-    max-width: 77%;
+    max-width: 70%;
 }
 .field-name-field-project-name{
   font-size: 3.6rem;
