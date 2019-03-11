@@ -126,18 +126,21 @@ $(function(){
       $('.owl-prev , .owl-next').css({"top": windowHH /4});
 
 });
+const observer = lozad();
+observer.observe();
 
 $('.specimens img, .view-thumbnail-gallery img, .field-name-field-slider-image img, .field-type-image img,.entity-paragraphs-item img').each(function(){
     $(this).attr("data-src" , $(this).attr("src")).removeAttr("src");
       $(this).addClass("lozad");
  });
-    lozad('.lozad', {
-    load: function(el) {
-        el.src = el.dataset.src;
-        el.onload = function() {
-            el.classList.add('fade-up')
-        }
-    }
+ lozad('.lozad', {
+ load: function(el) {
+     el.src = el.dataset.src;
+     el.onload = function() {
+         el.classList.add('fade-up')
+     }
+
+ }
 }).observe()
 
 

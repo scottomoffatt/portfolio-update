@@ -2065,9 +2065,11 @@ margin: 3.5rem auto;
   width: 100%;
   float: none;
   margin: 0 auto;
-      display: block;
-    height: auto;
-
+  display: block;
+  height: auto;
+}
+.field-name-field-detail-image .field-item, .field-name-field-video .field-item, .node-teaser .field-item{
+	display: inline-block;
 }
 .node-type-detail .field-type-text{
     width: 95%;
@@ -2378,6 +2380,9 @@ margin: 0 auto;
     height: auto;
 		font-weight: 800;
 		text-align: left;
+	}
+	.view-thumbnail-gallery img.lozad {
+		min-height: 19rem;
 	}
  .group-sections p{
     padding: 0.8rem 0;
