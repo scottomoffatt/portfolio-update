@@ -143,8 +143,6 @@ $('.specimens img, .view-thumbnail-gallery img, .field-name-field-slider-image i
  }
 }).observe()
 
-
-
 //scroll within div only
   $('.specimen-wrapper ').on( 'mousewheel DOMMouseScroll', function (e) {
 
