@@ -110,7 +110,12 @@ $(document).ready(function(){
   $('.page-taxonomy .field-items a, .field-content a, .views-field .views-field-field-slider-image a, .field-name-field-slider-image a, .field-type-image a').featherlightGallery();
 });
 
-
+var colors = ["#FFCF82","#FF7572","#2952C4","#7CEFD1","#AAAAFF"];
+  var i = 0;
+  $('.view-thumbnail-gallery .view-content .views-row').each(function(){
+    $(this).css("background-color", colors[i]);
+    i = (i + 1) % colors.length;
+  });
 $(function(){
   var windowHH = $(window).height();
   var headerheight = $('#header').height();
