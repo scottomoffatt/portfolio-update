@@ -387,7 +387,7 @@ font-weight: 700;
    background-color: transparent;
     position: relative;
     /* width: 35.6%; */
-    height: 10.9rem;
+    height:13rem;
     display: block;
     text-align: right;
     overflow: hidden;
@@ -456,7 +456,7 @@ margin:auto;
 .no-sticky #site-name{
 	     text-align: right;
     width: 100%;
-    /*height: 4.2rem;*/
+		max-width: 72.8rem;
     display: inline-block;
     vertical-align: top;
     letter-spacing: 0.16rem;
@@ -494,13 +494,13 @@ margin:auto;
     width: 100%;
     /* max-width: 18.0rem; */
     color: #ffffff;
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     position: relative;
     text-align: right;
     height: auto;
     z-index: 600;
     margin: 1.2rem 0 0 0;
-    line-height: 1.8rem;
+    line-height: 2.4rem;
 }
 
  .sticky #spw-front{
@@ -529,14 +529,14 @@ padding-bottom: 0;
 }
 .no-sticky #logo-wrap:before{
 	content: " ";
-  height: 10rem;
+  height: 13rem;
+	width: 13rem;
   margin: 0;
   display: inline-block;
 	position: absolute;
 	top: 0;
 	right: 0;
   transition: all 0.4s ease 0s;
-  width: 10rem;
   z-index: 6;
   background: url(../../logo-nosticky.svg) center bottom no-repeat;
   -webkit-background-size: contain;
@@ -591,7 +591,7 @@ padding-bottom: 0;
 }
 
 .no-sticky #logo img {
-	padding-top: 7.4rem;
+	padding-top: 13rem;
 	margin-left: -500px;
 	}
 .sticky #logo img {
@@ -2793,11 +2793,12 @@ margin: 0 auto;
     bottom: 15vh;
     width: 90%;
   }
-  .no-sticky #site-slogan{
-  width: 96%;
-  text-align: right;
-  margin:0;
-  }
+	  .no-sticky #site-slogan{
+	  width: 96%;
+	  text-align: right;
+	  margin:0;
+		font-size: 1.6rem;
+	  }
 	/*.sticky #logo-wrap{
 		position: relative;
 		width: 13%;
