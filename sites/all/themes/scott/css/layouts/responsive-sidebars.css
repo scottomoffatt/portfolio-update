@@ -358,7 +358,9 @@ font-weight: 700;
 	margin:0;
 
 	}
-
+ .page-single-page #single_page_wrapper #spw-about_scott{
+	 height: auto;
+ }
 
  .page-single-page  #main {
   	 margin:0;
@@ -1630,30 +1632,35 @@ color:#ffffff;
 	width: auto;
 	display: inline-block;
 	clear: both;
-	font-weight: 800;
-	font-size: 2.4rem;
+	font-weight: 600;
+	font-size: 1.6rem;
 	vertical-align: bottom;
 	padding: 1.6rem 0;
+	text-align: center;
+}
+.field-name-field-resume{
+	text-align: right;
 }
 .node-about-custom .field-label{
 	text-align: right;
+	width: auto;
 }
 .node-about-custom .file a {
-	width: auto;
-	vertical-align: bottom;
+	width:auto;
+	vertical-align: middle;
 }
 .node-about-custom .file img {
-	width: auto;
-	height: 2.4rem;
-	vertical-align: bottom;
+	width: 1.6rem;
+	height: 1.6rem;
+	vertical-align: middle;
+	display: inline-block;
 }
 .node-about-custom a{
 	width: 100%;
-	display: block;
+	display: inline-block;
+	vertical-align: center;
 	text-align: right;
-	font-weight: 800;
 	text-decoration: underline;
-	font-size: 2.4rem;
 }
    .about-bg:after{
 		 content: " ";
@@ -2548,7 +2555,7 @@ margin: 0 auto;
 	 * Use 5 grid columns for larger screens.
 	 */
   .open .views-field-field-project-name{
-    top:5.4rem;
+    top:3.6rem;
   }
   .open .specimen-wrapper{
     top: 5.4rem;
@@ -2746,6 +2753,9 @@ margin: 0 auto;
 		width: 100%;
 		margin: 0;
 	}
+	.aboutp p{
+		max-width: 96%;
+	}
 	#main-menu{
 		max-height: 3.6rem;
 		width: 100%;
@@ -2876,7 +2886,6 @@ margin: 0 auto;
 		/*content: " /";	*/
 		display:none;
 		}
-
 	.footnav{
 	padding:0;
 	margin: 0 auto;
@@ -2894,7 +2903,6 @@ margin: 0 auto;
   .page-taxonomy .sticky #navigation, .page-node .sticky #navigation{
   width: 100%;
 }
-
 #navigation .ex-menu  ul.links::before{
         content: "=";
       display: block;
@@ -2934,17 +2942,6 @@ margin: 0 auto;
     top: 0;
     right: 0;
     }
-
-     /***hover touch ***/
- /*    #navigation .ex-menu:hover, #navigation .ex-menu:focus{
-      width: 20%;
-      height:100vh;
-      text-align: right;
-      background: rgb(255,255,255);
-      border: 1px solid;
-     }  */
-
-
     #navigation  .ex-menu{
         display: inline-block;
           height: 3.6rem;
@@ -2953,10 +2950,7 @@ margin: 0 auto;
       transition: width .4s ease-out, height .2s ease-out;
       overflow: hidden;
       pointer-events: none; /*click trough to label checkbox*/
-
      }
-
-
      #toggle[type=checkbox]:checked ~ .ex-menu {
         display: inline-block;
       width: 50%;
@@ -3008,13 +3002,19 @@ margin: 0 auto;
 		border-right:none;
 		margin:0;
 		height:auto;
-		height: 15vh;
+		height: auto;
 		text-align: right;
 		/*border-bottom:1px solid #000000;*/
 	}
 	.view-thumbnail-gallery .view-content .views-row img{
+		max-width: 80%;
+		margin: 0;
+	}
+	.view-thumbnail-gallery .view-content .views-row img.lozad{
 		max-width: 50%;
 		margin: 0;
+		display: inline-block;
+		vertical-align: top;
 	}
 	.view-content .views-row:hover .overlay a::before, .view-content .views-row:hover .views-field-field-image span.field-content::before{
 		background-position: 90% 95%;
@@ -3025,7 +3025,7 @@ margin: 0 auto;
 	}
 
 	.view-thumbnail-gallery .view-content .views-row .views-field-field-image .field-content{
-		max-width: 300px;
+		text-align: right;
 	}
 	.view-thumbnail-gallery .project.views-fieldset{
 		position: absolute;
@@ -3146,7 +3146,7 @@ height: 3.6rem;
   }
 
 
-	.specimens .img-spec{
+	.view-thumbnail-gallery .views-row .specimens .img-spec{
 		width: 90%;
 	}
 	.view-thumbnail-gallery .views-row .specimens .img-spec .specimens:nth-child(1n+1) .img-cont{
