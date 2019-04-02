@@ -120,8 +120,6 @@ button:focus{
 	background-color: transparent;
 
 }
-
-
 #name-and-slogan { /* Wrapper for website name and slogan */
   float: left;
   color:#ffffff;
@@ -153,9 +151,6 @@ button:focus{
 .region-header { /* Wrapper for any blocks placed in the header region */
   clear: both; /* Clear the logo */
 }
-
-
-
 .region-highlighted {
 }
 
