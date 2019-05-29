@@ -112,7 +112,7 @@ $(document).ready(function(){
   $('.page-taxonomy .field-items a, .field-content a, .views-field .views-field-field-slider-image a, .field-name-field-slider-image a, .field-type-image a').featherlightGallery();
 });
 
-var colors = ["#99E079","#7CEFD1","#FF7572","#2952C4","#FFC260","#AAAAFF","#0D80A3"];
+var colors = ["#99E079","#7CEFD1","#FF7572","#2952C4","#FFC260","#AAAAFF","#4EB0CE"];
   var i = 0;
   $('.view-thumbnail-gallery .view-content .views-row').each(function(){
     $(this).css("background-color", colors[i]);
@@ -151,14 +151,14 @@ $('.specimens img, .view-thumbnail-gallery img, .field-name-field-slider-image i
 }).observe()
 
 //scroll within div only
-  $('.specimen-wrapper ').on( 'mousewheel DOMMouseScroll', function (e) {
+/*  $('.specimen-wrapper ').on( 'mousewheel DOMMouseScroll', function (e) {
 
   var e0 = e.originalEvent;
   var delta = e0.wheelDelta || -e0.detail;
 
   this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
   e.preventDefault();
-});
+});*/
 
 
 
