@@ -2288,7 +2288,6 @@ margin: 0 auto;
 	height: 5.4rem;
 	width: 96%;
 	max-width: 1200px;
-	border-bottom: 1px solid;
 	margin: 5.4rem auto;
 }
 .paragraphs-item-image-left .group-sections{
@@ -2314,7 +2313,7 @@ margin: 0 auto;
 	". text text image image image";
 }
 .paragraphs-item-image-right .group-sections{
-	max-width: 1400px;
+	max-width: 1200px;
 	margin: 0 auto;
 	display: grid;
 	grid-gap:1.6rem;
@@ -2326,13 +2325,13 @@ margin: 0 auto;
 }
 .paragraphs-item-case-study .group-sections{
 	display: grid;
-	grid-gap:0;
-	grid-template-columns:auto repeat(4, 1fr) auto;
-	grid-template-rows:5.6rem 5.6rem auto auto auto;
+	grid-gap: 0;
+	grid-template-columns: auto repeat(4, 1fr) auto;
+    grid-template-rows: auto 5.6rem auto auto auto;
 	grid-template-areas:
 	"image image image image image image"
-	". .header header header  header ."
-	".  text text text text . ";
+	". header header header header ."
+	". text text text text . ";
 	background: rgb(25,50,121);
 	max-height: 90vh;
 }
@@ -2394,9 +2393,9 @@ margin: 0 auto;
 	padding: 2.4rem 1.6rem;
 	z-index: 1;
 	color: #ffffff;
-	    padding-left: 15%;
-			font-weight: 600;
-			font-size: 1.8rem;
+	padding-left: 15%;
+	font-weight: 600;
+	font-size: 1.8rem;
 }
 .page-node-117 .paragraphs-item-case-study .group-sections h2{
 	grid-row: 2/3;
@@ -2405,17 +2404,16 @@ margin: 0 auto;
 	border: none;
 	z-index: 1;
 	color: #ffffff;
-	    padding-left: 15%;
+	padding-left: 15%;
 }
 .paragraphs-item-center-border .group-sections{
 	display: grid;
-	grid-gap:1.6rem;
-	grid-template-columns:auto repeat(4, 1fr) auto;
-	grid-template-rows:3.6rem auto auto;
-	grid-template-areas:
-		". . header header  . ."
-	". image image image image ."
-	".  . text text . . ";
+	max-width: 1200px;
+	margin: 0 auto;
+	grid-gap: 1.6rem;
+	grid-template-columns: auto repeat(4, 1fr) auto;
+	grid-template-rows: 3.6rem auto auto;
+	grid-template-areas: ". header header . . ." ". text text . . . " "image image image image image image";
 }
 
  .group-sections .group-image-wrap{
@@ -2429,8 +2427,8 @@ margin: 0 auto;
 }
 .group-sections .group-text-group{
 	grid-area: text;
-	border-top: 1px solid;
-    padding: 1.6rem 0;
+	border-top: none;
+    padding: 0 ;
     margin: 0;
 }
 .group-sections .case-intro{
@@ -2804,13 +2802,12 @@ font-weight: 600;
 	}
 	.paragraphs-item-case-study .group-sections{
 		display: grid;
-		grid-gap:0;
-		grid-template-columns:auto repeat(4, 1fr) auto;
-		grid-template-rows:auto 5.6rem auto auto;
-		grid-template-areas:
-		"image image image image image image"
-		". . header header  . ."
-		".  . text text . . ";
+    grid-gap: 0;
+    grid-template-columns: auto repeat(4, 1fr) auto;
+    grid-template-rows: auto 5.6rem auto auto;
+    grid-template-areas: "image image image image image image" ". .header header header header ." ". text text text text . ";
+    background: rgb(25,50,121);
+    max-height: 90vh;
 	}
 	.paragraphs-item-case-study .group-sections .group-image-wrap{
 		grid-row: 1/5;
