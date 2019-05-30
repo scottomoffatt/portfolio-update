@@ -2281,7 +2281,7 @@ margin: 0 auto;
 
 }
 .entity-paragraphs-item{
-	margin: 0; 
+	margin: 0;
 	text-align: left;
 }
 .paragraphs-item-titles{
@@ -2334,6 +2334,7 @@ margin: 0 auto;
 	". text text text text . ";
 	background: rgb(25,50,121);
 	max-height: 90vh;
+	margin: 0 0 5.4rem 0;
 }
 .paragraphs-item-center-border .group-sections .group-image-wrap{
 	text-align: center;
