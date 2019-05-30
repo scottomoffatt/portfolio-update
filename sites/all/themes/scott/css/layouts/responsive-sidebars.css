@@ -2281,7 +2281,7 @@ margin: 0 auto;
 
 }
 .entity-paragraphs-item{
-	margin: 5.4rem 0 0 0;
+	margin: 0; 
 	text-align: left;
 }
 .paragraphs-item-titles{
