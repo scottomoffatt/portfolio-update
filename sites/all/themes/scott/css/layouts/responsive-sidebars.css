@@ -1021,7 +1021,18 @@ position: relative;
 	width: 100%;
 	/*border-top: 5px solid rgba(255,219,31,1);*/
 }
+.prevent-scroll{
+	overflow-y:hidden;
+	-webkit-overflow-scrolling: auto;
+	position: -webkit-sticky;
+ position: sticky;
+	left:0;
 
+overflow: hidden;
+height: 100%;
+touch-action: none;
+}
+}
 /*.shrink:after{
 	content:" ";
 	display: block;
@@ -1148,7 +1159,7 @@ height: 100vh;
 }
 
 .open .specimen-wrapper{
- position: absolute;
+ position: fixed;
 	top: 9rem;
   left: 0;
   right: 0;
@@ -1158,15 +1169,15 @@ height: 100vh;
 	height: 100%;
   display: block;
   overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
      /*border: 1px solid;*/
- background: linear-gradient(90deg, rgb(251,251,251) 0%,rgb(255,255,255)20%,rgb(255,255,255) 80%,rgb(251,251,251)100%);
-      -webkit-transition: all 5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-    z-index: 500;
+ 	 background: linear-gradient(90deg, rgb(251,251,251) 0%,rgb(255,255,255)20%,rgb(255,255,255) 80%,rgb(251,251,251)100%);
+  -webkit-transition: all 5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  z-index: 500;
 }
 .load{
  	background: linear-gradient(319deg, #f7f59e, #5b2c92, #73eaac,#193279);
@@ -1493,9 +1504,11 @@ transition: all .2s;
 }
 
 .specimens:first-child .img-cont{
-      width:56%;
-
+    width:56%;
     margin: 8rem 0 0 0;
+}
+.specimens:last-child{
+    margin: 0 0 7.2rem 0;
 
 }
 .specimens .specimens .img-cont{
@@ -2729,6 +2742,10 @@ font-weight: 600;
 		width: 3.2rem;
 		margin: auto;
 		text-indent:50%;
+		position: absolute;
+		left: 0;
+		right:0;
+		justify-self:center;
 	}
 
 	.no-sticky #main-menu ul li:nth-child(1) a:before{
@@ -2933,11 +2950,16 @@ font-weight: 600;
 
 		.sticky #inner-wrapper{
 			font-size: 0;
+			height:6.2rem;
+			bottom: 0;
+			background: rgb(255,255,255);
+			top:initial;
 		}
 	.no-sticky #navigation{
 		width: 100%;
 		display:inline-block;
 		vertical-align: middle;
+		margin: 80vh 0 0 0;
 	}
 	.sticky #navigation{
 		width: 80%;
@@ -2995,10 +3017,16 @@ font-weight: 600;
     width: 96%;
 
 	}
-
+	.no-sticky #navigation ul li a:link{
+			display: flex;
+		flex-direction: row;
+		position: relative;
+		text-indent: 100rem;
+	}
 .no-sticky .info-contain{
-    bottom: 15vh;
+    bottom: 20vh;
     width: 90%;
+		margin: 80vh 0 0 0;
   }
 	  .no-sticky #site-slogan{
 	  width: 96%;
@@ -3052,10 +3080,20 @@ font-weight: 600;
   .sticky #navigation{
   overflow: visible;
   width: 83%;
-}
-  .page-taxonomy .sticky #navigation, .page-node .sticky #navigation{
-  width: 100%;
-}
+	padding-top: .8rem;
+	}
+	.sticky #logo-wrap{
+		top:.8rem;
+	}
+	  .page-taxonomy .sticky #navigation, .page-node .sticky #navigation{
+	  width: 100%;
+	}
+	.sticky #navigation ul li a:link{
+			display: flex;
+		flex-direction: row;
+		position: relative;
+		text-indent: 100rem;
+	}
 #navigation .ex-menu  ul.links::before{
         content: "=";
       display: block;
@@ -3251,11 +3289,13 @@ height: 3.6rem;
   .open .views-field-field-project-name{
     padding: 0 6rem 0 2rem;
     width: 100%;
+		top:0;
   }
   .open .specimen-wrapper{
     width: 100%;
 		display: flex;
 		flex-flow: column;
+		height: 85vh;
   }
 		.specimens{
   	width: 100%;
@@ -3266,8 +3306,8 @@ height: 3.6rem;
   .open .views-field-field-project-desc {
     position: relative;
     width: 90%;
-    top: 8rem;
-    margin: 0 auto;
+    top: initial;
+    margin:8.2rem auto 0 auto;
         padding-bottom: 20%;
     height: auto;
     min-height: 27rem;
