@@ -3080,6 +3080,10 @@ font-weight: 600;
   .sticky #navigation{
   overflow: visible;
   width: 83%;
+	padding-top: .8rem;
+	}
+	.sticky #logo-wrap{
+		top:.8rem;
 	}
 	  .page-taxonomy .sticky #navigation, .page-node .sticky #navigation{
 	  width: 100%;
