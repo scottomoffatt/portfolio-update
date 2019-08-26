@@ -23,9 +23,7 @@ function animatebodymovin(duration, animObject) {
   var scrollPosition = theWindow.scrollTop();
   var maxFrames = animObject.totalFrames;
   var frame = (maxFrames / 19) * (scrollPosition / (duration / 19));
-
   animObject.goToAndStop(frame, true);
-
 }
 
 
@@ -34,31 +32,29 @@ $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').o
   var widthstart = $('.view-thumbnail-gallery .views-row .views-field-field-image img').width();
   var imgst = $('.field-content').height();
   var totalHeight= 0;
+//  $(this).parents('body').toggleClass('prevent-scroll');
     $(this).parent().find('.specimens').each(function(){
       totalHeight = totalHeight + $(this).outerHeight(true);
     });
   e.preventDefault();
-
     if ($(this).siblings('.slide-container').hasClass('open')){
-    $(this).siblings('.slide-container').removeClass('open');
    $(this).parent('.views-row').css({"height" : "auto"});
-
   }  else {
   $(this).parent('.views-row').css({"height" : windowH}).siblings().css({"height" : "auto"});
     $(this).siblings('.slide-container').toggleClass('open').parent().siblings('.views-row').children('.slide-container').removeClass('open');
     $('html,body').animate({scrollTop:$(this).parent().parent().offset().top -3},500);
     $(this).find('.desc').css({"height":firstslide });
-
+  //  $(this).parents('body').toggleClass('prevent-scroll');
+    $(this).parents('#page').children('#header').css({"z-index":"0"});
   }
   if ($(this).siblings('.slide-container').hasClass('open')){
     $(this).parents('.views-row').find('.button-wrapper').css({"top" : " 13.5rem"});
-
   $(this).parents('ul').addClass('shrink').css({"margin-bottom": "100vh"});
+//  $(this).parents('body').addClass('prevent-scroll');
   } else {
-
   $(this).parents('ul').removeClass('shrink').css({"margin-bottom":"0"});
   $(this).parents('.views-row').find('.button-wrapper').css({"top" : " "});
-}
+  }
 });
 var windowH = $(window).height();
 
@@ -93,11 +89,13 @@ $(document).keyup(function(event) {
 $('.button').on('click', function(e){
   e.preventDefault();
        $('.shrink').removeClass('shrink').css({"margin-bottom":"0"});
+       //$(this).parents('body').toggleClass('prevent-scroll');
+       $(this).parents('#page').children('#header').css({"z-index":"10"});
      $('.open').removeClass('open');
      $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
      $('html,body').animate({scrollTop:$(this).parent().parent().offset().top -36},500);
-
 });
+
 
 $(window).scroll(function(){
   var away = $("#full-bg");
@@ -133,6 +131,8 @@ $(function(){
       $('.owl-prev , .owl-next').css({"top": windowHH /4});
 
 });
+
+
 const observer = lozad();
 observer.observe();
 
@@ -150,8 +150,78 @@ $('.specimens img, .view-thumbnail-gallery img, .field-name-field-slider-image i
  }
 }).observe()
 
+/*$(document).on('ready', function() {
+  var winHeight = $(window).height(),
+      docHeight = $(document).height(),
+      progressBar = $('progress'),
+      max, value;*/
+
+  /* Set the max scrollable area */
+  /*max = docHeight - winHeight;
+  progressBar.attr('max', max);
+  progressBar.width(winHeight-72);*/
+
+/*  $(document).on('scroll', function(){
+     value = $(window).scrollTop();
+     progressBar.attr('value', value);
+  });
+});*/
+// now on github:
+// https://github.com/simeydotme/jquery-unorphanize
+
+
+
+// PEW PEW !!
+$(function() {
+  $("p ,.case-notes").killThemOrphans(1);
+});
+
+$.fn.killThemOrphans = function( gather ) {
+
+  // if we haven't supplied a number for the number
+  // of words to join the orphan, or we supplied
+  // it wrong, make it 1.
+  if( typeof( gather ) !== "number" ) {
+    gather =  1;
+  }
+  // make it chain-able
+  return $(this).each( function() {
+
+    var $el = $(this),
+      htmlEls = [],
+      text, el, els, orphansExp, i,
+      replaceOrphans, lngth, replaceRegex;
+    text = $el.html();
+    // grab any html tags like a,strong,em
+    els = text.match(/<([A-Z][A-Z0-9]*)\b[^>]*>/gi);
+    // each time we match a html element opening tag (eg: <a href="">),
+    // save it into array and replace it with a placeholder like: "__n__";
+    for( el in els ) {
+      htmlEls.push( els[el] );
+      text = text.replace( els[el] , "__"+el+"__");
+    }
+    // now we find the given number of gathered words, and then insert a
+    // non-breaking-space (&nbsp;) in to the given number of spaces.
+    orphansExp = new RegExp("( (\\S)+){"+gather+"}$");
+    if( text.match( orphansExp ) ) {
+      replaceOrphans = text
+        .match( orphansExp )[0]
+        .replace( /\s/gi , "&nbsp;" );
+      text = text.replace( orphansExp , replaceOrphans );
+    }
+    // now we have put the non-breaking-spaces in, we must replace the
+    // placeholders with the original html elements we stored earlier.
+    lngth = htmlEls.length;
+    for( i = 0; i < lngth; i++ ) {
+      replaceRegex = new RegExp("__"+i+"__");
+      text = text.replace( replaceRegex , htmlEls[i] );
+    }
+    // and finally replace the html with the sparkly new text string.
+    $el.html( text );
+  });
+};
 //scroll within div only
-/*  $('.specimen-wrapper ').on( 'mousewheel DOMMouseScroll', function (e) {
+ /*$('.specimen-wrapper ').on( 'mousewheel DOMMouseScroll', function (e) {
 
   var e0 = e.originalEvent;
   var delta = e0.wheelDelta || -e0.detail;
@@ -159,9 +229,5 @@ $('.specimens img, .view-thumbnail-gallery img, .field-name-field-slider-image i
   this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
   e.preventDefault();
 });*/
-
-
-
-
 });
 })(jQuery);
