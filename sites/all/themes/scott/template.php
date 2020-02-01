@@ -255,19 +255,22 @@ function scott_preprocess_html(&$vars) {
   // Add JS files that *needs* to be loaded in the head in a new "$head_scripts" scope.
   // For instance the Modernizr lib.
   $path = drupal_get_path('theme', 'scott');
- 
-  drupal_add_js($path . '/js/image-preview.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));  
-  
+
+  drupal_add_js($path . '/js/image-preview.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));
+
   drupal_add_js($path . '/js/lozad.min.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));
 
-  drupal_add_js($path . '/js/featherlight.js', array('scope' => 'head_scripts', 'weight' => -2, 'preprocess' => FALSE));    
-  
-  drupal_add_js($path . '/js/featherlight.gallery.js', array('scope' => 'head_scripts', 'weight' => 0, 'preprocess' => FALSE));  
-  drupal_add_js($path . '/js/bodymovin.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));
+  /*drupal_add_js($path . '/js/featherlight.js', array('scope' => 'head_scripts', 'weight' => -2, 'preprocess' => FALSE));    */
 
-  drupal_add_js('sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js', array('scope' => 'head_scripts', 'weight' => -3, 'preprocess' => TRUE));  
+  /*drupal_add_js($path . '/js/featherlight.gallery.js', array('scope' => 'head_scripts', 'weight' => 0, 'preprocess' => FALSE));  */
+drupal_add_js($path . '/js/bodymovin.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));
+  /*drupal_add_js($path . '/js/lottie_light_canvas.min.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));*/
 
-  
+
+
+drupal_add_js('sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js', array('scope' => 'head_scripts', 'weight' => -3, 'preprocess' => TRUE));
+
+
 
 }
 /**
@@ -275,4 +278,21 @@ function scott_preprocess_html(&$vars) {
  */
 function scott_process_html(&$vars) {
   $vars['head_scripts'] = drupal_get_js('head_scripts');
+}
+function scott_preprocess_image(&$variables) {
+   if ($variables['style_name'] == 'width-1500') {
+       $variables['attributes']['data-src'][] = file_create_url($variables['path']);
+       $variables['attributes']['class'][] = 'lozad';
+       $variables['path'] = $base_url . 'sites/all/themes/scott/images/img-placeholder.svg';
+   }
+   if ($variables['style_name'] == 'specimens') {
+       $variables['attributes']['data-src'][] = file_create_url($variables['path']);
+       $variables['attributes']['class'][] = 'lozad';
+       $variables['path'] = $base_url . 'sites/all/themes/scott/images/img-placeholder.svg';
+   }
+   if ($variables['style_name'] == 'medium') {
+       $variables['attributes']['data-src'][] = file_create_url($variables['path']);
+       $variables['attributes']['class'][] = 'lozad';
+       $variables['path'] = $base_url . 'sites/all/themes/scott/images/img-placeholder.svg';
+   }
 }

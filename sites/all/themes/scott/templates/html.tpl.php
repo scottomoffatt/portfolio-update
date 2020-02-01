@@ -88,8 +88,8 @@
     <meta name="theme-color" content="#1a337a">
   <?php endif; ?>
   <meta http-equiv="cleartype" content="on">
+    <?php print $styles; ?>
   <?php print $head_scripts; ?>
-  <?php print $styles; ?>
   <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
     <script src="<?php print $base_path . $path_to_zen; ?>/js/html5-respond.js"></script>
@@ -101,7 +101,7 @@
   <?php endif; ?>
 
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  
+
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
