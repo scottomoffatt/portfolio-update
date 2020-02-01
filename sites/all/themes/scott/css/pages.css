@@ -16,7 +16,129 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');*/
 /*@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');*/
 /*@import url('https://fonts.googleapis.com/css?family=Libre Franklin:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');*/
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+/*@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');*/
+/*@import url('https://rsms.me/inter/inter.css');*/
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-Light.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-Light.woff?v=3.11") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-LightItalic.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-LightItalic.woff?v=3.11") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-Regular.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-Regular.woff?v=3.11") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-Italic.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-Italic.woff?v=3.11") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-Medium.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-Medium.woff?v=3.11") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-MediumItalic.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-MediumItalic.woff?v=3.11") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-SemiBold.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-SemiBold.woff?v=3.11") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-SemiBoldItalic.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-SemiBoldItalic.woff?v=3.11") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-Bold.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-Bold.woff?v=3.11") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-BoldItalic.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-BoldItalic.woff?v=3.11") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-ExtraBold.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-ExtraBold.woff?v=3.11") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-ExtraBoldItalic.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-ExtraBoldItalic.woff?v=3.11") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-Black.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-Black.woff?v=3.11") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-BlackItalic.woff2?v=3.11") format("woff2"),
+       url("../fonts/inter/Inter-BlackItalic.woff?v=3.11") format("woff");
+}
+
+
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot');
@@ -47,7 +169,7 @@ html{
 	  /*background-color:#ffffff;*/
 	}
 body {
-  font-family:'Libre Franklin', Helvetica, Arial, sans-serif;
+  font-family:'Inter', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
@@ -69,8 +191,18 @@ body {
 p, ul, ol, dl, blockquote, pre, td, th, label, textarea, caption {
   font-size: 1.6rem;
   line-height: 2.4rem;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 16px;
+letter-spacing: -0.011em;
+line-height: 2.4rem;
     margin: 0 0 1.6em 0;
+    -moz-font-feature-settings:    "kern" 1;
+-ms-font-feature-settings:     "kern" 1;
+-o-font-feature-settings:      "kern" 1;
+-webkit-font-feature-settings: "kern" 1;
+font-feature-settings:         "kern" 1;
+font-kerning: normal;
+
 }
 a, a:active, a:focus {
 outline: none;
@@ -177,38 +309,45 @@ h3.title { /* Comment title */
 	font-weight: 800;
 	text-transform: capitalize;
 }
-h1, h2, h3, h4, h5{
-	font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
-	font-weight: 900;
-  letter-spacing: 0.005rem;
+h1, h2, h3, h4, h5, h6{
+  -moz-font-feature-settings:    "kern" 1;
+-ms-font-feature-settings:     "kern" 1;
+-o-font-feature-settings:      "kern" 1;
+-webkit-font-feature-settings: "kern" 1;
+font-feature-settings:         "kern" 1;
+font-kerning: normal;
+	font-family: 'Inter', Helvetica, Arial, sans-serif;
+	font-weight: 800;
+
   text-transform: capitalize;
   margin: 0;
 
 	}
 h1{
-    font-size:  5.4rem; /* equiv 54 */
-    line-height: 5.4rem;
-
+    font-size:  4.8rem; /* equiv 54 */
+    line-height: 5.6rem;
+    letter-spacing: -0.021em;
+    line-height: ;
 }
 h2{
-    font-size:  4.6rem; /* equiv 36 */
-    line-height: 4.6rem;
-
+    font-size:  4rem; /* equiv 36 */
+    line-height: 4.8rem;
+    letter-spacing: -0.021em;
 }
 h3{
     font-size:  3.2rem; /* equiv 28 */
-    line-height: 3.2rem;
-
+    line-height: 4rem;
+    letter-spacing: -0.020em;
 }
 h4{
     font-size:  2.4rem; /* equiv 26 */
-    line-height:  2.4rem;
-
+    line-height:  3.2rem;
+        letter-spacing: -0.019em;
 }
 h5{
     font-size:  1.6rem; /* equiv 24 */
     line-height:  2.4rem;
-
+        letter-spacing: -0.018em;
 }
 h6{
     font-size:  1.4rem; /* equiv 16 */

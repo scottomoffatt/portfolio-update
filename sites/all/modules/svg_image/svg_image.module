@@ -144,6 +144,11 @@ function svg_image_get_dimensions($uri) {
       if ($attribute === 'width' || $attribute === 'height') {
         $svg_dimensions[$attribute] = (integer) $value;
       }
+      elseif ($attribute === 'viewBox') {
+        $viewBox = explode(" ", $value);
+        $svg_dimensions['width'] = isset($svg_dimensions['width']) ? $svg_dimensions['width'] : (integer) $viewBox[2];
+        $svg_dimensions['height'] = isset($svg_dimensions['height']) ? $svg_dimensions['height'] : (integer) $viewBox[3];
+      }
     }
   }
 

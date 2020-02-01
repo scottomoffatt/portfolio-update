@@ -36,10 +36,66 @@ function svg_image_field_widget_form_alter(&$element, &$form_state, $context) {
           }
 
           $element[$delta] = $field_item;
+          $element[$delta]['#process'][] = 'svg_image_field_widget_process';
         }
       }
     }
   }
+}
+
+
+/**
+ * Element #process callback function.
+ *
+ * Fetch the SVG Image correct dimensions.
+ */
+function svg_image_field_widget_process($element, &$form_state, $form) {
+  $instance = field_widget_instance($element, $form_state);
+
+  $settings = $instance['settings'];
+  $widget_settings = $instance['widget']['settings'];
+
+  // Add the image preview.
+  if ($element['#file'] && $widget_settings['preview_image_style']) {
+    $variables = array(
+      'style_name' => $widget_settings['preview_image_style'],
+      'path' => $element['#file']->uri,
+    );
+
+    // Determine image dimensions.
+    if (isset($element['#value']['width']) && isset($element['#value']['height'])) {
+      $variables['width'] = $element['#value']['width'];
+      $variables['height'] = $element['#value']['height'];
+    }
+    else {
+      $info = svg_image_get_dimensions($element['#file']->uri);
+
+      if (is_array($info)) {
+        $variables['width'] = $info['width'];
+        $variables['height'] = $info['height'];
+      }
+      else {
+        $variables['width'] = $variables['height'] = NULL;
+      }
+    }
+
+    $element['preview'] = array(
+      '#type' => 'markup',
+      '#markup' => theme('image_style', $variables),
+    );
+    // Store the dimensions in the form so the file doesn't have to be accessed
+    // again. This is important for remote files.
+    $element['width'] = array(
+      '#type' => 'hidden',
+      '#value' => $variables['width'],
+    );
+    $element['height'] = array(
+      '#type' => 'hidden',
+      '#value' => $variables['height'],
+    );
+  }
+
+  return $element;
 }
 
 /**

@@ -12,10 +12,6 @@ function scott_form_system_theme_settings_alter(&$form, &$form_state, $form_id =
   if (isset($form_id)) {
     return;
   }
-function mscott_preprocess_page(&$variables) {
-  if (!empty($variables['node']) && $variables['node']->type == 'basic_page') {
-    $variables['show_title'] = FALSE;
-  }
 }
   // Create the form using Forms API: http://api.drupal.org/api/7
 
@@ -34,4 +30,3 @@ function mscott_preprocess_page(&$variables) {
   // */
 
   // We are editing the $form in place, so we don't need to return anything.
-}

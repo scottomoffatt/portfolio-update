@@ -74,13 +74,13 @@
   <header id="header" role="banner">
     <div id="inner-wrapper">
     <div id="site-info">
-    <div class="info-contain">	
+    <div class="info-contain">
 	<div id="logo-wrap">
     <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a> 
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
     <?php endif; ?>
 	</div>
-    
+
       <?php if ($site_name || $site_slogan): ?>
 
         <?php if ($site_name): ?>
@@ -92,18 +92,18 @@
         <?php if ($site_slogan): ?>
           <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
         <?php endif; ?>
-  
+
        <?php endif; ?>
    </div><!--info-contain-->
       </div><!--siteinfo-->
-   
+
 
 	   <nav id="navigation">
 
       <?php if ($main_menu): ?>
         <nav id="main-menu" role="navigation">
           <?php
-        
+
           print theme('links__system_main_menu', array(
             'links' => $main_menu,
             'attributes' => array(
@@ -117,24 +117,18 @@
           )); ?>
         </nav>
       <?php endif; ?>
-
       <?php print render($page['navigation']); ?>
-
     </nav><!-- /#navigation -->
     <?php print render($page['header']); ?>
-
-
     </div><!--innner-wrapper-->
   </header>
 
   <div id="main">
-
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
- 
       <a id="main-content"></a>
+      <div id="admin-controls">
       <?php print render($title_prefix); ?>
-      
       <?php print render($title_suffix); ?>
       <?php if($is_admin): ?>
         <?php print $messages; ?>
@@ -144,11 +138,13 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+    </div>
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
+
     </div><!-- /#content -->
 
- 
+
 
     <?php
       // Render the sidebars to see if there's anything in them.

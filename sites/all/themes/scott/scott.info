@@ -47,24 +47,26 @@ base theme  = zen
 stylesheets[all][] = system.menus.css
 
 ; Then we add our own stylesheets.
- stylesheets[all][] = css/normalize.css
- stylesheets[all][] = css/wireframes.css
- stylesheets[all][] = css/featherlight.css
- stylesheets[all][] = css/featherlight.gallery.css
+
+
+ ;stylesheets[all][] = css/wireframes.css
+ ;stylesheets[all][] = css/featherlight.css
+ ;stylesheets[all][] = css/featherlight.gallery.css
  ;stylesheets[all][] = css/iconic/open-iconic.css
- stylesheets[all][] = css/typicons/typicons.css
- stylesheets[all][] = css/layouts/responsive-sidebars.css
+ ;stylesheets[all][] = css/typicons/typicons.css
  stylesheets[all][] = css/page-backgrounds.css
  stylesheets[all][] = css/tabs.css
- stylesheets[all][] = css/pages.css
  stylesheets[all][] = css/blocks.css
- stylesheets[all][] = css/navigation.css
  stylesheets[all][] = css/views-styles.css
  stylesheets[all][] = css/nodes.css
  stylesheets[all][] = css/comments.css
  stylesheets[all][] = css/forms.css
  stylesheets[all][] = css/fields.css
  stylesheets[all][] = css/print.css
+ stylesheets[all][] = css/normalize.css
+ stylesheets[all][] = css/navigation.css
+ stylesheets[all][] = css/pages.css
+ stylesheets[all][] = css/layouts/responsive-sidebars.css
 
 ;SASS
 ;stylesheets[all][] = sass/normalize.scss
@@ -102,8 +104,8 @@ stylesheets[all][] = system.menus.css
 
 ;scripts[] = js/script.js
 scripts[] = js/image-preview.js
-scripts[] = js/featherlight.js
-scripts[] = js/featherlight.gallery.js
+;scripts[] = js/featherlight.js
+;scripts[] = js/featherlight.gallery.js
 ;scripts[] = js/bodymovin.js
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
