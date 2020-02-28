@@ -1,1 +1,12 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><defs><style>.cls-1{fill:#193279;}</style></defs><path class="cls-1" d="M51.52,0H0V51.52A51.52,51.52,0,0,1,51.52,0Z"/><path class="cls-1" d="M289.85,0A193.56,193.56,0,0,1,300,62.05c0,107.08-87.63,194.27-194.71,193.75A192.78,192.78,0,0,1,0,224.07V600H80.64l143-209.06,78.55,114.88,199.6-291.9L600,357.63V0Z"/><path class="cls-1" d="M548.48,600H600V548.48A51.52,51.52,0,0,1,548.48,600Z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#193279;}
+</style>
+<circle class="st0" cx="168" cy="161.9" r="90"/>
+<polyline class="st0" points="1296,446.8 693.7,446.8 693.7,633.7 1296,633.7 "/>
+<path class="st0" d="M532.7,236.9l-42.1,0.2L275,473.5V600H599V305.9C599,269,569.7,236.7,532.7,236.9"/>
+<path class="st0" d="M256.8,306.9l-42.1,0.2L-0.9,543.5V600h323.9V375.9C323.1,339,293.8,306.7,256.8,306.9"/>
+</svg>
