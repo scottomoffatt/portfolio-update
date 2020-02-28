@@ -16,9 +16,8 @@ files[] = tests/lazyloader_theme.test
 stylesheets[all][] = lazyloader.css
 configure = admin/config/media/lazyloader
 
-; Information added by Drupal.org packaging script on 2015-09-29
-version = "7.x-2.0-alpha1"
+; Information added by Drupal.org packaging script on 2018-10-16
+version = "7.x-2.0-alpha2"
 core = "7.x"
 project = "lazyloader"
-datestamp = "1443533948"
-
+datestamp = "1539713901"

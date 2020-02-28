@@ -1065,6 +1065,7 @@ touch-action: none;
 	background-repeat: no-repeat;
 	background-size: 3.2rem 3.2rem;
 	background-position: 3.2rem 0.8rem;
+	border-top:3px solid;
 	  }
   .open .views-field-field-project-name .sub-header{
   	max-width: 1260px;
@@ -1194,11 +1195,16 @@ top:0;
   z-index: 500;
 
 }
-.open.projects .specimen-wrapper{
+/*.open.projects .specimen-wrapper{
 	position: absolute;
+}*/
+.open.projects .specimen-wrapper.views-field-field-case-test {
+	overflow-x: hidden;
+	overflow-y: visible;
+	-webkit-overflow-scrolling: touch;
 }
-.open.projects .specimen-wrapper .field-content{
-	position: fixed;
+.open.projects .specimen-wrapper.views-field-field-case-test .field-content{
+	position: sticky;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -1231,6 +1237,7 @@ top:0;
 }
 
 .lozad{
+	will-change: auto;
 	opacity: 1;
 	background: linear-gradient(319deg, rgba(25,50,121,.1), rgba(240,240,240,.1),rgba(25,50,121,.1),rgba(240,240,240,.1) );
 background-size: 800% 800%;
@@ -2972,7 +2979,7 @@ font-weight: 600;
 		font-size: 3.2rem;
 	}
 	#main-menu ul li a:before{
-		content: ' ';
+		/*content: ' ';*/
 		background-size: 3.2rem 3.2rem;
 		background-position: center top;
 		display: inline-block;
@@ -2987,7 +2994,9 @@ font-weight: 600;
 		right:0;
 		justify-self:center;
 	}
-
+	.#navigation ul li a:link{
+		font-size: 1.6rem;
+	}
 	.no-sticky #main-menu ul li:nth-child(1) a:before{
 		background: url(../../images/home-w.svg) no-repeat;
 	}
@@ -3192,8 +3201,11 @@ font-weight: 600;
 		margin:0;
 		}
 	 #main-menu ul li a::before {
-	 	font-size: 2.7rem;
+	 	font-size: 1.6rem;
 	 	text-align: center;
+		font-weight: 400;
+		text-align: left;
+
 	 }
 	  #main-menu .links{
 	  	width: 100%;
@@ -3201,8 +3213,8 @@ font-weight: 600;
 
 		.sticky #inner-wrapper{
 			font-size: 0;
-			height:6.2rem;
-			bottom: 0;
+			height:3.2rem;
+			top: 0;
 		/*background: rgb(255,255,255);*/
 			top:initial;
 		}
@@ -3268,10 +3280,11 @@ font-weight: 600;
 
 	}
 	.no-sticky #navigation ul li a:link{
-			display: flex;
+			display: block;
 		flex-direction: row;
 		position: relative;
-		text-indent: 100rem;
+		font-size: 1.6rem;
+		font-weight: 400;
 	}
 .no-sticky .info-contain{
     bottom: 20vh;
@@ -3323,19 +3336,19 @@ font-weight: 600;
   .sticky #navigation{
   overflow: visible;
   width: 83%;
-	padding-top: .8rem;
+	padding-top: 0;
 	}
 	.sticky #logo-wrap{
-		top:.8rem;
+		top:0;
 	}
 	  .page-taxonomy .sticky #navigation, .page-node .sticky #navigation{
 	  width: 100%;
 	}
 	.sticky #navigation ul li a:link{
-			display: flex;
+			display: inline-block;
 		flex-direction: row;
 		position: relative;
-		text-indent: 100rem;
+		text-indent: 0;
 	}
 #navigation .ex-menu  ul.links::before{
         content: "=";
