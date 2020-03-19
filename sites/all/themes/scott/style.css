@@ -1,0 +1,53 @@
+.entity-paragraphs-item div {
+    /* background-position: center left; */
+    /* background-size: 328px 1080px; */
+    /* background-image: url(../../images/lines-328-01.svg); */
+    /* background-repeat: no-repeat; */
+}
+
+.field-content:before {
+    background-position: center left;
+    background-size: 328px 1080px;
+    background-image: url(../../images/lines-328-01.svg);
+    background-repeat: no-repeat;
+    /* content: " "; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5000;
+}
+
+.entity.entity-paragraphs-item.paragraphs-item-image-left {
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+    display: table;
+}
+
+
+
+.background-image-formatter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    /* max-width: 1016px; */
+    height: 100%;
+    z-index: -1;
+    background-position: bottom right;
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-color: rgb(153, 224, 121);
+    /* background-attachment: fixed; */
+}
+
+.views-field-field-case-test .paragraphs-item-case-study {
+    background-color: rgb(25,50,121);
+}
