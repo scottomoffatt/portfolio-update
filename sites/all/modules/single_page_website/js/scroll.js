@@ -77,14 +77,14 @@
          $(".links li:eq(2) a").removeClass('active') ;
          $(".links li:eq(3) a").removeClass('active') ;
         }
-        else{ 
+        else{
           $(".links li:eq(0) a").toggleClass('active') ;
           $(".links li:eq(1) a").removeClass('active') ;
           $(".links li:eq(2) a").removeClass('active') ;
           $(".links li:eq(3) a").removeClass('active') ;
         }
 
-   
+
       });
       $("#single_page_wrapper .single_page_wrapper:eq(1)").waypoint(function(direction) {
         if (direction ==='down') {
@@ -99,14 +99,14 @@
          $(".links li:eq(2) a").removeClass('active') ;
          $(".links li:eq(3) a").removeClass('active') ;
         }
-        else{ 
+        else{
         $(".links li:eq(1) a").toggleClass('active') ;
         $(".links li:eq(0) a").removeClass('active') ;
           $(".links li:eq(2) a").removeClass('active') ;
           $(".links li:eq(3) a").removeClass('active') ;
         }
 
-   
+
       });
       $("#single_page_wrapper .single_page_wrapper:eq(2)").waypoint(function(direction) {
         if (direction ==='down') {
@@ -121,7 +121,7 @@
          $(".links li:eq(1) a").removeClass('active') ;
          $(".links li:eq(3) a").removeClass('active') ;
         }
-        else{ 
+        else{
           $(".links li:eq(2) a").toggleClass('active') ;
           $(".links li:eq(1) a").removeClass('active') ;
           $(".links li:eq(0) a").removeClass('active') ;
@@ -141,7 +141,7 @@
          $(".links li:eq(1) a").removeClass('active') ;
          $(".links li:eq(2) a").removeClass('active') ;
         }
-        else{ 
+        else{
           $(".links li:eq(3) a").toggleClass('active') ;
           $(".links li:eq(1) a").removeClass('active') ;
           $(".links li:eq(0) a").removeClass('active') ;
@@ -154,7 +154,7 @@
             var $links = $('.links a[href="#' + this.id + '"]');
             $links.toggleClass('active', direction === 'down');
         }, {
-            //context: '#docs',
+            context: '#docs',
             offset: '100%'
         })
             .waypoint(function(direction) {
@@ -168,6 +168,6 @@
         });*/
 
 
-    
+
   });
 })(jQuery);
