@@ -263,7 +263,11 @@ $(function(){
       $('.owl-prev , .owl-next').css({"top": windowHH /4});
 
 });
-
+$('p, li, span').each(function(){
+   var string = $(this).html();
+   string = string.replace(/ ([^ ]*)$/,'&nbsp;$1');
+   $(this).html(string);
+ });
 
 // Initialize library to lazy load images
  const observer = lozad(".lozad", {
