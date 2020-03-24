@@ -38,31 +38,33 @@ $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').o
   var imgst = $('.field-content').height();
   var totalHeight= 0;
   var thisoffset = $(this).parent().parent().offset()
+ 
   $(this).parents('body').addClass('prevent-scroll');
-    $(this).parent().find('.specimens').each(function(){
+          console.log("TEst");
+   
+
+  $(this).parent().find('.specimens').each(function(){
       totalHeight = totalHeight + $(this).outerHeight(true);
     });
   e.preventDefault();
   window.location.hash = $(this).attr('id');
   $(window).on('hashchange' ,function (event){
-  if(window.location.hash != "#overlay-mod") {
-    $('.shrink').removeClass('shrink').css({"margin-bottom":"0"});
-    //$(this).parents('body').toggleClass('prevent-scroll');
-    $('#header').css({"z-index":"10"});
-  $('.open').removeClass('open');
-  $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
-       $('body').removeClass('prevent-scroll');
-  $('html,body').animate({scrollTop:thisoffset.top -36},500);
-        }
+    if(window.location.hash != "#overlay-mod") {
+        $('.shrink').removeClass('shrink').css({"margin-bottom":"0"}); 
+       $(this).parents('#page').children('#header').css({"z-index":"10"});
+     $('.open').removeClass('open');
+     $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
+      $(this).parents('body').removeClass('prevent-scroll');
+        $('html,body').animate({scrollTop:thisoffset.top -54},500);
+    } 
 
 });
-    if ($(this).siblings('.slide-container').hasClass('open')){
-   $(this).parent('.views-row').css({"height" : "auto"});
-
+  if ($(this).siblings('.slide-container').hasClass('open')){
+   $(this).parent('.views-row').css({"height" : "0"});
   }  else {
-  $(this).parent('.views-row').css({"height" : windowH}).siblings().css({"height" : "auto"});
+  $(this).parent('.views-row').css({"height" : windowH}).siblings().css({"height" : "0"});
     $(this).siblings('.slide-container').toggleClass('open').parent().siblings('.views-row').children('.slide-container').removeClass('open');
-    $('html,body').animate({scrollTop:thisoffset.top -36},500);
+    $('html,body').animate({scrollTop:thisoffset.top -54},500);
     $(this).find('.desc').css({"height":firstslide });
     $(this).parents('#page').children('#header').css({"z-index":"0"});
   }
@@ -95,24 +97,25 @@ $(document).on("navigate", function (event, data) {
 });
 $(document).keyup(function(event) {
     if(event.which === 27) {
-      $('.shrink').removeClass('shrink').css({"margin-bottom":"0"});
-      $('.open').removeClass('open');
-      $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
+       $('.shrink').removeClass('shrink').css({"margin-bottom":"0"});
+       $(this).parents('#page').children('#header').css({"z-index":"10"});
+     $('.open').removeClass('open');
+     $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
       $(this).parents('body').removeClass('prevent-scroll');
+     $('html,body').animate({scrollTop:thisoffset.top -54},500);
     }
 });
 $('.button').on('click', function(e){
   e.preventDefault();
-//  window.location.hash = '';
- // document.location.href = String( document.location.href ).replace( "#", "" );
        $('.shrink').removeClass('shrink').css({"margin-bottom":"0"});
        //$(this).parents('body').toggleClass('prevent-scroll');
        $(this).parents('#page').children('#header').css({"z-index":"10"});
      $('.open').removeClass('open');
      $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
-          $(this).parents('body').removeClass('prevent-scroll');
-     $('html,body').animate({scrollTop:$(this).parent().parent().offset().top -36},500);
+      $(this).parents('body').removeClass('prevent-scroll');
+     $('html,body').animate({scrollTop:$(this).parent().parent().offset().top -54},500);
 });
+
 $(".views-field-field-project-name").waypoint(function(direction) {
    if (direction ==='down') {
     $(this).css('top','-54px') ;
