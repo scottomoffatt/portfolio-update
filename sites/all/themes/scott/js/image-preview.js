@@ -21,7 +21,7 @@ if (typeof(element) != 'undefined' && element != null)
     animatebodymovin(animDuration, anim);
   });
 }
-console.log("fucking test!!!!!!!!");
+
 function animatebodymovin(duration, animObject) {
 
   var scrollPosition = theWindow.scrollTop();
@@ -115,7 +115,7 @@ $('.button').on('click', function(e){
 $(".views-field-field-project-name").waypoint(function(direction) {
    if (direction ==='down') {
     $(this).css('top','-54px') ;
-    console.log(direction);
+
    }
    else if (direction ==='up'){
     $(this).css('top','0px') ;
@@ -167,7 +167,6 @@ var $window = $(window);
                   //section.children('.background-image-formatter').addClass('fade-left');
                 //  section.children().children().addClass('fade-left');
 
-                  //console.log("small and 60");
                 }
                 else if ($(window).width() <= 800){
                  section.children('.background-image-formatter').css({"background-position-x": + (fast+200)  + "px" });
@@ -176,17 +175,17 @@ var $window = $(window);
 
                   section.children().children().children('img').css({"transform":"translate("+ "-" + (windowsize/15) + "px" + "," + (fast+200) + "px",  "max-width": + (windowsize/3) + "px"});
                   section.children().children().children('img').css({"-webkit-transform":"translate(100%,100%",  "max-width":"300px"});
-                  console.log("just small");
+                 
                 }
                 else if (window.matchMedia("(min-width: 800px)").matches && fast >= "-90" ) {
                   section.children('.background-image-formatter').css({"background-position-x":"90%" });
                   section.children('.background-image-formatter').css({"background-size":(windowsize/2)});
                   section.children().children().children('img').css({"transform":"translate(800px," + (fast+700) + "%" });
                   section.children().children().children('img').css({"-webkit-transform":"translate(" + "-"+ (windowsize/13)+ "," + (fast+700) + "%" });
-                  console.log("lrg");
+                
                 }
                 else if (window.matchMedia("(max-width: 680px)").matches){
-                  console.log("realysml");
+           
                 }
                 else {
               section.children('.background-image-formatter').css({"background-position": + (fast+200)  + "%" , "background-size":(windowsize/2)});
@@ -235,14 +234,14 @@ $('.specimen-wrapper .field-content').bind('touchstart', function(e) {
         //$('.paragraphs-item-project-title').children('.background-image-formatter').css({"background-position-x":"90%"});
         //$('.paragraphs-item-hero-showcase').children().children().children('img').css({"transform":"translate(800px," + (fast+700) + "%" });
         $('.paragraphs-item-hero-showcase').children().children().children('img').addClass('fade-left');
-        console.log("withoutscroll down" +top);
+       
 
       }
       else {
         section.children('.background-image-formatter').css({"background-position-y": "40px"  });
         section.children('.background-image-formatter').css({"background-position-x": (top+100)   });
         $('.paragraphs-item-hero-showcase').children().children().children('img').addClass('fade-left');
-        console.log('up');
+ 
       }
     });
 });
