@@ -3193,7 +3193,7 @@ font-weight: 600;
 			flex-direction: column;
 		}
 		.paragraphs-item-case-study .group-sections {
-			flex-direction: column-reverse;
+			flex-direction: column;
 			background: rgb(25,50,121);
 			max-height: none;
 			min-height: initial;
