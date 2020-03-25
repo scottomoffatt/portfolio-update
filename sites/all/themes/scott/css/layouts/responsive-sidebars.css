@@ -12,7 +12,7 @@
 /*
  * Center the page.
  */
-
+/***saving test**/
 body{
 	width: 100%;
 	height: 100%;
@@ -1203,6 +1203,7 @@ top:0;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 	    background-color: rgb(240,240,240);
+	    z-index: 600;
 
 
 }
