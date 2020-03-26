@@ -1,6 +1,7 @@
 (function($){
 
 $(document).ready(function(){
+
  var theWindow = $(window);
 var winHeight = theWindow.height();
 var animDuration = winHeight / 2;
@@ -31,7 +32,8 @@ function animatebodymovin(duration, animObject) {
 }
 
  $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').attr('id','mod/');
-var clicked = false;
+
+
 $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').on('click' , function(e){
   var mywidth =  $('.view-thumbnail-gallery .views-row .views-field-field-image img')[0].getBoundingClientRect().width;
   var widthstart = $('.view-thumbnail-gallery .views-row .views-field-field-image img').width();
@@ -40,14 +42,15 @@ $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').o
   var thisoffset = $(this).parent().parent().offset()
  
   $(this).parents('body').addClass('prevent-scroll');
-  var clickedSpan = true;
-  
-  
+
   
   $(this).parent().find('.specimens').each(function(){
       totalHeight = totalHeight + $(this).outerHeight(true);
     });
-  if ($(this).siblings('.slide-container').hasClass('open')){
+    e.preventDefault();
+  window.location.hash = $(this).attr('id');
+
+if ($(this).siblings('.slide-container').hasClass('open')){
     $(this).addClass("activate");
   } 
   else {
@@ -65,19 +68,7 @@ $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').o
   $(this).parents('ul').removeClass('shrink').css({"margin-bottom":"0"});
   $(this).parents('.views-row').find('.button-wrapper').css({"top" : " "});
 }  
-
-e.preventDefault();
-  window.location.hash = $(this).attr('id');
-  $(window).on('hashchange' ,function (event){
-    if(window.location.hash != "#mod/") {
-        $('.shrink').removeClass('shrink').css({"margin-bottom":"0"}); 
-       $(this).parents('#page').children('#header').css({"z-index":"10"});
-     $('.open').removeClass('open');
-     $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
-      $(this).parents('body').removeClass('prevent-scroll');
-        $('html,body').animate({scrollTop:thisoffset.top -54},500);
-    } 
-  });
+  
 });
 var windowH = $(window).height();
 
@@ -85,6 +76,18 @@ var winh = $('.single_page_wrapper').height();
 var firstslide = $('.view-thumbnail-gallery .view-content .views-row .owl-wrapper .owl-item:first-child').height();
   $(".views-field-field-slider-image").each(function(){
   $(this).find('.img-cont').attr("id", "img-cont").addClass("vis");
+  });
+$(window).on('hashchange' ,function (event){
+  if(window.location.hash != "#mod/") {
+    $('.shrink').removeClass('shrink').css({"margin-bottom":"0"});
+    //$(this).parents('body').toggleClass('prevent-scroll');
+    $('#header').css({"z-index":"10"});
+  $('.open').removeClass('open');
+  $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
+       $('body').removeClass('prevent-scroll');
+  //$('html,body').animate({scrollTop:$(this).parent().parent().offset().top },500);
+        }
+
 });
 
 $(document).on("navigate", function (event, data) {
@@ -94,6 +97,8 @@ $(document).on("navigate", function (event, data) {
      $('.open').removeClass('open');
      $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
      $(this).parents('body').removeClass('prevent-scroll');
+     window.location.hash = '';
+    
   }
 
 });
@@ -106,6 +111,7 @@ $(document).keyup(function(event) {
      $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
       $(this).parents('body').removeClass('prevent-scroll');
      $('html,body').animate({scrollTop:thisoffset.top -54},500);
+     window.location.hash = '';
     }
 });
 $('.button').on('click', function(e){
@@ -117,6 +123,10 @@ $('.button').on('click', function(e){
      $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
       $(this).parents('body').removeClass('prevent-scroll');
      $('html,body').animate({scrollTop:$(this).parent().parent().offset().top -54},500);
+     //window.location.replace('#mod/');
+     history.replaceState(null, null, ' ');
+      
+
 });
 
 $(".views-field-field-project-name").waypoint(function(direction) {
