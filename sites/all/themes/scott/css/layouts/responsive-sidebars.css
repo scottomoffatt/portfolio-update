@@ -3755,12 +3755,12 @@ max-height: 20vh;
     width: 100%;
     float: none;
     }
-		.paragraphs-item-project-title h1{
-			border: none;
-			padding:auto 15% 0 2.4rem;
-			height: auto;
-			font-size: 4.8rem;
-			line-height: 4.8rem;
+	.paragraphs-item-project-title h1{
+	border: none;
+	padding:3.2rem 15% 0 2.4rem;
+	height: auto;
+	font-size: 4.8rem;
+	line-height: 4.8rem;
 		}
 }
 
