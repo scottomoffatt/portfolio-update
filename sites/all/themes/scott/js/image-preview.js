@@ -99,8 +99,6 @@ $(document).on("navigate", function (event, data) {
      $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
      $(this).parents('body').removeClass('prevent-scroll');
      window.location.hash = '';
-     window.location = '';
-    
   }
 
 });
@@ -118,7 +116,6 @@ $(document).keyup(function(event) {
     }
 });
 $('.button').on('click', function(e){
-  e.preventDefault();
        $('.shrink').removeClass('shrink').css({"margin-bottom":"0"});
        //$(this).parents('body').toggleClass('prevent-scroll');
        $(this).parents('#page').children('#header').css({"z-index":"10"});
@@ -127,10 +124,10 @@ $('.button').on('click', function(e){
       $(this).parents('body').removeClass('prevent-scroll');
      //$('html,body').animate({scrollTop:$(this).parent().parent().offset().top -54},500);
      //window.location.replace('#mod/');
-     window.location.hash = '';
-     window.location = '';
-      
-
+     //var sub = window.location.hash.replace( '#', ' ');
+      //window.location.hash = ' ';
+     // window.history.go(-1);
+     history.replaceState(null, null, ' ');
 });
 
 $(".views-field-field-project-name").waypoint(function(direction) {
