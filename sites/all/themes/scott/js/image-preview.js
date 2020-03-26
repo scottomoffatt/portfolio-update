@@ -99,6 +99,7 @@ $(document).on("navigate", function (event, data) {
      $('.view-thumbnail-gallery .view-content .views-row ').css({"height" : "auto"});
      $(this).parents('body').removeClass('prevent-scroll');
      window.location.hash = '';
+     window.location = '';
     
   }
 
@@ -113,6 +114,7 @@ $(document).keyup(function(event) {
       $(this).parents('body').removeClass('prevent-scroll');
      //$('html,body').animate({scrollTop:thisoffset.top -54},500);
      window.location.hash = '';
+
     }
 });
 $('.button').on('click', function(e){
@@ -126,6 +128,7 @@ $('.button').on('click', function(e){
      //$('html,body').animate({scrollTop:$(this).parent().parent().offset().top -54},500);
      //window.location.replace('#mod/');
      window.location.hash = '';
+     window.location = '';
       
 
 });
