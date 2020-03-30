@@ -171,6 +171,7 @@ var $window = $(window);
               var wraP = $('.specimen-wrapper .field-content').offset().top;
               var min = section.offset().top ;
               var top = (wrap - min) / 10;
+              var dif = (windowsize/2) - top;
               var pos =  min;
               var matH = (100/w);
 
@@ -190,24 +191,24 @@ var $window = $(window);
                   section.children('.background-image-formatter').css({"background-position-y": "110px"  });
                    section.children('.background-image-formatter').css({"background-size":"400px"});
 
-                  section.children().children().children('img').css({"transform":"translate("+ "-" + (windowsize/15) + "px" + "," + (fast+200) + "px",  "max-width": + (windowsize/3) + "px"});
+                  section.children().children().children('img').css({"transform":"translate("+ "-" + (windowsize/15) + "px" + "," + (fast+200) + "px",  "max-width": + (windowsize/5) + "px"});
                   section.children().children().children('img').css({"-webkit-transform":"translate(100%,100%",  "max-width":"300px"});
 
                 }
-                else if (window.matchMedia("(min-width: 800px)").matches && fast >= "-90" ) {
-                  section.children('.background-image-formatter').css({"background-position-x":"90%" });
-                  section.children('.background-image-formatter').css({"background-size":(windowsize/2)});
+                else if (window.matchMedia("(min-width: 800px)").matches && fast >= "-200" ) {
+                  section.children('.background-image-formatter').css({"background-position-x":"100%" });
+                  section.children('.background-image-formatter').css({"background-size":"contain"});
                   section.children().children().children('img').css({"transform":"translate(800px," + (fast+700) + "%" });
-                  section.children().children().children('img').css({"-webkit-transform":"translate(" + "-"+ (windowsize/13)+ "," + (fast+700) + "%" });
+                  section.children().children().children('img').css({"-webkit-transform":"translate(0%," + (fast+700) + "%" });
 
                 }
                 else if (window.matchMedia("(max-width: 680px)").matches){
 
                 }
                 else {
-              section.children('.background-image-formatter').css({"background-position": + (fast+200)  + "%" , "background-size":(windowsize/2)});
+              section.children('.background-image-formatter').css({"background-position": + (fast+200)  + "%" , "background-size":"contain"});
                 section.children('.background-image-formatter').css({"background-position-y": "110%"  });
-                section.children().children().children('img').css({"transform":"translate(" + "-" + (windowsize/13) + "px" + "," + (fast+700) + "px" ,  "max-width":+ (windowsize/3) + "px"});
+                section.children().children().children('img').css({"transform":"translate(0%," + (fast+700) + "px" ,  "max-width":+ (windowsize/3) + "px"});
 
                 }
               });

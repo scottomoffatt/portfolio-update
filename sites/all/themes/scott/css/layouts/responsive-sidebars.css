@@ -960,7 +960,25 @@ form textarea{
 		width: 100%;
 		display: block;
 	}
-
+	.view-thumbnail-gallery .view-content .views-row .entity-paragraphs-item a:link {
+		transition: all .200s ease-out;
+		will-change: all;
+	}
+.view-thumbnail-gallery  .view-content .views-row .entity-paragraphs-item	 a:hover {
+	    transform: scale(1.05);
+	    opacity: 0.7;
+		}
+		.view-thumbnail-gallery  .view-content .views-row .entity-paragraphs-item	 a:hover:after {
+			    width: 4rem;
+					height: 4rem;
+					right:0;
+					top:0;
+					position: absolute;
+					content: " ";
+					background: url(../../images/zoom.b.svg);
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
 .case-study-link .view-content .views-row:hover{
 	position: relative;
 }
@@ -2310,6 +2328,9 @@ margin: 3.5rem auto;
     .page-taxonomy .field-type-video .field-item{
     	width: 33%;
     }
+		.video-js, .video-js source{
+			max-width: 100%;
+		}
     .node-teaser .video-js{
     	width: 146px;
     	height: 100px;
