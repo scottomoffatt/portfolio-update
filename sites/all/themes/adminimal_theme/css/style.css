@@ -2018,7 +2018,9 @@ div.field-type-media {
 div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.media-wrapper {
   padding: 0;
 }
-
+.video-js, .video-js source{
+  max-width: 100%;
+}
 .media-browser-tab.ui-tabs-panel {
     border: none;
 }
