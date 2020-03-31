@@ -2455,7 +2455,7 @@ align-items: center;
 }
 /* specific rule over regular casestudy template*/
 .view-design-collection .paragraphs-item-image-left {
-	min-height: 100vh;
+	min-height: 60vh;
 	height: auto;
 	overflow: hidden;
 	display: table;
