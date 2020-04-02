@@ -224,6 +224,8 @@ var $window = $(window);
 checkWidth();
 // Bind event listener
 var ts;
+$(function() {
+  if ($(window).width <=700){
 $('.specimen-wrapper .field-content').bind('touchstart', function(e) {
     ts = e.originalEvent.touches[0].clientY;
 });
@@ -262,6 +264,8 @@ $('.specimen-wrapper .field-content').bind('touchstart', function(e) {
 
       }
     });
+});
+}
 });
 /*$(document).ready(function(){
   $('.page-taxonomy .field-items a, .field-content a, .views-field .views-field-field-slider-image a, .field-name-field-slider-image a, .field-type-image a').featherlightGallery();
