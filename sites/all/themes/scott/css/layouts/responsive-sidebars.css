@@ -2653,10 +2653,12 @@ align-items: center;
 .view-visual-design-clone .open.projects .specimen-wrapper .field-content{
 	background: rgb(240,240,240);
 }
+
 .paragraphs-item-center-border .group-sections .group-image-wrap{
 	text-align: center;
 	grid-column: 2/-2;
-	grid-row:1/2;
+	grid-row:2/-1;
+	padding: 5vh 0;
 }
 .paragraphs-item-center-border .group-sections .group-image-wrap img{
 	max-width: 1200px;
@@ -2747,7 +2749,7 @@ align-items: center;
 	grid-gap: 1.6rem;
 	grid-template-columns: auto repeat(4, 1fr) auto;
 	grid-template-rows: auto;
-	grid-auto-rows: 20vh;
+	/*grid-auto-rows: 20vh;*/
 }
 .paragraphs-item-image-left .group-image-wrap {
 	grid-column: 2 / 4;
@@ -2767,7 +2769,7 @@ align-items: center;
 }
 .paragraphs-item-center-border .group-sections .group-text-group{
 	grid-column: 2/-2;
-	grid-row:2/4;
+	grid-row:1/2;
 }
 .group-sections .group-text-group{
 	border-top: none;
