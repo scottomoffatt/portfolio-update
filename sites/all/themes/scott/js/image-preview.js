@@ -198,8 +198,8 @@ var $window = $(window);
                 else if (window.matchMedia("(min-width: 800px)").matches && fast >= "-200" ) {
                   section.children('.background-image-formatter').css({"background-position-x":"100%" });
                   section.children('.background-image-formatter').css({"background-size":"contain"});
-                  section.children().children().children('img').css({"transform":"translate(800px," + (fast+700) + "%" });
-                  section.children().children().children('img').css({"-webkit-transform":"translate(0%," + (fast+700) + "%" });
+                  section.children().children().children('img').css({"transform":"translate(800px,0px"});
+                  section.children().children().children('img').css({"transform":"translate(800px,0px"});
 
                 }
                 else if (window.matchMedia("(max-width: 680px)").matches){
