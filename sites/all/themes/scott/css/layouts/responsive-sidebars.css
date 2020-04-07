@@ -901,6 +901,8 @@ form textarea{
  	width: 100%;
  	height:auto;
 	background-color: rgb(240,240,240);
+	max-width: 800px;
+	margin: 0 auto;
 	}
 .view-thumbnail-gallery .view-content{
 	width: 100%;
@@ -930,11 +932,13 @@ form textarea{
 }
 .view-thumbnail-gallery .view-content .item-list ul{
 	display: flex;
-	flex-flow: row wrap;
-	padding: 0 0 0 1.6rem !important;
+	flex-flow: row ;
+	padding: 0;
 	margin: 0 auto;
 	width:100%;
-	max-width:1200px;
+	align-items: stretch;
+    justify-content: stretch;
+
 
 }
 .view-thumbnail-gallery .view-content .views-row{
@@ -943,9 +947,9 @@ form textarea{
 		will-change:auto;
 	display: inline-block;
 	vertical-align: top;
-	width:31.3%;
+	width:100%;
 	height: auto;
-	margin: 1%;
+	margin:0;
 	overflow: hidden;
 	position: relative;
 	/*margin-bottom: 3.6rem;*/
@@ -1093,24 +1097,24 @@ touch-action: none;
   }
 	.page-title{
 		height: 5.4rem;
-width: 96%;
-max-width: 1016px;
-max-width: 860px;
-margin: 5.4rem auto;
-text-align: left;
-	}
-	.node-type-case-study .page-title{
+		width: 96%;
 		max-width: 1016px;
 		max-width: 860px;
+		margin: 5.4rem auto;
+		text-align: left;
+	}
+	.node-type-case-study .page-title{
+		max-width: initial;
     display: grid;
     grid-gap: 1.6rem;
-    margin: 0 auto;
+    margin: 2.4rem auto;
     grid-template-columns: auto repeat(6, 1fr) auto;
     grid-template-rows: 5.6rem;
     grid-auto-rows: auto;
+		width: 100%;
 	}
 		.node-type-case-study .page-title h1{
-			grid-column: 2 / 9;
+			grid-column: 3 / -1;
 		}
   .open .views-field-field-project-name h1{
   	font-size: 2.4rem;
@@ -1234,13 +1238,14 @@ top:0;
 	-webkit-overflow-scrolling: touch;
 }
 .open.projects .specimen-wrapper.views-field-field-case-test .field-content{
-	position: sticky;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
 	width: 100%;
 	min-height: 90vh;
+	max-height: 100vh;
 	height: 100%;
 	display: block;
 	display: flex;
@@ -1574,6 +1579,7 @@ transition: all .2s;
 		vertical-align: top;
 		margin:0;
 		width: 80%;
+		max-width: 35rem;
 		margin:7.4rem 0 0 0;
 		}
 
@@ -2215,10 +2221,10 @@ display: none;
  }
 
 .single_page_wrapper #full-page, #spw-work .title{
-	max-width: 1174px;
+	max-width: 800px;
 	margin: 0 auto;
 	padding: 0;
-	width: 96%;
+	width: 100%;
 	display: inline-block;
 	vertical-align: bottom;
 	padding:1.6rem 0;
@@ -2467,7 +2473,7 @@ align-items: center;
 	z-index: -2;
 	    /* transform: translateZ(-2px) scale(3); */
 	    overflow: visible;
-	    min-height: 74vh;
+	    min-height: 90vh;
 	    margin: 0 auto;
 	background-color: transparent;
 }
@@ -2483,7 +2489,7 @@ align-items: center;
 		max-height: 60vh;
 		opacity: 0.5;
 		/* max-width: 80%; */
-    z-index: -1;
+    z-index: 0;
     background-position: 0 0;
     background-size: contain;
     background-repeat: no-repeat;
@@ -2507,7 +2513,7 @@ align-items: center;
 	max-width: 1016px;
 	text-align: left;
 	color: inherit;
-	z-index: 0;
+	z-index: 1;
 	padding: 3.6rem 15% 0 3.6rem;
 	background-color: transparent;
 	font-size: 9.6rem;
@@ -2550,6 +2556,16 @@ align-items: center;
 			grid-auto-rows: auto;
 
 }
+.node-case-study .paragraphs-item-hero .group-sections{
+	max-width:initial;
+	display: grid;
+	grid-gap:1.6rem;
+	margin: 2.4rem auto;
+	grid-template-columns:auto repeat(6, 1fr) auto;
+			grid-template-rows:5.6rem;
+			grid-auto-rows: auto;
+
+}
 .paragraphs-item-hero-showcase{
 	position: relative;
 	height: 100%;
@@ -2582,6 +2598,7 @@ align-items: center;
 	/* left: 0; */
 	margin: auto;
 	max-width: 400px;
+	z-index: 0;
 }
 	}
 .paragraphs-item-hero-showcase img.lozad:nth-child(1) {
@@ -2792,7 +2809,8 @@ flex-flow: column wrap;
   padding: 1.6rem 0 3.6rem 0;
     margin: 0;
 		grid-row: 1/3;
-    grid-column: 2/8;
+    grid-column: 3/6;
+		    background: rgb(25,50,121);
 }
 .view-thumbnail-gallery .view-content .group-sections .case-intro ul.case-notes, .group-sections .case-intro ul.case-notes{
 	list-style-type: none;
@@ -2802,6 +2820,9 @@ flex-flow: column wrap;
     margin: 0;
     background: rgb(25,50,121);
 }
+.group-sections .case-intro ul.case-notes{
+	width: 80%;
+			max-width: 40rem;
 }
  .group-sections .case-intro .case-notes h2 {
 	 grid-area: text;
@@ -2860,6 +2881,10 @@ flex-flow: column wrap;
 }
 .paragraphs-item-hero .group-image-wrap img {
     max-width: 70%;
+		max-width: 100%;
+		max-height: 800px;
+		width: initial;
+
 }
 .entity-paragraphs-item{
 		background: rgb(240,240,240);
@@ -3048,10 +3073,10 @@ font-weight: 600;
     top:0;
   }
 	.view-thumbnail-gallery .view-content .views-row{
-		width: 48%;
+		/* width: 48%; */
 		height: auto;
 		padding: 0;
-    margin: 1%;
+    /* margin: 1%; */
 		}
 	.view-thumbnail-gallery .view-content .item-list .shrink{
 		width: 100%;
@@ -3836,7 +3861,7 @@ max-height: 20vh;
     top: 34rem;
   }
 	.view-thumbnail-gallery .view-content .views-row{
-		width:44%;
+		/* width:44%; */
 		border-right:none;
 
 	}
