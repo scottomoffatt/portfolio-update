@@ -5,6 +5,7 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 sites/all/libraries/temp/backup_migrate/
+vendor/drupal/drupal/*
 
 error_log
 /modules/README.txt
