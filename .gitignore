@@ -30,3 +30,5 @@ error_log
 /composer.json
 /composer.lock
 /example.gitignore
+.DS_Store
+sites/.DS_Store
