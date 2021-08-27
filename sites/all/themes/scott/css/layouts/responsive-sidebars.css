@@ -1780,7 +1780,7 @@ transition: all .2s;
 #spw-about_scott{
 	/*background: rgba(25,50,121,1);
 	color: rgba(255,255,255,1);*/
-	padding: 1.8rem 0 0 0;
+	padding: 0;
   text-align: right;
 	overflow: hidden;
 	height: 60vh;
@@ -1893,8 +1893,6 @@ margin: 0 4rem 0 0;
 #spw-work{
 	padding: 0 0 0 0;
 	z-index: 5;
-	background: rgba(255,255,255,1);
-	background-color: rgb(240,240,240);
 }
 
 .views-slideshow-cycle-main-frame-row-item{
@@ -2144,6 +2142,11 @@ margin: 0 4rem 0 0;
 }
 .page-node article{
   text-align: left;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
 }
 .page-taxonomy #content .view-content .views-row{
      text-align: center;
@@ -2320,8 +2323,8 @@ margin: 3.5rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
-        width: 48%;
-    margin: 3.6rem 0;
+    
+    margin: 3.6rem auto;
 }
 .page-node .field-type-image .field-item:first-child a:before{
   display: inline-block;
@@ -2400,12 +2403,10 @@ margin: 3.5rem auto;
 
 .page-single-page #single_page_wrapper .single_page_wrapper {
 		display: block;
-		
+		margin: 0 auto 4.2rem auto;
 		width: 88%;
-		max-width: 108rem;
-	
-		}
-
+		max-width: 108rem;	
+}
 
 .maintenance-page #logo{
 	display: inline-block;
