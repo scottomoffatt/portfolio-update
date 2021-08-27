@@ -75,7 +75,7 @@ if ($(this).scrollTop() > 250){
 
    function setHeight() {
     windowHeight = $(window).innerHeight();
-    $('.single_page_wrapper').css('min-height', windowHeight);
+    $('#spw-front').css('height', windowHeight);
   };
   setHeight();
 

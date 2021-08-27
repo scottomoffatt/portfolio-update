@@ -162,6 +162,11 @@ font-weight: 700;
 
 .single_page{
 	overflow:hidden;
+	width: 100%;
+	margin: 0 auto;
+	padding: 3.2rem;
+	background-color: rgb(240,240,240);
+	border-radius: 4rem;
 	}
 
 .user-picture{
@@ -359,7 +364,7 @@ font-weight: 700;
 }
 
  .page-single-page #single_page_wrapper .single_page_wrapper{
-	/*padding-top:3.6rem;*/
+	
 	width:100%;
 	margin:0 0 0 0;
 	position: relative;
@@ -374,7 +379,7 @@ font-weight: 700;
 	 height: auto;
 	 display: flex;
 	 flex-direction: column;
-	 justify-content: center;
+	 justify-content: flex-start;
 	 align-items: center;
  }
 
@@ -901,7 +906,7 @@ form textarea{
  	width: 100%;
  	height:auto;
 	background-color: rgb(240,240,240);
-	max-width: 800px;
+	
 	margin: 0 auto;
 	}
 .view-thumbnail-gallery .view-content{
@@ -942,8 +947,6 @@ form textarea{
 
 }
 .view-thumbnail-gallery .view-content .views-row{
-	/*vertical-align: middle;
-	overflow: hidden;*/
 		will-change:auto;
 	display: inline-block;
 	vertical-align: top;
@@ -952,12 +955,13 @@ form textarea{
 	margin:0;
 	overflow: hidden;
 	position: relative;
-	/*margin-bottom: 3.6rem;*/
-	/*border-right: #ffffff 2px solid;*/
 	padding: 0;
-   /* background: url(../../images/sq-bg.svg) no-repeat;
-    background-size: contain;
-    background-position: top;*/
+	padding: 0;
+border: 0.4rem solid;
+margin: 1.6rem;
+border-radius: 0.8rem;
+box-shadow: 4px 4px;
+
 	}
 	.view-thumbnail-gallery .view-content .views-row a{
 		height: 100%;
@@ -1756,15 +1760,13 @@ transition: all .2s;
 	min-height: 800px;
 	padding: 0 0 0 0;
 	position: relative;
-  background:rgb(25,50,121);
-	color: #ffffff;
+  
+	
 }
 #spw-about_scott h1, #spw-emailme h1{
-	width: 96%;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-		color: #ffffff;
+	
 }
 #spw-about_scott{
 	/*background: rgba(25,50,121,1);
@@ -1922,7 +1924,7 @@ color:#ffffff;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 }
 .node-about-custom .field-name-field-blog-image{
 	display:inline-block;
@@ -2221,13 +2223,13 @@ display: none;
  }
 
 .single_page_wrapper #full-page, #spw-work .title{
-	max-width: 800px;
+	
 	margin: 0 auto;
 	padding: 0;
 	width: 100%;
 	display: inline-block;
 	vertical-align: bottom;
-	padding:1.6rem 0;
+	
 }
 #full-page{
 	text-align: right;
@@ -2383,9 +2385,13 @@ margin: 3.5rem auto;
 
 .page-single-page #single_page_wrapper .single_page_wrapper {
 		display: block;
-		padding-top:5.4rem;
+		
+		width: 88%;
+		max-width: 108rem;
+	
+		}
 
-	}
+
 .maintenance-page #logo{
 	display: inline-block;
 	width: 9%;
