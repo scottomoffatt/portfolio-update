@@ -36,3 +36,5 @@ error_log
 /robots.txt
 /update.php
 /web.config
+.DS_Store
+sites/.DS_Store
