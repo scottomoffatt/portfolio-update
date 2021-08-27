@@ -1879,8 +1879,6 @@ color:#ffffff;
 #spw-work{
 	padding: 0 0 0 0;
 	z-index: 5;
-	background: rgba(255,255,255,1);
-	background-color: rgb(240,240,240);
 }
 
 .views-slideshow-cycle-main-frame-row-item{
@@ -2385,7 +2383,7 @@ margin: 3.5rem auto;
 
 .page-single-page #single_page_wrapper .single_page_wrapper {
 		display: block;
-		
+		margin: 0 auto;
 		width: 88%;
 		max-width: 108rem;
 	
