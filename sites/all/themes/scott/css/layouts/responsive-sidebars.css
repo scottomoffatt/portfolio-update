@@ -1809,9 +1809,7 @@ left:0;
 	list-style-type: none;
 	padding: 0;
 }
-#spw-about_scott a{
-color:#ffffff;
-}
+
 .node-about-custom .field-label,.node-about-custom .file {
 	width: auto;
 	display: inline-block;
@@ -1833,8 +1831,15 @@ color:#ffffff;
 	width: auto;
 }
 #spw-about_scott .links span{
-	width:4rem;
+	width: 3rem;
+	height: 3rem;
+	background-color: rgb(25,50,121);
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4px;
+	border-radius: 25%;
+margin: 0 4rem 0 0;
 }
 #spw-about_scott .links span img{
 	width: 2.4rem;
@@ -2132,7 +2137,7 @@ color:#ffffff;
   text-align: left;
 }
 .page-taxonomy #content .view-content .views-row{
-     text-align: left;
+     text-align: center;
     padding: .9rem;
     margin: .9rem 0;
     border: 1px solid;
@@ -2142,6 +2147,7 @@ color:#ffffff;
     overflow: hidden;
     font-size: initial;
     box-shadow: 2px 2px 0 rgba(25,50,121,1);
+
 }
 .page-taxonomy #content .view-content .views-row:nth-child(odd){
     animation: .5s ease-out 0s 1 leftslide;
