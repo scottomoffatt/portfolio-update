@@ -258,7 +258,7 @@ font-weight: 700;
     margin-right: -100%;
   }
  .single_page .title{
-  width: 94%;
+  /* width: 94%; */
   margin: 0 auto;
  	text-align: left;
 
@@ -735,6 +735,7 @@ padding-bottom: 0;
   	background: rgba(25, 50, 121, 1);
     background: transparent;
 		height: 90vh;
+		opacity: 0;
   }
 #spw-front canvas{
 position: fixed;
@@ -961,14 +962,14 @@ form textarea{
 	padding: 0;
 	padding: 0;
 	border: 0.4rem solid;
-	margin: 1.6rem;
+	margin: 0 1.6rem;
 	border-radius: 0.8rem;
 	max-height: 28rem;
 	box-shadow: 4px 4px;
 	transition: width 0.2s ease-in;
 	}
 	.view-thumbnail-gallery .view-content .views-row-first, .view-thumbnail-gallery .view-content .views-row-last{
-		margin 0;
+		margin: 0;
 	}
 
 	.view-thumbnail-gallery .view-content .views-row a{
@@ -2241,8 +2242,7 @@ display: none;
  }
 
 .single_page_wrapper #full-page, #spw-work .title{
-	
-	margin: 2.4rem auto;
+	/* margin: 2.4rem auto; */
 	padding: 0;
 	width: 100%;
 	display: inline-block;
