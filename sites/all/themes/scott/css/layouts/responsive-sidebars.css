@@ -630,6 +630,9 @@ padding-bottom: 0;
     position: relative;
 		text-align: right;
 			position: fixed;
+			-webkit-transition: background-color 100ms ease-out;
+    -ms-transition: background-color 100ms ease-out;
+    transition: background-color 100ms ease-out;
 	}
 	.no-sticky #inner-wrapper::after{
 		content: " ";
@@ -650,8 +653,11 @@ padding-bottom: 0;
 	position: fixed;
 	height: 3.6rem;
 	z-index: 100;
-
+	background-color: rgb(240, 240, 240);
 	text-align: right;
+	-webkit-transition: background-color 1000ms ease-out;
+    -ms-transition: background-color 1000ms ease-out;
+    transition: background-color 1000ms ease-out;
 }
 .sticky #inner-wrapper::after{
 	content: " ";
