@@ -947,26 +947,38 @@ form textarea{
 
 }
 .view-thumbnail-gallery .view-content .views-row{
-		will-change:auto;
-	display: inline-block;
+	will-change: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
 	vertical-align: top;
-	width:100%;
-	height: auto;
-	margin:0;
+	width: 100%;
+	/* height: auto; */
+	margin: 0;
 	overflow: hidden;
 	position: relative;
 	padding: 0;
 	padding: 0;
-border: 0.4rem solid;
-margin: 1.6rem;
-border-radius: 0.8rem;
-box-shadow: 4px 4px;
-
+	border: 0.4rem solid;
+	margin: 1.6rem;
+	border-radius: 0.8rem;
+	max-height: 28rem;
+	box-shadow: 4px 4px;
+	transition: width 0.2s ease-in;
 	}
+	.view-thumbnail-gallery .view-content .views-row-first, .view-thumbnail-gallery .view-content .views-row-last{
+		margin 0;
+	}
+
 	.view-thumbnail-gallery .view-content .views-row a{
 		height: 100%;
 		width: 100%;
 		display: block;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
 	}
 	.entity-paragraphs-item a:link {
 		transition: all .200s ease-out;
@@ -989,6 +1001,8 @@ box-shadow: 4px 4px;
 	}
 .case-study-link .view-content .views-row:hover{
 	position: relative;
+	width: 150%;
+	transition: width 0.2s ease-out;
 }
 
 .view-thumbnail-gallery .view-content h3 .item-list ul{
@@ -997,7 +1011,7 @@ box-shadow: 4px 4px;
 	height:21.6rem;
 }
 .view-thumbnail-gallery .view-content .views-row:active{
-	overflow: visible;
+	/* overflow: visible; */
 
 }
 .view-thumbnail-gallery .view-content .views-row .views-field-field-image{
@@ -1579,12 +1593,11 @@ transition: all .2s;
 
 	}
 .view-thumbnail-gallery .views-row img{
-		display: inline-block;
-		vertical-align: top;
-		margin:0;
-		width: 80%;
-		max-width: 35rem;
-		margin:7.4rem 0 0 0;
+	display: block;
+	vertical-align: bottom;
+	width: 80%;
+	max-width: 32rem;
+	margin: 1.6rem auto 0 auto;
 		}
 
 		.lazyloader-icon{
@@ -1763,11 +1776,7 @@ transition: all .2s;
   
 	
 }
-#spw-about_scott h1, #spw-emailme h1{
-    margin: 0;
-    padding: 0;
-	
-}
+
 #spw-about_scott{
 	/*background: rgba(25,50,121,1);
 	color: rgba(255,255,255,1);*/
@@ -2044,7 +2053,7 @@ margin: 0 4rem 0 0;
 	text-align: center;
 	background: url(../../images/forward-w.svg) rgba(25,50,121,0.8) no-repeat;
 	background-size: 2.4rem 2.4rem;
-	background-position: 90% 90%;
+	background-position: 90% 93%;
 }
 .view-content .views-row:hover  .overlay a:after, .view-content .views-row:hover .views-field-field-image span.field-content:after{
 	content: "Read more";
@@ -2233,7 +2242,7 @@ display: none;
 
 .single_page_wrapper #full-page, #spw-work .title{
 	
-	margin: 0 auto;
+	margin: 2.4rem auto;
 	padding: 0;
 	width: 100%;
 	display: inline-block;
@@ -2865,7 +2874,7 @@ flex-flow: column wrap;
 		text-align: left;
 	}
 	.view-thumbnail-gallery img.lozad {
-		min-height: 19rem;
+		/* min-height: 19rem; */
 	}
 	.view-thumbnail-gallery img.fade-up{
 			min-height: initial;
@@ -3617,11 +3626,17 @@ font-weight: 600;
 	.view-thumbnail-gallery .view-content .views-row{
 		width:100%;
 		border-right:none;
-		margin:0;
+		margin: 0.8rem 0;
 		height:auto;
 		max-height: 30vh;
 		text-align: right;
 		/*border-bottom:1px solid #000000;*/
+	}
+	.case-study-link .view-content .views-row:hover{
+		width:100%;
+	}
+	.case-study-link .view-content .views-row:active{
+		width:100%;
 	}
 	.view-thumbnail-gallery .view-content .views-row img.lozad{
 		position: relative;
@@ -3868,9 +3883,14 @@ max-height: 20vh;
  #main-menu ul li a:after{
 		display:none;
 		}
-		.single_page_wrapper #full-page, #spw-work .title{
+  .single_page_wrapper #full-page, #spw-work .title{
 			width: 100%;
-		}
+			
+	}
+	.single_page_wrapper h1.title{
+		
+		margin: 2.4rem 0 0 0;
+}
   .view-thumbnail-gallery .view-content .views-row .open .views-field-field-slider-image{
     top: 34rem;
   }
