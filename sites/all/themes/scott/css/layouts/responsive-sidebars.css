@@ -1583,7 +1583,7 @@ transition: all .2s;
 .view-thumbnail-gallery .views-row img{
 	display: block;
 	width: 80%;
-	max-width: 32rem;
+	max-width: 28rem;
 	margin: 1.6rem auto 0 auto;
 		}
 
