@@ -959,7 +959,7 @@ form textarea{
 	justify-content: flex-end;
 	vertical-align: top;
 	width: 100%;
-	/* height: auto; */
+	height: 38rem;
 	margin: 0;
 	overflow: hidden;
 	position: relative;
