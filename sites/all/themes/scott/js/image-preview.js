@@ -2,6 +2,20 @@
 
 $(document).ready(function(){
 
+  //newer lottie to dev
+
+  // LottieInteractivity.create({
+  //   mode: "scroll",
+  //   player: "#full-bg2",
+  //   actions: [
+  //     {
+  //       visibility: [0, 1],
+  //       type: "seek",
+  //       frames: [0, 53]
+  //     }
+  //   ]
+  // });
+
  var theWindow = $(window);
 var winHeight = theWindow.height();
 var animDuration = winHeight / 2;
@@ -30,6 +44,9 @@ function animatebodymovin(duration, animObject) {
   var frame = (maxFrames / 19) * (scrollPosition / (duration / 19));
   animObject.goToAndStop(frame, true);
 }
+
+
+
 
  $('.view-thumbnail-gallery .view-content .views-row .views-field-field-image').attr('id','mod/');
 
@@ -141,15 +158,15 @@ $(".views-field-field-project-name").waypoint(function(direction) {
 
 
 
-$(window).scroll(function(){
-  var away = $("#full-bg");
-  var windowpos = $(window).scrollTop();
-  if (windowpos >=900 ){
-     $('#full-bg canvas').css({"display":"none"});
-  } else{
-    $('#full-bg canvas').css({"display":"block"});
-  }
-});
+// $(window).scroll(function(){
+//   var away = $("#full-bg");
+//   var windowpos = $(window).scrollTop();
+//   if (windowpos >=900 ){
+//      $('#full-bg canvas').css({"display":"none"});
+//   } else{
+//     $('#full-bg canvas').css({"display":"block"});
+//   }
+// });
 
 
 var $window = $(window);

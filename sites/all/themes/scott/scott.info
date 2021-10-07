@@ -104,6 +104,8 @@ stylesheets[all][] = system.menus.css
 
 
 scripts[] = js/image-preview.js
+;scripts[] = js/lottie-player.js
+;scripts[] = js/llottie-interactivity.min.js
 ;scripts[] = js/typemate.js
 ;scripts[] = js/script.js
 ;scripts[] = js/featherlight.js

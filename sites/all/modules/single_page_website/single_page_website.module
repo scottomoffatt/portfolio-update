@@ -109,11 +109,12 @@ function single_page_website_front_page() {
         continue;
       }
 	  $anchor = "spw-" . str_replace("/", "-", drupal_get_path_alias($href));
+    $contId = drupal_get_path_alias($href);
 /* 	  if(strstr($anchor, '/')) {
 	    $anchor_split = explode('/', $anchor);
 		$anchor = $anchor_split[count($anchor_split)-1];
       } */
-      $output .= '<a  name="' . $anchor . '"></a><div id="' . $anchor . '"  class="single_page_wrapper"><div class="single_page">';
+      $output .= '<div id="' . $contId. '"  class="single_page_wrapper"><div class="single_page">';
 
       // Set the q to ... required to get the block system working
       $q_orig = $_GET['q'];
@@ -156,6 +157,7 @@ function single_page_website_front_page() {
         $output .= "<p>An error '" . $page_callback_result . "' occurred for " . $item['#href'] . '</p>';
       }
       $output .= '</div></div>';
+      $output .= '<span  id="' . $anchor . '" class="nav-offset"></span>';
       $_GET['q'] = $q_orig;
     }
   }

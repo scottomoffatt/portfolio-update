@@ -20,13 +20,14 @@ $(window).ready(function() {
       'z-index' : '500'
     });
     $(window).scroll(function() {
-if ($(this).scrollTop() > 250){
+if ($(this).scrollTop() > 400){
     $('.page-single-page #page, .page-single-page #full-bg').addClass("sticky").removeClass("no-sticky");
   }
   else{
     $('.page-single-page #page, .page-single-page #full-bg').removeClass("sticky").addClass("no-sticky");
   }
 });
+
 
 
 
@@ -75,7 +76,7 @@ if ($(this).scrollTop() > 250){
 
    function setHeight() {
     windowHeight = $(window).innerHeight();
-    $('#spw-front').css('height', windowHeight);
+    $('#front').css('height', windowHeight);
   };
   setHeight();
 

@@ -123,46 +123,57 @@
     </div><!--innner-wrapper-->
   </header>
 
-  <div id="main">
-    <div id="content" class="column" role="main">
-      <?php print render($page['highlighted']); ?>
-      <a id="main-content"></a>
-      <div id="admin-controls">
-      <?php print render($title_prefix); ?>
-      <?php print render($title_suffix); ?>
-      <?php if($is_admin): ?>
-        <?php print $messages; ?>
-      <?php endif; ?>
-      <?php print render($tabs); ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-    </div>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
-
-    </div><!-- /#content -->
 
 
-
-    <?php
-      // Render the sidebars to see if there's anything in them.
-      $sidebar_first  = render($page['sidebar_first']);
-      $sidebar_second = render($page['sidebar_second']);
-    ?>
-
-    <?php if ($sidebar_first || $sidebar_second): ?>
-      <aside class="sidebars">
-        <?php print $sidebar_first; ?>
-        <?php print $sidebar_second; ?>
-      </aside><!-- /.sidebars -->
-    <?php endif; ?>
-
-  </div><!-- /#main -->
+  <!-- </div>--> <!-- /#main -->
 
   <?php print render($page['footer']); ?>
      <?php /*print $breadcrumb;*/ ?>
 </div><!-- /#page -->
-<div id="full-bg"></div>
+<!-- <div id="main"> -->
+<!--  <div id="content" class="column" role="main">-->
+    <?php print render($page['highlighted']); ?>
+    <!-- <a id="main-content"></a> -->
+    <div id="admin-controls">
+    <?php print render($title_prefix); ?>
+    <?php print render($title_suffix); ?>
+    <?php if($is_admin): ?>
+      <?php print $messages; ?>
+    <?php endif; ?>
+    <?php print render($tabs); ?>
+    <?php print render($page['help']); ?>
+    <?php if ($action_links): ?>
+      <ul class="action-links"><?php print render($action_links); ?></ul>
+    <?php endif; ?>
+  </div>
+    <?php print render($page['content']); ?>
+    <?php print $feed_icons; ?>
+
+  <!-- /#content </div> -->
+
+
+
+  <?php
+    // Render the sidebars to see if there's anything in them.
+    $sidebar_first  = render($page['sidebar_first']);
+    $sidebar_second = render($page['sidebar_second']);
+  ?>
+
+  <?php if ($sidebar_first || $sidebar_second): ?>
+    <aside class="sidebars">
+      <?php print $sidebar_first; ?>
+      <?php print $sidebar_second; ?>
+    </aside><!-- /.sidebars -->
+  <?php endif; ?>
+<div id="full-bg"></div> 
+<!-- <div id="full-bg-2">
+<lottie-player
+                        id="full-bg2"
+                        src="https://res.cloudinary.com/dcyjvvdtr/raw/upload/v1633469319/som-head-rotation.json"
+                        background="transparent"
+                        speed="1"
+                        style="height:876px; width: 904px;" 
+                      ></lottie-player>
+            
+</div> -->
 <?php print render($page['bottom']); ?>

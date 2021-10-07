@@ -265,7 +265,13 @@ function scott_preprocess_html(&$vars) {
   /*drupal_add_js($path . '/js/featherlight.gallery.js', array('scope' => 'head_scripts', 'weight' => 0, 'preprocess' => FALSE));  */
 drupal_add_js($path . '/js/bodymovin.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));
   /*drupal_add_js($path . '/js/lottie_light_canvas.min.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));*/
+  
+  // drupal_add_js('https://unpkg.com/@lottiefiles/lottie-player@0.3.0/dist/lottie-player.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));
 
+
+  // drupal_add_js('https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js', array('scope' => 'head_scripts', 'weight' => -1, 'preprocess' => FALSE));
+
+  
 
 
 drupal_add_js('sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js', array('scope' => 'head_scripts', 'weight' => -3, 'preprocess' => TRUE));
