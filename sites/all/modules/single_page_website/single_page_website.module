@@ -158,6 +158,7 @@ function single_page_website_front_page() {
       }
       $output .= '</div></div>';
       $output .= '<span  id="' . $anchor . '" class="nav-offset"></span>';
+
       $_GET['q'] = $q_orig;
     }
   }
