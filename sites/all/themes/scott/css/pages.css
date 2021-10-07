@@ -19,24 +19,9 @@
 /*@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');*/
 /*@import url('https://rsms.me/inter/inter.css');*/
 
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("../fonts/inter/Inter-Light.woff2?v=3.11") format("woff2"),
-       url("../fonts/inter/Inter-Light.woff?v=3.11") format("woff");
-}
-@font-face {
-  font-family: 'Inter';
-  font-style:  italic;
-  font-weight: 300;
-  font-display: swap;
-  src: url("../fonts/inter/Inter-LightItalic.woff2?v=3.11") format("woff2"),
-       url("../fonts/inter/Inter-LightItalic.woff?v=3.11") format("woff");
-}
+@import url("https://use.typekit.net/hrs2pky.css");
 
-@font-face {
+/* @font-face {
   font-family: 'Inter';
   font-style:  normal;
   font-weight: 400;
@@ -85,58 +70,9 @@
   font-display: swap;
   src: url("../fonts/inter/Inter-SemiBoldItalic.woff2?v=3.11") format("woff2"),
        url("../fonts/inter/Inter-SemiBoldItalic.woff?v=3.11") format("woff");
-}
+} */
 
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/inter/Inter-Bold.woff2?v=3.11") format("woff2"),
-       url("../fonts/inter/Inter-Bold.woff?v=3.11") format("woff");
-}
-@font-face {
-  font-family: 'Inter';
-  font-style:  italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/inter/Inter-BoldItalic.woff2?v=3.11") format("woff2"),
-       url("../fonts/inter/Inter-BoldItalic.woff?v=3.11") format("woff");
-}
 
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("../fonts/inter/Inter-ExtraBold.woff2?v=3.11") format("woff2"),
-       url("../fonts/inter/Inter-ExtraBold.woff?v=3.11") format("woff");
-}
-@font-face {
-  font-family: 'Inter';
-  font-style:  italic;
-  font-weight: 800;
-  font-display: swap;
-  src: url("../fonts/inter/Inter-ExtraBoldItalic.woff2?v=3.11") format("woff2"),
-       url("../fonts/inter/Inter-ExtraBoldItalic.woff?v=3.11") format("woff");
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../fonts/inter/Inter-Black.woff2?v=3.11") format("woff2"),
-       url("../fonts/inter/Inter-Black.woff?v=3.11") format("woff");
-}
-@font-face {
-  font-family: 'Inter';
-  font-style:  italic;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../fonts/inter/Inter-BlackItalic.woff2?v=3.11") format("woff2"),
-       url("../fonts/inter/Inter-BlackItalic.woff?v=3.11") format("woff");
-}
 
 
 @font-face {
@@ -149,6 +85,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -163,13 +100,14 @@
   *,*:before,*:after {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased; }
+    font-smoothing: antialiased;
+  }
 html{
 	font-size: 62.5%;
 	  /*background-color:#ffffff;*/
 	}
 body {
-  font-family:'Inter', Helvetica, Arial, sans-serif;
+  font-family:'aileron', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
@@ -217,8 +155,7 @@ nav ul, nav ol{
 	height: 0;
 	line-height: 0;
 }
-#page {
-}
+
 input:focus{
     outline: none;
 }
@@ -283,11 +220,7 @@ button:focus{
 .region-header { /* Wrapper for any blocks placed in the header region */
   clear: both; /* Clear the logo */
 }
-.region-highlighted {
-}
 
-.breadcrumb { /* The path to the current page in the form of a list of links */
-}
 .breadcrumb ol {
   margin: 0;
   padding: 0;
@@ -306,7 +239,7 @@ h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
   margin: 0;
-	font-weight: 800;
+	/* font-weight: 800; */
 	text-transform: capitalize;
 }
 h1, h2, h3, h4, h5, h6{
@@ -316,54 +249,64 @@ h1, h2, h3, h4, h5, h6{
 -webkit-font-feature-settings: "kern" 1;
 font-feature-settings:         "kern" 1;
 font-kerning: normal;
-	font-family: 'Inter', Helvetica, Arial, sans-serif;
-	font-weight: 800;
+	/* font-family: 'Inter', Helvetica, Arial, sans-serif; */
 
-  text-transform: capitalize;
+  font-family: aileron, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+	/* font-weight: 800; */
+
+  /* text-transform: capitalize; */
   margin: 0;
 
 	}
 h1{
-    font-size:  4.8rem; /* equiv 54 */
+    font-size:  5.6rem; /* equiv 54 */
     line-height: 5.6rem;
     letter-spacing: -0.021em;
-    line-height: ;
+    /* font-family: utopia-std-headline, serif;
+    font-weight: 400; */
+    font-style: normal;
+    text-transform: capitalize;
+
+    font-family: le-monde-livre-classic-byol, serif;
+    font-weight: 700;
+    font-style: normal;
 }
 h2{
-    font-size:  4rem; /* equiv 36 */
-    line-height: 4.8rem;
+    font-size:  3.2rem; /* equiv 36 */
+    line-height: 4rem;
     letter-spacing: -0.021em;
+    font-weight: 300;
+
 }
 h3{
-    font-size:  3.2rem; /* equiv 28 */
-    line-height: 4rem;
+    font-size:  2.4rem; /* equiv 28 */
+    line-height: 3.2rem;
     letter-spacing: -0.020em;
+    font-weight: 300;
 }
 h4{
-    font-size:  2.4rem; /* equiv 26 */
-    line-height:  3.2rem;
+    font-size:  1.8rem; /* equiv 26 */
+    line-height:  2.4rem;
         letter-spacing: -0.019em;
+        font-weight: 300;
 }
 h5{
-    font-size:  1.6rem; /* equiv 24 */
+    font-size:  1.4rem; /* equiv 24 */
     line-height:  2.4rem;
         letter-spacing: -0.018em;
+        font-weight: 300;
 }
 h6{
-    font-size:  1.4rem; /* equiv 16 */
+    font-size:  1.2rem; /* equiv 16 */
     line-height:  1.6rem;
+    font-weight: 300;
 
 }
 .page-single-page h1{
-  font-size: 10.4rem;
-  line-height: 10.4rem;
-}
-tr.even { /* Some tables have rows marked even or odd. */
-  /* background-color: #eee; */ /* Drupal core uses a #eee background */
-}
-
-tr.odd {
-  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+  font-size: 7.2rem;
+  line-height: 7.2rem;
 }
 
 div.messages { /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
@@ -372,38 +315,6 @@ div.messages { /* Important messages (status, warning, and error) for the user. 
 div.messages ul {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-div.status { /* Normal priority messages */
-}
-
-div.warning,
-tr.warning { /* Medium priority messages */
-  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
-}
-
-div.error,
-tr.error { /* High priority messages. See also the .error declaration below. */
-}
-
-.error { /* Errors that are separate from div.messages status messages. */
-  /* color: #e55; */ /* Drupal core uses a #e55 background */
-}
-
-.warning { /* Warnings that are separate from div.messages status messages. */
-  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
-}
-
-.tabs { /* See also the tabs.css file. */
-}
-
-.region-help { /* Help text on a page */
-}
-
-.more-help-link { /* Link to more help */
-}
-
-.region-content { /* Wrapper for the actual page content */
 }
 
 ul.inline { /* List of links generated by theme_links() */
@@ -427,22 +338,6 @@ span.field-label { /* The inline field label used by the Fences module */
   padding: 0 ;
 }
 
-.feed-icon { /* The link to the RSS or Atom feed for the current list of content */
-}
-/************* Main (container for everything else)******************* */
-
-#main {
-
-
-}
-/**********************CONTENT****************/
-
-#content {
-}
-
-
-.more-link { /* Aggregator, blog, and forum more link */
-}
 .view-frontpage article{
 border-top: 1px solid #000000;
 
@@ -456,39 +351,6 @@ border-top: 1px solid #000000;
 	width: 80px;
 	overflow: hidden;
 	margin:0 auto;
-}
-/*
- * First sidebar (on left in LTR languages, on right in RTL)
- *
- * Remember to NOT add padding or margin to your .region-sidebar-first
- * (see the layout.css file.)
- */
-
-.region-sidebar-first {
-}
-
-/*
- * Second sidebar (on right in LTR languages, on left in RTL)
- *
- * Remember to NOT add padding or margin to your .region-sidebar-second
- * (see the layout.css file.)
- */
-
-.region-sidebar-second {
-}
-
-/*
- * Footer
- */
-
-#footer {
-}
-
-/*
- * Page bottom
- */
-
-.region-bottom { /* Wrapper for any blocks placed in the page bottom region */
 }
 
 @media all and (max-width: 1024px) {
@@ -557,7 +419,7 @@ border-top: 1px solid #000000;
 }
 @media all and (max-width:680px){
   .page-single-page h1{
-    font-size: 7.2rem;
-line-height: 7.2rem;
+    font-size: 4.8rem;
+line-height: 5.6rem;
   }
 }
