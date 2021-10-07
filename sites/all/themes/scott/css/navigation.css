@@ -54,8 +54,8 @@ li a.active {
 }
 
 #navigation ul.links, /* Main menu and secondary menu links */
-#navigation .ex-menu ul.menu { height: 3.6rem;
-
+#navigation .ex-menu ul.menu { 
+  height: 3.6rem;
 }
 
 .ex-menu ul.links li,
