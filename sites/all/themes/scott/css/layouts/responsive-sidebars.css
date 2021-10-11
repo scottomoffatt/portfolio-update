@@ -1015,8 +1015,8 @@ form textarea{
 	/*max-width: 1200px;*/
 	width: 100%;
 	margin: 0 auto;
-
-	height:80vh;
+	min-height: 20vh;
+	max-height:80vh;
 	box-shadow: 1rem 1rem;
 		padding: 3.2rem;
 		color: rgb(240,240,240);
@@ -1025,7 +1025,7 @@ form textarea{
 		background-image:url('../../images/lines-w.svg');
 		background-size:contain;
 		background-repeat:no-repeat;
-		background-position: right bottom;
+		background-position: right 200%;
 		border: 2px solid rgb(240,240,240);
 		border-radius: 4rem;
 
@@ -1085,7 +1085,7 @@ form textarea{
 	justify-content: flex-end;
 	vertical-align: top;
 	width: 100%;
-	min-height: 40rem;
+	min-height: 20rem;
 	margin: 0;
 	overflow: hidden;
 	position: relative;
@@ -1094,7 +1094,7 @@ form textarea{
 	/* border: 0.4rem solid; */
 	margin: 0 1.6rem;
 	border-radius: 0.8rem;
-	max-height: 40rem;
+	max-height: 24rem;
 	/* box-shadow: 4px 4px; */
 	transition: width 0.2s ease-in;
 	}
