@@ -92,13 +92,18 @@
     <?php print render($page['header']); ?>
     </div><!--innner-wrapper-->
   </header>
-  <div id="main">
-    <div id="content" class="column" role="main">
+  <!-- <div id="main"> -->
+    <!-- <div id="content" class="column specimen-wrapper" role="main"> -->
+      <!-- <div class="field-content"> -->
       <?php print render($page['highlighted']); ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-        <div class="page-title"><h1><?php print $title; ?></h1></div>
+        <div class="page-title"><h1><?php print $title; ?></h1>
+          <div class="progress">
+            <span class="progress-bar"></span>
+          </div>
+      </div>
       <?php endif; ?>
       <div id="admin-controls">
       <?php print render($title_suffix); ?>
@@ -110,9 +115,10 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-    </div>
+      </div>
       <?php print render($page['content']); ?>
-    </div><!-- /#content -->
+      <!-- </div> -->
+    <!-- </div>/#content -->
 
     <?php
       // Render the sidebars to see if there's anything in them.
@@ -127,7 +133,7 @@
       </aside><!-- /.sidebars -->
     <?php endif; ?>
 
-  </div><!-- /#main -->
+  <!-- </div> /#main -->
 
   <?php print render($page['footer']); ?>
      <?php /*print $breadcrumb;*/ ?>

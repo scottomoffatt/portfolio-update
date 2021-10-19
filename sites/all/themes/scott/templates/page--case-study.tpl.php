@@ -98,7 +98,11 @@
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-        <div class="page-title"><h1><?php print $title; ?></h1></div>
+        <div class="page-title"><h1><?php print $title; ?></h1>
+          <div class="progress">
+            <span class="progress-bar"></span>
+          </div>
+      </div>
       <?php endif; ?>
       <div id="admin-controls">
       <?php print render($title_suffix); ?>
