@@ -1,4 +1,4 @@
-(function($){
+(function($) {
   $(document).ready(function(){
     $(".single_page_wrapper").css("clear", "both");
     //$(".single_page_wrapper .single_page").css("overflow", "hidden");
