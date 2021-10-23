@@ -104,10 +104,6 @@ audio:not([controls]) {
  *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
 
-html {
-
-}
-
 
 html,
 button,
@@ -193,64 +189,7 @@ ul.links a:link, ul.links a:visited, ul.links a:hover ul.links a:active{
    For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
    ========================================================================== */
 
-/*
- * Addresses font sizes and margins set differently in IE6/7
- * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
- */
-h1, h2, h3, h4, h5{
-	font-family: Quicksand, Verdana, sans-serif;
-	letter-spacing: 1.2px;
 
-	}
-h1 {
-  font-size: 2em;
-  /* Sets the line height to 2 units of vertical rhythm */
-  line-height: 1.5em; /* 3rem / 2em = 1.5em */
-  /* Sets 1 unit of vertical rhythm on the top and bottom margins. */
-
-
-}
-
-h2 {
-  font-size: 1.5em;
-  line-height: 2em; /* 3rem / 1.5em = 2em */
-
-}
-
-h3 {
-  font-size: 1.17em;
-  line-height: 1.282em; /* 1.5rem / 1.17em = 1.282em */
-
-
-}
-
-h4 {
-  font-size: 1em;
-  line-height: 1.5em; /* 1.5rem / 1em = 1.5em */
-
-
-}
-
-h5 {
-  font-size: 0.83em;
-  line-height: 1.807em; /* 1.5rem / 0.83em = 1.807em */
-
-
-}
-
-h6 {
-  font-size: 0.75em;
-  line-height: 2em; /* 1.5rem / .75em = 2em */
-
-}
-
-/* Thematic break */
-hr {
-  height: 1px;
-  border: 1px solid #666;
-  padding-bottom: -1px;
-  margin: 1.5em 0;
-}
 
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome
@@ -297,16 +236,7 @@ mark {
  * Addresses margins set differently in IE6/7
  */
 
-p,
-pre {
-  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
-  margin: 1.5em 0;
-}
 
-/*
- * Corrects font family set oddly in IE6, S4/5, Chrome
- * en.wikipedia.org/wiki/User:Davidgothberg/Test59
- */
 
 pre,
 code,
@@ -368,11 +298,11 @@ sup {
 }
 
 sup {
-  top: -0.5em;
+  top: -0.4rem;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -0.2rem;
 }
 
 
@@ -390,7 +320,7 @@ ol,
 ul,
 .item-list ul /* Drupal override */ {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
-  margin: 1.5em 0;
+  margin: 1.6rem 0;
 }
 
 .item-list ul li { /* Drupal override */
@@ -416,7 +346,7 @@ menu,
 ol,
 ul,
 .item-list ul /* Drupal override */ {
-  padding: 0 0 0 30px; /* LTR */
+  padding: 0 0 0 2.4rem; /* LTR */
 }
 
 /*
@@ -627,8 +557,8 @@ table {
   border-spacing: 0;
   /* width: 100%; */ /* Prevent cramped-looking tables */
   /* Add vertical rhythm margins. */
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
 }
 
 /*
