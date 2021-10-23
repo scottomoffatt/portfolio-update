@@ -3275,6 +3275,7 @@ font-weight: 600;
 .paragraphs-item-center-border .group-sections .group-image-wrap{
 	width: 100%;
 	grid-row: span 5;
+	grid-column: var(--col-pos-center);
 }
 .paragraphs-item-center-border .group-sections .group-image-wrap img{
 	width: 100%;
