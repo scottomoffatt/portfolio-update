@@ -32,10 +32,10 @@ body{
 --size-page: 100vh;
 --grid-col: minmax(10%, 50%)  repeat(12, minmax(0, 102px))  minmax(10%, 50%);
 --col-pos-center: 4 / 12;
---col-pos-txt: 4 / 12;
+--col-pos-txt: 3 / 12;
 --col-pos-wide: 2 / 14;
---col-txt-left: 4 / 8;
---col-txt-right: 8 / 12;
+--col-txt-left: 3 / 8;
+--col-txt-right: 8 / 13;
 --col-img-left: 2 / 8;
 --col-img-right: 8 / 14;
 --row-auto: 3.2rem 3.2rem minmax(min-content, max-content);
@@ -497,7 +497,7 @@ top: var(--size-page);
   left:0;
   right: 0;
   margin: 0 auto;
-
+ 
 	height: 3.6rem;
 	background-color: rgb(240, 240, 240);
 }
@@ -537,9 +537,9 @@ top:0;
 left: 0;
 bottom: 0;
 right: 0;
-margin:auto;
+margin:0 auto;
 max-width:1080px;
-max-height:1115px;
+/* max-height:1115px; */
 
 }
 .no-sticky #site-name{
@@ -628,10 +628,10 @@ padding-bottom: 0;
 }
 .no-sticky #logo-wrap:before{
 	content: " ";
-  height: 13rem;
-	width: 13rem;
+  height: 12.4rem;
+	width: 12.4rem;
   margin: 0;
-  display: inline-block;
+  display: block;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -2571,7 +2571,7 @@ article.node-case-study{
 }
 .paragraphs-items-field-case-test-full{
 width: 100%;
-margin:9.6rem 0 0 0;
+margin:0;
 }
 .entity-paragraphs-item {
 	width: 100%;
@@ -2706,7 +2706,14 @@ margin:9.6rem 0 0 0;
 	flex-direction: row;
 	flex-wrap:wrap;
 	justify-content: center;
+
+    padding: 1.6rem;
 }
+.mfp-nogallery-image a{
+	overflow: hidden;
+    max-height: 600px;
+}
+
 .paragraphs-item-project-title h1{
 	position: absolute;
 	top: 0;
@@ -2735,7 +2742,7 @@ margin:9.6rem 0 0 0;
 	margin:0;
 	height: 100%;
 	width: 100%;
-	max-width: 936px;
+	max-width: 546px;
 	text-align: left;
 	color: inherit;
 	z-index: 1;
@@ -2849,25 +2856,7 @@ align-items: center;
 .view-visual-design-clone .open.projects .specimen-wrapper .field-content{
 	background: rgb(240,240,240);
 }
-/* .paragraphs-item-image-left::after, .paragraphs-item-image-right::after, .paragraphs-item-center-border::after {
-	content: " ";
-	width: clamp(320px, calc(100% - 3.2rem), 1600px);
-	height: calc(100% - 3.2rem);
-	/* grid-column: 2 / -2; */
-	/* grid-row: 1 / -1; */
-	border: 3px solid;
-	border-radius: 3.2rem;
-	position: absolute;
-	max-width: 1080px;
-	top: 1.6rem;
-	left: 0;
-	right: 0;
-	bottom: 1.6rem;
-	margin: 0 auto;
-	/* padding: 1.6rem; */
-	z-index: -1;
-	box-shadow: 6px 6px;
-	} */
+
 .paragraphs-item-center-border .group-sections .group-image-wrap{
 	text-align: center;
 	grid-column: var(--col-pos-wide);
@@ -3135,26 +3124,25 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value{
 background-color: rgb(25,50,121);
 }
-
-.node-type-case-study #navigation{
+.node-type-case-study #navigation, .node-type-portfolio-story #navigation{
 	text-align: right;
 	width: 100%;
 	justify-content: flex-end;
 }
-.node-type-case-study #inner-wrapper{
+.node-type-case-study #inner-wrapper, .node-type-portfolio-story #inner-wrapper{
 	text-align: right;
 }
-.node-type-case-study .sticky #navigation ul{
+.node-type-case-study .sticky #navigation ul, .node-type-portfolio-story .sticky #navigation ul{
 	width: 100%;
 	text-align: right;
 }
-.node-type-case-study .sticky #navigation ul li{
+.node-type-case-study .sticky #navigation ul li, .node-type-portfolio-story .sticky #navigation ul li{
 text-align: right;
 width: 14.2rem;
 display: inline-block;
 position: relative;
 }
-.node-type-case-study .sticky #navigation ul li a{
+.node-type-case-study .sticky #navigation ul li a, .node-type-portfolio-story .sticky #navigation ul li a{
 	font-size:2.4rem;
 	width: 100%;
 	height: 3.2rem;
@@ -3162,7 +3150,7 @@ position: relative;
 	text-align: right;
 	padding: 0;
 }
-.node-type-case-study .sticky #navigation ul li a:before{
+.node-type-case-study .sticky #navigation ul li a:before, .node-type-portfolio-story .sticky #navigation ul li a:before{
 	content: " ";
 background: url(../../fonts/back.svg);
 background-repeat: no-repeat;
@@ -3315,6 +3303,7 @@ padding: 0.8rem 0;
 .paragraphs-item-image-right .group-sections .group-image-wrap, .paragraphs-item-image-left .group-sections .group-image-wrap{
 	/* max-height: 50vh; */
 	margin: 0 auto;
+	grid-row:span 5;
 }
 .group-sections .group-text-group{
 
@@ -3377,9 +3366,7 @@ padding: 0.8rem 0;
 	grid-row: 2 /3;
 	padding: 0;
 }
-.paragraphs-items-field-case-test-full{
-	margin:4rem 0 0 0;
-}
+
 .open .button {
 	opacity: 1;
 	width: 11.4rem;
@@ -3530,9 +3517,9 @@ padding: 0.8rem 0;
 		.paragraphs-item-image-left::after, .paragraphs-item-image-right::after, .paragraphs-item-center-border::after {
 			content: none;
 		}
-		.node-type-case-study .page-title, .node-type-portfolio-story .page-title{
+		/* .node-type-case-study .page-title, .node-type-portfolio-story .page-title{
 			padding:0 1.6rem;
-		}
+		} */
 		.node-type-case-study .page-title h1, .node-type-portfolio-story .page-title h1{
 			font-size: clamp(1.6rem, calc(5 / 100 * 100vw), 3.2rem)
 		}
@@ -3595,7 +3582,7 @@ padding: 0.8rem 0;
 	}
 	.sticky #navigation{
 		width: 80%;
-		display:inline-block;
+		display:flex;
 		vertical-align: middle;
 	}
 
@@ -3634,18 +3621,17 @@ padding: 0.8rem 0;
 	}
 
 	.no-sticky #logo-wrap:before{
-	width: 9rem;
-	height: 9rem;
+	width: 5.6rem;
+	height: 5.6rem;
   }
 
  	.no-sticky #logo-wrap{
       width:100%;
-      height: 9rem;
-
+      height: 5.6rem;
  	 }
 	.page-single-page .no-sticky #site-name{
     width: 96%;
-	font-size: clamp(3rem, calc(10 / 78 * 100vw), 16.2rem);
+	font-size: clamp(2.4rem, calc(10 / 81 * 100vw), 16.2rem);
 	}
 	.no-sticky #navigation ul li a:link{
 			display: block;
@@ -3743,11 +3729,21 @@ padding: 0.8rem 0;
 		margin-left:1.6rem;
 
 	}
+	#main-menu ul li{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		margin: 0;
+	
+	}
 	.sticky #navigation ul li a:link{
-			display: inline-block;
-		flex-direction: row;
+		display:block;
+		padding: 0 0.4rem;
 		position: relative;
 		text-indent: 0;
+		font-size: 1.6rem;
+	
 	}
 	#navigation .ex-menu  ul.links::before{
         content: "=";
@@ -4023,6 +4019,9 @@ padding: 0.8rem 0;
     width: 100%;
     float: none;
     }
+	.single_page{
+		height: auto;
+	}
 	.paragraphs-item-project-title h1{
 	border: none;
 	padding:3.2rem 15% 0 2.4rem;
@@ -4034,14 +4033,17 @@ padding: 0.8rem 0;
 			
 			--col-pos-center: 2 / -2;
 			--col-pos-wide: 1 / -1;
-			--col-pos-txt: 1 / -1;
-			--col-txt-left: 1 / -1;
-			--col-txt-right: 1 / -1;
+			--col-pos-txt: 2 / -2;
+			--col-txt-left: 2 / -2;
+			--col-txt-right: 2 / -2;
 			--col-img-left: 2 / -2;
 			--col-img-right: 2 / -2;
-		
+			}
+			.page-single-page #single_page_wrapper .single_page_wrapper{
+				position: relative;
 			}
 }
+
 
 @media all and (max-width:680px) and (orientation: landscape) {
 
