@@ -20,7 +20,7 @@ $(window).ready(function() {
       'z-index' : '500'
     });
     $(window).scroll(function() {
-if ($(this).scrollTop() > 400){
+if ($(this).scrollTop() > 260){
     $('.page-single-page #page, .page-single-page #full-bg').addClass("sticky").removeClass("no-sticky");
   }
   else{
