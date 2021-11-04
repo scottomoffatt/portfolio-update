@@ -1921,7 +1921,7 @@ div.form-item-view-args input#preview-args {
 
 .container-inline .form-actions, .container-inline.form-actions {
   clear: none;
-  display: inline-block;
+
   float: left;
   margin-bottom: 0;
   margin-top: 0;
@@ -3150,4 +3150,7 @@ table.diff .diff-links a.active {
 table.diff td.diff-section-title,
 div.diff-section-title {
   font-size: 1em;
+}
+body div.error {
+  display: none !important;
 }
