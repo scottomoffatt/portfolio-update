@@ -425,11 +425,13 @@ $(document).ready(function() {
         } else {
           this.play();
         }
-
+        
       });
-
+      // $('.vjs-tech').attr('playsinline','');
+      $('video').attr('webkit-playsinline', '');
 });
 });
 
 
 })(jQuery);
+

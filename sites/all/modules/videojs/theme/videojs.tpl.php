@@ -40,9 +40,15 @@
  */
 
 $attrs = '';
+$extra ='playsinline muted';
 if (!empty($autoplay)) {
   $attrs .= ' autoplay="autoplay"';
 }
+// if (!empty($playsline)) {
+//   $attrs .= 'playsinline';
+// } else {
+//   $attrs .= 'playsinline';
+// }
 if (!empty($poster)) {
   $attrs .= ' poster="'. check_plain($poster) .'"';
 }
