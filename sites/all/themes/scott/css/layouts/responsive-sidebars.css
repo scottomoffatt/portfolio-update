@@ -2611,9 +2611,8 @@ margin:0;
 }
 .entity-paragraphs-item {
 	width: 100%;
-	min-height: none;
+	min-height: 10vh;
 	/* transform: translateZ(0px); */
-
 	z-index: 0;
 	text-align: left;
 	margin: 0 auto;
@@ -3105,6 +3104,7 @@ align-items: center;
 .paragraphs-item-case-study .video-js .vjs-tech{
 	max-height: 720px;
 }
+
 .views-field-field-case-test .paragraphs-item-case-study{
 		background: rgb(25,50,121);
 		/* transform: translateZ(-1px) scale(2); */
