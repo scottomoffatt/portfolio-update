@@ -71,7 +71,6 @@
 ?>
 
 <div id="page" class="sticky">
-<script>document.querySelector(".vjs-tech").setAttribute("playsinline", "");</script>
   <header id="header" role="banner">
     <div id="inner-wrapper">
     <div id="site-info">
