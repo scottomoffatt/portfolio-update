@@ -417,7 +417,16 @@ $(document).ready(function() {
         blade.children('.background-image-formatter').css({"background-position": + ( posRound * 1.5 )  + "px" , "background-size":"contain"});
 
       });
-      
+      $('.vjs-tech').each(function(i ,el){
+        var videoTop = $(this).position().top;
+        var videoTil = videoTop - scrollTop;
+        if ( videoTil > 0 && videoTil < videoTop + winHeight) {
+          this.pause();
+        } else {
+          this.play();
+        }
+
+      });
 
 });
 });
