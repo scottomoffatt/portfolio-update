@@ -3099,6 +3099,12 @@ align-items: center;
 .node-portfolio-story .paragraphs-item-case-study img {
 	max-width: 1500px;
 }	
+.paragraphs-item-case-study .video-js{
+	max-width: none;
+}
+.paragraphs-item-case-study .video-js .vjs-tech{
+	max-height: 720px;
+}
 .views-field-field-case-test .paragraphs-item-case-study{
 		background: rgb(25,50,121);
 		/* transform: translateZ(-1px) scale(2); */
