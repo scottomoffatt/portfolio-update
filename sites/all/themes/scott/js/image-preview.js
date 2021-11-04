@@ -428,7 +428,10 @@ $(document).ready(function() {
         
       });
       // $('.vjs-tech').attr('playsinline','');
-      $('video').attr('webkit-playsinline', '');
+      $('.vjs-tech').attr('webkit-playsinline', '1');
+    $('.vjs-tech').attr('playsinline', '1');
+
+     
 });
 });
 
