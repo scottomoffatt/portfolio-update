@@ -346,9 +346,8 @@ font-weight: 700;
 	min-height: 3.6rem;
 }
 
-.
  .page-single-page #single_page_wrapper .single_page_wrapper{
-	/*padding-top:3.6rem;*/
+
 	width:100%;
 	margin:0 0 0 0;
 	position: relative;
@@ -1777,7 +1776,7 @@ border-bottom: 1px solid;
 		text-align: center;
 	}
 	.view-thumbnail-gallery .view-content .item-list h3 li{
-	transform: rotate(0deg); */
+	transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
