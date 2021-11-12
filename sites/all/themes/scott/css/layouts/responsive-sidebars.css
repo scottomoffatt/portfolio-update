@@ -4361,13 +4361,17 @@ border-bottom: 17vh solid;
 		height: 7.2rem;
 	}
 	.no-sticky #inner-wrapper{
-		height: 76vh;
+		height: 73vh;
 	}
 	.no-sticky .info-contain{
 		width: calc(100% - 4.8rem);
 	}
+	.no-sticky #site-name{
+		font-size: clamp(3rem, calc(10 / 67.5 * 100vw), 16.1rem);
+	}
 	.single_page{
 		height: 76vh;
+		padding: 1.6rem;
 	}
 
 	#single_page_wrapper::before {
