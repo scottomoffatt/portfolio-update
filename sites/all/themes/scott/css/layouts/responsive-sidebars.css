@@ -17,7 +17,7 @@ body{
 	width: 100%;
 	min-height: 100%;/*fix for sticky elements*/
  	color: rgba(25,50,121,1);
- 	overflow-x: hidden;
+
 	background-color: rgb(240, 240, 240);
 }
 #page,
@@ -237,8 +237,49 @@ font-weight: 700;
  .page-single-page #front #page-title {
 	display: none;
 }
-
-
+#single_page_wrapper::before{
+	top: 5.3rem;
+	content: " ";
+	right: 0;
+	left: 0;
+	width: calc(100% - 3.2rem);
+	max-width: 108rem;
+	margin: 0 auto;
+	height: 88vh;
+	box-shadow: 1rem 1rem;
+	padding: 3.2rem;
+	color: rgb(240,240,240);
+	/* background: linear-gradient(0deg, rgba(25,50,121,0) 0%, rgba(25,50,121,1) 50%); */
+	/* background-color: rgb(25,50,125); */
+	/* background-image: url('../../images/lines-w.svg'); */
+	/* background-size: contain; */
+	/* background-repeat: no-repeat;
+	background-position: right bottom; */
+	border: 2px solid rgb(240,240,240);
+	border-radius: 4rem;
+	position: fixed;
+	z-index: 500;
+	pointer-events:none;
+}
+#single_page_wrapper::after{
+	top: 0;
+	content: " ";
+	right: 0;
+	left: 0;
+	width: 100%;
+	max-width: 110rem;
+	margin: 0 auto;
+	height: 100vh;
+	background-color: rgba(25,50,121,0);
+	position: fixed;
+	z-index: 46;
+	border-left: 1.6rem solid;
+	border-right: 1.6rem solid;
+	border-bottom: 10vh solid;
+	border-top: 5.6rem solid;
+	border-radius: 4rem 0 0 0;
+	pointer-events: none;
+}
 
 .nav-offset{
 	display: block;
@@ -423,15 +464,12 @@ top: var(--size-page);
 
 	}
  .page-single-page #single_page_wrapper #about_scott{
-
 	 display: flex;
 	 flex-direction: column;
 	 justify-content: flex-start;
 	 align-items: center;
-	 z-index:45;
-	position:sticky;
 	 top:0;
-	 padding-top:0;
+	
  }
 
  .page-single-page  #main {
@@ -1039,21 +1077,22 @@ form textarea{
 	/*max-width: 1200px;*/
 	width: 100%;
 	margin: 0 auto;
-	height: 90vh;
-	box-shadow: 1rem 1rem;
+	height: 89.5vh;
+	/* box-shadow: 1rem 1rem; */
 		padding: 3.2rem;
 		color: rgb(240,240,240);
 		/* background: linear-gradient(0deg, rgba(25,50,121,0) 0%, rgba(25,50,121,1) 50%); */
 		background-color: rgb(25,50,125);
-		background-image:url('../../images/lines-w.svg');
+		/* background-image:url('../../images/lines-w.svg');
 		background-size:contain;
 		background-repeat:no-repeat;
-		background-position: right bottom;
-		border: 2px solid rgb(240,240,240);
+		background-position: right bottom; */
+		border: 0 solid rgb(240,240,240);
+		border-width:2px 0 0 0;
 		border-radius: 4rem;
 
 }
-.single_page::before{
+/* .single_page::before{
 	content: " ";
 	position: absolute;
 	top:0;
@@ -1072,9 +1111,7 @@ form textarea{
 	display: block;
 	width: 100%;
 	min-height:24.2rem;
-
-
-}
+} */
 
 #front  article:before{
      display: none;
@@ -1883,7 +1920,7 @@ transition: all .2s;
 }
 
  #about_scott,#emailme{
-	min-height: 800px;
+
 	padding: 0 0 0 0;
 	position: relative;
 
@@ -1915,15 +1952,27 @@ transition: all .2s;
 .aboutp{
     width: 100%;
     display: inline-block;
-	max-width: 56rem;
+	
 	padding: 3.2rem 0;
+	position: relative;
+	z-index: 0;
 }
 .aboutp p {
     text-align: left;
+	max-width: 72ch;
 	}
 .aboutp ul{
 	list-style-type: none;
 	padding: 0;
+}
+.indent{
+	width: 47%;
+	height: 32rem;
+	display: block;
+	float: left;
+	shape-outside: ellipse(48% 51% at 26% 36%);
+	margin: 0 9.6rem 6rem 0;
+	font-size: 0px;
 }
 
 .node-about-custom .field-label,.node-about-custom .file {
@@ -1963,6 +2012,34 @@ margin: 0 4rem 0 0;
 	width: 2.4rem;
 	align-self:flex-end;
 }
+.node-about-custom{
+    max-width: 1200px;
+	margin: 0 0 0 5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	/* background-color: rgb(25,50,121); */
+	background: linear-gradient(0, rgba(25,50,121,0), 50%, rgba(25,50,121,1));
+	border-radius: 3.2rem;
+}
+.node-about-custom .field-name-field-blog-image{
+	display:inline-block;
+	width: 50%;
+	height: 200px;
+	max-width: 200px;
+	overflow: hidden;
+	margin:0;
+	vertical-align: top;
+	 -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  -webkit-transform:    skewX(-45deg);
+  transform:    skewX(-45deg);
+}
 .field-name-field-resume{
 	text-align: right;
 }
@@ -1985,6 +2062,9 @@ margin: 0 4rem 0 0;
 	overflow: hidden;
 	mix-blend-mode: exclusion;
 	margin: 0 1.6rem 0 0;
+	position:absolute;
+	top:4rem;
+	left:0;
 }
 .node-about-custom a{
 	width: 100%;
@@ -2045,33 +2125,7 @@ margin: 0 4rem 0 0;
 		width: 100%;
 	overflow: hidden;
 	}
-.node-about-custom{
-    max-width: 1200px;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: flex-start;
-	background-color: rgb(25,50,121);
-	border-radius: 3.2rem;
-}
-.node-about-custom .field-name-field-blog-image{
-	display:inline-block;
-	width: 50%;
-	height: 200px;
-	max-width: 200px;
-	overflow: hidden;
-	margin:0;
-	vertical-align: top;
-	 -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
 
-  -o-text-overflow: clip;
-  text-overflow: clip;
-  -webkit-transform:    skewX(-45deg);
-  transform:    skewX(-45deg);
-}
 .view-thumbnail-gallery .view-content .open .views-field-title{
 	position: relative;
     width: 100%;
@@ -2560,9 +2614,9 @@ margin: 3.5rem auto;
 .page-single-page #single_page_wrapper .single_page_wrapper {
 		display: block;
 		margin: 0 auto 4.2rem auto;
-		width: calc(100% - 2.4rem);
+		width: calc(100% - 3.2rem);
 		max-width: 108rem;
-		height: 90vh;
+		height: 93.5vh;
 }
 
 .maintenance-page #logo{
@@ -3493,7 +3547,7 @@ padding: 0.8rem 0;
 		pointer-events:none;
 	}
 	#navigation ul li a:link{
-		
+			/*mark som */
 	}
 	#navigation ul { /* Menu block links */
 		width:100%;
@@ -3659,7 +3713,7 @@ padding: 0.8rem 0;
 			}
 	
 }	
-@media all and (max-width:680px) {
+@media all and (max-width:680px) and (orientation: portrait) {
 	body{
 		overflow: initial;
 	}
@@ -3728,7 +3782,7 @@ padding: 0.8rem 0;
       height: 5.6rem;
  	 }
 	.page-single-page .no-sticky #site-name{
-    width: 96%;
+    width: 100%;
 	font-size: clamp(2.4rem, calc(10 / 72 * 100vw), 16.1rem);
 	}
 	.no-sticky #navigation ul li a:link{
@@ -3739,10 +3793,13 @@ padding: 0.8rem 0;
 		font-weight: 400;
 	}
 	.no-sticky .info-contain{
-    bottom: 20vh;
+    bottom: 10vh;
     width: calc(100% - 2.4rem);
-	margin: 80vh auto 0 auto;
+	margin: auto auto 0 auto;
 	padding:1.6rem;
+  }
+  #single_page_wrapper::after{
+	  
   }
 	  .no-sticky #site-slogan{
 	  width: 96%;
@@ -3778,16 +3835,12 @@ padding: 0.8rem 0;
 		min-height: auto;
 	}
 	.page-single-page #single_page_wrapper #about_scott{
-		padding-top: 3.6rem;
+		/* padding-top: 3.6rem; */
 		height: auto;
 		min-height: initial;
 		margin: 0 auto;
 	}
-	.node-about-custom{
-		align-items: center;
-		flex-direction: column;
 
-	}
 	.case-study-link .view-content li.views-row-3::before{
 		top:0.4rem;
 		right:0.4rem;
@@ -3804,10 +3857,37 @@ padding: 0.8rem 0;
 		padding: 0.4rem 0 0 1.6rem;
 		max-height: 3.2rem;
 	}
+	.node-about-custom{
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		z-index: 0;
+		margin:0;
+	}
+	.aboutp{
+		padding: 2.4rem 0 0 0;
+	}
 	.node-about-custom .img-wrap{
 		margin: 0;
-		max-height: 20vh;
+		max-height: initial;
+		position: absolute;
+		z-index: 0;
+		top: 4rem;
+		left:0;
+		width: 38%;
+		z-index: 0;
 	}
+	.indent{
+		width: 9.6rem;
+		height: 28rem;
+		display: block;
+		float: left;
+		shape-outside: ellipse(5.4rem 7.2rem at 9.6rem 9rem);
+		margin: 0 9rem 0 0;
+
+	}
+
+
 	.node-about-custom .field-name-field-blog-image{
 		width: 100%;
 		height: auto;
@@ -4152,6 +4232,7 @@ padding: 0.8rem 0;
     }
 	.single_page{
 		height: auto;
+		min-height: 90vh;
 	}
 	.paragraphs-item-project-title h1{
 	border: none;
@@ -4173,47 +4254,169 @@ padding: 0.8rem 0;
 	
 }
 
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.no-sticky #inner-wrapper{
+		height: 76vh;
+	}
+	.single_page{
+		height: 76vh;
+	}
+	#single_page_wrapper::before {
+		height: 76vh;
+	}
+	#single_page_wrapper::after{
+		height: 100vh;
+		border-bottom: 17vh solid;
+	}
+	.page-single-page #single_page_wrapper .single_page_wrapper{
+		height: 81.7vh;
+	}
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.no-sticky #inner-wrapper{
+		height: 76vh;
+	}
+	.single_page{
+		height: 76vh;
+	}
 
-@media all and (max-width:680px) and (orientation: landscape) {
+	#single_page_wrapper::before {
+		height: 76vh;
+	}
+	#single_page_wrapper::after{
+		height: 100vh;
+	border-bottom: 17vh solid;
+	}
+	.page-single-page #single_page_wrapper .single_page_wrapper{
+		height: 81.7vh;
+	}
 
+}
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.no-sticky #inner-wrapper{
+		height: 76vh;
+	}
+	.single_page{
+		height: 76vh;
+	}
+
+	#single_page_wrapper::before {
+		height: 76vh;
+	}
+	#single_page_wrapper::after{
+		height: 100vh;
+border-bottom: 17vh solid;
+	}
+	.page-single-page #single_page_wrapper .single_page_wrapper{
+		height: 81.7vh;
+	}
+
+}
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.no-sticky #inner-wrapper{
+		height: 76vh;
+	}
+	.single_page{
+		height: 76vh;
+	}
+
+	#single_page_wrapper::before {
+		height: 76vh;
+	}
+	#single_page_wrapper::after{
+		height: 100vh;
+border-bottom: 17vh solid;
+	}
+	.page-single-page #single_page_wrapper .single_page_wrapper{
+		height: 81.7vh;
+	}
+
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 820px) 
+  and (orientation: landscape) {
+	#logo-wrap{
+		width: 7.2rem;
+		height: 7.2rem;
+	}
+	.no-sticky #logo-wrap:before{
+		width: 7.2rem;
+		height: 7.2rem;
+	}
+	.no-sticky #inner-wrapper{
+		height: 76vh;
+	}
+	.no-sticky .info-contain{
+		width: calc(100% - 4.8rem);
+	}
+	.single_page{
+		height: 76vh;
+	}
+
+	#single_page_wrapper::before {
+		top:4rem;
+		height: 66vh;
+	}
+	#single_page_wrapper::after{
+		height: 100vh;
+border-bottom: 17vh solid;
+	}
+	.page-single-page #single_page_wrapper .single_page_wrapper{
+		height: 81.7vh;
+	}
+  }
+/*@media all and (max-width:1280px) and (orientation: landscape) {
+	body{
+		overflow: initial;
+		}	
 	.node-about-custom .field-name-body{
 		width: 100%;
 		padding: 1.8rem;
-	}
+		}
 	.page-single-page #main{
 		width:100%;
 		margin:0 auto;
-
 		}
 	.single_page_wrapper .single_page{
 		display: block;
 		clear: both;
 		content: " ";
-		width: 100%;
-		
+		width: 100%;	
 	 	}
-
 	.single_page_wrapper h2{
 		display: block;
 		width: 100%;
-
 	}
-
   .single_page_wrapper #full-page, #work .title{
 			width: 100%;
-
 	}
-	.single_page_wrapper h1.title{
-
-		margin: 2.4rem 0 0 0;
-}
+	.single_page_wrapper #full-page, #work h2.title{
+		width: 100%;
+		font-size:2.4rem;
+		line-height:2.4rem;
+	}	
   .view-thumbnail-gallery .view-content .views-row .open .views-field-field-slider-image{
     top: 34rem;
   }
 	.view-thumbnail-gallery .view-content .views-row{
-		/* width:44%; */
 		border-right:none;
-
 	}
 	.views-slideshow-cycle-main-frame-row-item{
 		width: 100%;
@@ -4249,7 +4452,54 @@ padding: 0.8rem 0;
 		#footer{
 			font-size: 3.6rem;
 		}
-}
+		.page-single-page #single_page_wrapper .single_page_wrapper{
+			max-height:79.5vh;
+		}
+		.page-single-page #single_page_wrapper #about_scott{
+			max-height:79.5vh;
+		}
+		#single_page_wrapper::before {
+			height: 80vh;
+		}
+		#single_page_wrapper::after{
+			height: 100vh;
+			border-bottom:14vh;
+		}
+		.single_page{
+			padding:1.6rem;
+			max-height:79.5vh;
+		}
+		.single_page .title{
+			font-size: 4rem;
+			line-height: 4rem;
+			margin: 0;
+		}
+		.node-about-custom{
+
+		}
+		.aboutp{
+			margin: 0;
+			padding: 1.6rem 0 0 0;
+		}
+		.node-about-custom .img-wrap{
+			max-width: 162px;
+			overflow: hidden;
+			mix-blend-mode: exclusion;
+			margin: 0 1.6rem 0 0;
+			position: absolute;
+			top: 4rem;
+			left: 0;
+		}
+		.indent{
+			width: 224px;
+			height: 28rem;
+			display: block;
+			float: left;
+			shape-outside: ellipse(60% 47% at 26% 38%);
+			margin: 0 0.6rem 0rem 0;
+		}
+}*\
+
 	@media all and (max-width:600px){
 
 			.single_page_wrapper #full-page, #work .title{
@@ -4284,5 +4534,31 @@ padding: 0.8rem 0;
 			--img-sc-x:20%;
 			}
 
+	}
+	@media all and (max-width:400px){
+		.aboutp{
+			padding: 2.4rem 0 0 0;
+		}
+	.node-about-custom .img-wrap{
+		margin: 0;
+		max-height: initial;
+		position: absolute;
+		z-index: 0;
+		top: 4rem;
+		left:0;
+		width: 12.4rem;
+		z-index: 0;
+	}
+	.indent{
+		width: 9.6rem;
+		height: 28rem;
+		display: block;
+		float: left;
+		shape-outside: ellipse(5.4rem 7.2rem at 9.6rem 9rem);
+		margin: 0 9rem 0 0;
 
 	}
+	.single_page{
+		background-image: none;
+	}
+}
