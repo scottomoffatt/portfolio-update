@@ -4079,9 +4079,9 @@ padding: 0.8rem 0;
 		flex: 1 1 48%;
 		border-right: none;
 		margin: 0.8rem 0;
-		height: auto;
-		min-height: 16vh;
-		/* max-height: 15vh; */
+		height: 12.6rem;
+		/* min-height: 12rem; */
+		max-height: 20vh;
 		text-align: right;
 		/* width: 100%; */
 	}
