@@ -4064,17 +4064,17 @@ padding: 0.8rem 0;
 	background-size: 1.6rem;
   }
 	.view-thumbnail-gallery .view-content .item-list ul {
-		justify-content: center;
+		/* justify-content: center;
 		flex-flow: column-reverse;
 		padding: 0 !important;
-		width: 100%;
+		width: 100%; */
 	}
 	.view-thumbnail-gallery .view-content li.views-row{
 		flex: 1 1 48%;
 		border-right: none;
 		margin: 0.8rem 0;
 		height: auto;
-		min-height: 6rem;
+		min-height: 10vh;
 		max-height: 12vh;
 		text-align: right;
 		/* width: 100%; */
@@ -4084,7 +4084,7 @@ padding: 0.8rem 0;
 		align-items: center;
 	}
 	.view-thumbnail-gallery .view-content li.views-row:nth-child(2){
-		margin: 0 0 0 0.8;
+		margin: 0 0 0 0.8rem;
 	}
 	.view-thumbnail-gallery .view-content li.views-row:nth-child(3){
 		margin: 0.8rem 0 0 0;
