@@ -3765,13 +3765,13 @@ padding: 0.8rem 0;
 		width: 100%;
 	}
 
-	.single_page_wrapper #full-page, #work .title{
+	.single_page_wrapper #full-page, .single_page .title{
 		width: 100%;
 	}
-	.single_page_wrapper #full-page, #work h1.title{
+	.single_page_wrapper #full-page, .single_page h1.title{
 		font-size: 3.2rem;
 	}
-	.single_page_wrapper #full-page, #work h2.title{
+	.single_page_wrapper #full-page, .single_page h2.title{
 		font-size: 1.6rem;
 	}
 	#full-bg canvas{
