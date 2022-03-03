@@ -243,7 +243,7 @@ font-weight: 700;
 	right: 0;
 	left: 0;
 	width: calc(100% - 3.2rem);
-	max-width: 108rem;
+	max-width: 156rem;
 	margin: 0 auto;
 	height: 88vh;
 	box-shadow: 1rem 1rem;
@@ -267,7 +267,7 @@ font-weight: 700;
 	right: 0;
 	left: 0;
 	width: 100%;
-	max-width: 110rem;
+	max-width: 160rem;
 	margin: 0 auto;
 	height: 100vh;
 	background-color: rgba(25,50,121,0);
@@ -1145,7 +1145,7 @@ form textarea{
 	padding: 0;
 	margin: 0 ;
 	border-radius: 0.8rem;
-	flex: 1 1 48%;
+	flex: 1 1 23%;
 	transition: all 0.2s ease-in;
 	}
 	.case-study-link .view-content li.views-row-last::before{
@@ -1164,9 +1164,12 @@ form textarea{
 	.view-thumbnail-gallery .view-content li.views-row:nth-child(2){
 		margin: 0 1.6rem;
 	}
-	.view-thumbnail-gallery .view-content li.views-row:nth-child(4){
-		margin: 0 1.6rem;
+	.view-thumbnail-gallery .view-content li.views-row:nth-child(3){
+		margin:0 1.6rem 0 0;
 	}
+	/* .view-thumbnail-gallery .view-content li.views-row:nth-child(4){
+		margin:1.6rem 1.6rem 0 1.6rem;
+	} */
 	.view-thumbnail-gallery .view-content li.views-row.views-row-first.views-row-last{
 		margin: 1.6rem 0;
 		flex: 1 1 90%;
@@ -1785,9 +1788,9 @@ transition: all .2s;
 	margin: 0;
 	height: auto;
 	/* top: 0; */
-	right: 0;
+	/* right: 0;
 	bottom: -2rem;
-	position: absolute;
+	position: absolute; */
 
 		}
 
@@ -2618,7 +2621,7 @@ margin: 3.5rem auto;
 		display: block;
 		margin: 0 auto 4.2rem auto;
 		width: calc(100% - 3.2rem);
-		max-width: 108rem;
+		max-width: 156rem;
 		height: 93.5vh;
 }
 
