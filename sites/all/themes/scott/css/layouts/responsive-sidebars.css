@@ -3862,6 +3862,7 @@ padding: 0.8rem 0;
 	.view-thumbnail-gallery .views-row .project .views-field-body{
 		font-size: 1.2rem;
 		line-height: 1.4rem;
+		padding: 0 0 0 1.6rem;
 	}
 	.view-thumbnail-gallery .views-row .project .views-field-title{
 		padding: 0.4rem 0 0 1.6rem;
@@ -4069,21 +4070,37 @@ padding: 0.8rem 0;
 		width: 100%;
 	}
 	.view-thumbnail-gallery .view-content li.views-row{
-		flex: 1 1 100%;
+		flex: 1 1 48%;
 		border-right: none;
 		margin: 0.8rem 0;
 		height: auto;
 		min-height: 6rem;
 		max-height: 12vh;
 		text-align: right;
-		width: 100%;
+		/* width: 100%; */
 	}
 	.view-thumbnail-gallery .view-content .views-row a{
 		justify-content: center;
 		align-items: center;
 	}
 	.view-thumbnail-gallery .view-content li.views-row:nth-child(2){
-		margin: 0.8rem 0;
+		margin: 0 0 0 0.8;
+	}
+	.view-thumbnail-gallery .view-content li.views-row:nth-child(3){
+		margin: 0.8rem 0 0 0;
+	}
+	.view-thumbnail-gallery .view-content li.views-row:nth-child(4){
+		margin: 0.8rem 0 0 0.8rem;
+	}
+	.view-thumbnail-gallery .view-content li.views-row.views-row-first.views-row-last{
+		margin: 0;
+	}
+	.case-study-link .view-content li.views-row-last::before{
+		top: 0.4rem;
+		right: 0.4rem;
+		border: 1px solid;
+		font-size: 1.2rem;
+		font-weight:400;
 	}
 	.case-study-link .view-content .views-row:hover{
 		width:100%;
@@ -4092,14 +4109,15 @@ padding: 0.8rem 0;
 		width:100%;
 	}
 	.view-thumbnail-gallery .view-content .views-row img.lozad{
-		position: relative;
-		width: 42%;
-		margin: -14% 0 0 30%;
-
+		width: 100%;
+		margin: 0;
+		max-width: 14rem;
+		position: absolute;
+		right: 0;
 	}
 	.view-thumbnail-gallery .view-content .paragraphs-item-hero-showcase img.lozad{
-		right: 0;
 		position: absolute;
+		right: 0;
 	}
 	.view-content .views-row:hover .overlay a::before, .view-content .views-row:hover .views-field-field-image span.field-content::before{
 		background-position: calc(100% - 0.8rem) calc(100% - 0.8rem);
@@ -4115,7 +4133,7 @@ padding: 0.8rem 0;
 	.view-thumbnail-gallery .project.views-fieldset{
 		position: absolute;
 		height: 100%;
-		width: 50%;
+		width: 100%;
 		top: 0;
 		left: 0;
 		margin: 0;
