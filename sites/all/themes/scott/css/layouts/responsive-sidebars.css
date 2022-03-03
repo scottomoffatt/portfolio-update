@@ -3768,6 +3768,12 @@ padding: 0.8rem 0;
 	.single_page_wrapper #full-page, #work .title{
 		width: 100%;
 	}
+	.single_page_wrapper #full-page, #work h1.title{
+		font-size: 3.2rem;
+	}
+	.single_page_wrapper #full-page, #work h2.title{
+		font-size: 1.6rem;
+	}
 	#full-bg canvas{
 		top:-20%;
 	}
@@ -4074,14 +4080,17 @@ padding: 0.8rem 0;
 		border-right: none;
 		margin: 0.8rem 0;
 		height: auto;
-		min-height: 10vh;
-		max-height: 12vh;
+		min-height: 16vh;
+		/* max-height: 15vh; */
 		text-align: right;
 		/* width: 100%; */
 	}
 	.view-thumbnail-gallery .view-content .views-row a{
 		justify-content: center;
 		align-items: center;
+	}
+	.view-thumbnail-gallery .view-content li.views-row:nth-child(1){
+		margin: 0;
 	}
 	.view-thumbnail-gallery .view-content li.views-row:nth-child(2){
 		margin: 0 0 0 0.8rem;
