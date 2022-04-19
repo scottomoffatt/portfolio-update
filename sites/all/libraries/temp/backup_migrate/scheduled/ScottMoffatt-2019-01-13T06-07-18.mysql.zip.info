@@ -1,8 +1,0 @@
-filename = "ScottMoffatt-2019-01-13T06-07-18"
-description = ""
-datestamp = "1547388439"
-generator = "Backup and Migrate (http://drupal.org/project/backup_migrate)"
-generatorversion = "7.x-2.x"
-sites[0][version] = "7.59"
-sites[0][name] = "Scott Moffatt"
-sites[0][url] = "https://www.scottomoffatt.com/"

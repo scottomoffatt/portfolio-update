@@ -40,3 +40,11 @@ error_log
 /web.config
 .DS_Store
 sites/.DS_Store
+sites/all/libraries/temp/backup_migrate/scheduled/ScottMoffatt-2019-01-13T06-07-18.mysql.zip
+sites/all/libraries/temp/backup_migrate/scheduled/ScottMoffatt-2019-01-13T06-07-18.mysql.zip.info
+sites/all/libraries/temp/backup_migrate/scheduled/ScottMoffatt-2019-01-18T06-23-17.mysql.zip
+sites/all/libraries/temp/backup_migrate/scheduled/ScottMoffatt-2019-01-18T06-23-17.mysql.zip.info
+sites/all/libraries/temp/backup_migrate/scheduled/ScottMoffatt-2019-01-22T16-49-10.mysql.gz
+sites/all/libraries/temp/backup_migrate/scheduled/ScottMoffatt-2019-01-22T16-49-10.mysql.gz.info
+sites/all/libraries/temp/backup_migrate/scheduled/ScottMoffatt-2019-02-20T14-22-18.mysql.gz
+sites/all/libraries/temp/backup_migrate/scheduled/ScottMoffatt-2019-02-20T14-22-18.mysql.gz.info
